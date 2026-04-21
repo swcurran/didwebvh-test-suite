@@ -1,0 +1,19 @@
+{
+  "name": "didwebvh-test-suite",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "bun run implementations/ts/src/generator.ts",
+    "verify": "bun run implementations/ts/src/generator.ts --verify"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "@stablelib/ed25519": "^2.0.2",
+    "didwebvh-ts": "file:../didwebvh-ts",
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "bun-types": "latest"
+  }
+}

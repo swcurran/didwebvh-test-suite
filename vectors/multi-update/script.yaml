@@ -1,0 +1,40 @@
+description: "Create then apply several sequential updates; resolve at each version"
+spec_ref: "https://identity.foundation/didwebvh/v1.0/#updating-a-did"
+
+keys:
+  - id: key-0
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000001"
+
+steps:
+  - op: create
+    domain: example.com
+    signer: key-0
+    timestamp: "2000-01-01T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+
+  - op: update
+    signer: key-0
+    timestamp: "2000-01-02T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+      alsoKnownAs: ["did:web:example.com"]
+
+  - op: update
+    signer: key-0
+    timestamp: "2000-01-03T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+      alsoKnownAs: ["did:web:example.com", "did:web:example.org"]
+
+  - op: resolve
+    versionNumber: 1
+    expect: resolutionResult.1.json
+
+  - op: resolve
+    versionNumber: 2
+    expect: resolutionResult.2.json
+
+  - op: resolve
+    expect: resolutionResult.json
