@@ -227,6 +227,7 @@ For proof-integrity tests (tampered entry, missing proof), `when: after-sign` co
 | SCID mismatch | before-sign | replace SCID placeholder |
 | Broken hash chain | before-sign | replace `versionId` hash |
 | Key not in `nextKeyHashes` | before-sign | wrong `updateKeys` on pre-rotation consume |
+| Duplicate `versionTime` | before-sign | set entry N's `versionTime` equal to entry N-1's |
 | Tampered entry | after-sign | flip a byte in the state |
 | Wrong signing key | N/A | use `signer: unauthorized-key` |
 | Missing proof | after-sign | delete proof field |

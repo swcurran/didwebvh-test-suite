@@ -11,6 +11,9 @@ keys:
   - id: key-2
     type: ed25519
     seed: "0000000000000000000000000000000000000000000000000000000000000003"
+  - id: key-3
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000004"
 
 steps:
   - op: create
@@ -27,6 +30,13 @@ steps:
     params:
       updateKeys: ["key-1"]
       nextKeyHashes: ["key-2"]
+
+  - op: update
+    signer: key-2
+    timestamp: "2000-01-03T00:00:00Z"
+    params:
+      updateKeys: ["key-2"]
+      nextKeyHashes: ["key-3"]
 
   - op: resolve
     expect: resolutionResult.json
