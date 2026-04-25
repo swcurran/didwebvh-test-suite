@@ -162,7 +162,46 @@ Each implementation then writes a thin test harness that:
 2. Calls its own `resolveDID(log)` on the `did.jsonl` in each directory
 3. Compares the result to the corresponding `resolutionResult*.json`
 
+### Canonical Comparison via JCS
+
+Both sides of each comparison are serialized through a [JSON Canonicalization Scheme (JCS)](https://www.rfc-editor.org/rfc/rfc8785) library before comparing. This eliminates false failures caused by differences in key ordering or whitespace that are semantically irrelevant.
+
+- **TypeScript**: implemented — uses [`json-canonicalize`](https://www.npmjs.com/package/json-canonicalize) (already a dep; `canonicalize` was already imported for hashing)
+- **Python**: implemented — uses [`jsoncanon`](https://pypi.org/project/jsoncanon/) (already a transitive dep of `did-webvh`; implements RFC 8785)
+- **Rust**: implemented — uses [`serde_jcs`](https://crates.io/crates/serde_jcs) (`serde_jcs::to_vec`)
+
+The comparison pattern in each harness should be:
+
+```python
+assert jcs(actual_resolution_result) == jcs(expected_resolution_result)
+```
+
+This applies to the full resolution result object, including `didDocument`, `didDocumentMetadata`, and `didResolutionMetadata`.
+
 ## Future Work
+
+### Explicit DID Document Input
+
+**TODO:** Scripts should support referencing a fully-specified DID Document file rather than relying solely on the generated-from-params template. The motivation is to verify that a did:webvh implementation faithfully preserves whatever the DID Controller places in the DIDDoc — it must not silently reorder, strip, or transform controller-supplied content.
+
+Proposed DSL addition on `create` / `update` steps:
+
+```yaml
+- op: create
+  domain: example.com
+  signer: key-0
+  didDoc: diddoc-fixture.json   # path relative to the script file
+  params:
+    updateKeys: ["key-0"]       # did:webvh envelope params still applied as normal
+```
+
+When `didDoc` is present the generator uses it as the DID Document body instead of constructing one from `params`. The did:webvh-required fields (e.g. `id`, `@context`) are merged or overridden from the fixture so the log entry is still spec-compliant, but any additional controller-supplied content is carried through verbatim.
+
+The corresponding `resolutionResult.json` will then contain that exact content, and a conforming implementation must return it unchanged. This gives test coverage of the **pass-through guarantee**: the protocol layer must not alter DID Controller content.
+
+Scenario to add once this is implemented:
+
+- `custom-diddoc` — create with an explicit DIDDoc fixture containing extra service endpoints, verification methods, and non-standard properties; resolve and assert the document is returned unmodified.
 
 ### Negative / Error Test Vectors
 
@@ -195,6 +234,16 @@ For proof-integrity tests (tampered entry, missing proof), `when: after-sign` co
 The `resolve` step would need an `expectError` field (instead of `expect`) naming the DID resolution error code. Invalid vectors would live alongside valid ones in `vectors/` or in a parallel `invalid-vectors/` tree.
 
 The generator already holds all private keys, so signing broken content is fully feasible — this is the key advantage over hand-editing.
+
+#### Flagging and Consumer Responsibilities
+
+Negative test vectors must be clearly marked so that compliance harnesses can handle them correctly:
+
+- Each negative vector's `script.yaml` should include a top-level `negative: true` flag (or equivalent) so harnesses can identify it without inspecting the log content.
+- **Compliance implementations are only required to *run resolution* on negative vectors** — they verify that their resolver returns the expected error, nothing more.
+- **Generating** negative vectors (i.e., producing valid proofs over semantically broken content via the `corrupt` step) is the sole responsibility of this repo's generator. No implementation harness needs to replicate that logic.
+
+This keeps the compliance harness interface simple: walk all vectors, check `negative` flag, call `resolveDID`, compare against `resolutionResult.json` (which for negative cases expresses the expected error). Generation complexity stays in one place.
 
 ### Cross-Language Error Vectors
 

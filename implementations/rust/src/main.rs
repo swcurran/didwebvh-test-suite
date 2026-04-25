@@ -21,6 +21,7 @@ use std::path::Path;
 use didwebvh_rs::log_entry::LogEntryMethods;
 use didwebvh_rs::prelude::DIDWebVHState;
 use serde_json::{json, Value};
+use serde_jcs;
 
 const VECTORS_ROOT: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../../vectors");
 
@@ -351,7 +352,15 @@ async fn run_vector_test(scenario_dir: &Path, result_file: &str) -> TestOutcome 
 
     normalize_actual(&mut actual, &expected);
 
-    if actual == expected {
+    let actual_jcs = match serde_jcs::to_vec(&actual) {
+        Ok(b) => b,
+        Err(e) => return TestOutcome::Fail(format!("JCS serialize actual: {e}")),
+    };
+    let expected_jcs = match serde_jcs::to_vec(&expected) {
+        Ok(b) => b,
+        Err(e) => return TestOutcome::Fail(format!("JCS serialize expected: {e}")),
+    };
+    if actual_jcs == expected_jcs {
         return TestOutcome::Pass;
     }
 

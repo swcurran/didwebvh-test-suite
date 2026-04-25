@@ -16,6 +16,8 @@ import json
 import pytest
 from pathlib import Path
 
+import jsoncanon
+
 from did_webvh.resolver import resolve_did
 
 VECTORS_ROOT = Path(__file__).parent.parent.parent / "vectors"
@@ -182,4 +184,4 @@ def test_vector(scenario: str, result_file: str) -> None:
     _normalize_resolution_metadata(actual, expected)
     _normalize_document_metadata(actual, expected)
 
-    assert actual == expected
+    assert jsoncanon.canonicalize(actual) == jsoncanon.canonicalize(expected)

@@ -296,7 +296,7 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
         continue;
       }
       const committed = JSON.parse(fs.readFileSync(committedPath, 'utf8'));
-      if (JSON.stringify(result, null, 2) !== JSON.stringify(committed, null, 2)) {
+      if (canonicalize(result) !== canonicalize(committed)) {
         console.error(`\n  MISMATCH: ${filename}`);
         allMatch = false;
       }
@@ -320,7 +320,7 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
         allMatch = false;
       } else {
         const committed = JSON.parse(fs.readFileSync(witnessPath, 'utf8'));
-        if (JSON.stringify(witnessProofs, null, 2) !== JSON.stringify(committed, null, 2)) {
+        if (canonicalize(witnessProofs) !== canonicalize(committed)) {
           console.error('\n  MISMATCH: did-witness.json');
           allMatch = false;
         }
