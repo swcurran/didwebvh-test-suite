@@ -14,7 +14,7 @@ The approach is a **DSL + committed artifacts** pattern:
 
 ## Repository Structure
 
-```
+```text
 scripts/           # YAML DSL scripts describing test scenarios
 vectors/           # Committed, pre-generated artifacts (do not edit by hand)
   <scenario-name>/
@@ -28,7 +28,11 @@ implementations/
     cryptography.ts  # deterministic Ed25519 signing from seed
     interfaces.ts  # types shared between generator and scripts
   python/          # Python compliance harness (pytest)
+    README.md
   rust/            # Rust compliance harness (cargo)
+    README.md
+  java/            # Java compliance harness (Maven)
+    README.md
 package.json
 ```
 
@@ -129,19 +133,25 @@ Follows the [DID Resolution](https://w3c-ccg.github.io/did-resolution/) response
 3. Inspect the generated files in `vectors/<scenario-name>/`.
 4. Commit both the script and the generated artifacts together.
 
-## Scenario Coverage Goals
+## Scenario Coverage
 
-Happy-path scenarios (initially):
+All happy-path scenarios listed below are implemented and committed to `vectors/`.
 
-- `basic-create` — minimal create + resolve
-- `basic-update` — create + single update + resolve
-- `key-rotation` — create + update rotating the update key
-- `pre-rotation` — create with `nextKeyHashes`, update consuming the pre-rotation
-- `deactivate` — create + deactivate + resolve (deactivated state)
-- `portable` — create with `portable: true`
-- `witness-threshold` — create with a witness list, simulate witness proofs
-- `multi-update` — create + several sequential updates, resolve at each version
-- `services` — create with service endpoints, update adding/removing a service
+| Scenario | Description |
+| --- | --- |
+| `basic-create` | Minimal create + resolve at HEAD |
+| `basic-update` | Create + single update + resolve |
+| `key-rotation` | Create + update rotating the update key |
+| `pre-rotation` | Create with `nextKeyHashes` commitment |
+| `pre-rotation-consume` | Create with `nextKeyHashes`; update signed by the pre-rotated key |
+| `deactivate` | Create + deactivate + resolve (deactivated state) |
+| `portable` | Create with `portable: true` |
+| `portable-move` | Create portable DID; update migrating to a new domain |
+| `witness-threshold` | Create with a witness list; witness proof provided on resolve |
+| `witness-update` | Create with 2-of-2 witness config; update reducing to 1-of-1 |
+| `multi-update` | Create + two updates; resolve at v1, v2, and HEAD |
+| `multiple-update-keys` | Create with two `updateKeys`; update signed by the second key |
+| `services` | Create with service endpoints; update adding a second service |
 
 Negative / error cases are out of scope for this repo — those are per-implementation unit tests. This repo only commits valid, resolvable logs.
 
@@ -245,6 +255,61 @@ Negative test vectors must be clearly marked so that compliance harnesses can ha
 - **Generating** negative vectors (i.e., producing valid proofs over semantically broken content via the `corrupt` step) is the sole responsibility of this repo's generator. No implementation harness needs to replicate that logic.
 
 This keeps the compliance harness interface simple: walk all vectors, check `negative` flag, call `resolveDID`, compare against `resolutionResult.json` (which for negative cases expresses the expected error). Generation complexity stays in one place.
+
+### Script-Driven Semantic Violation Vectors
+
+A second class of negative tests does not require a `corrupt` step at all. Instead, the script describes a valid sequence of operations where one step violates a **semantic rule** the spec imposes on the state machine. The generator executes every step normally — producing correctly signed entries — but the resulting log is semantically invalid and a conforming resolver must reject it.
+
+The canonical example is attempting to migrate a non-portable DID:
+
+```yaml
+description: "Attempt to migrate a DID that was not created with portable: true"
+negative: true
+
+keys:
+  - id: key-0
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000001"
+
+steps:
+  - op: create
+    domain: example.com
+    signer: key-0
+    timestamp: "2000-01-01T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+      # portable: false (default — domain migration is forbidden)
+
+  - op: migrate
+    domain: other.example.com
+    signer: key-0
+    timestamp: "2000-01-02T00:00:00Z"
+
+  - op: resolve
+    expectError: invalidDid
+```
+
+Here `op: migrate` is a new DSL op (or an `update` with a `domain:` override) that the generator executes by producing a signed log entry whose `state.id` contains the new domain. The proofs are valid. The resolver must detect that `portable` is absent/false and reject the domain change.
+
+This pattern differs from `corrupt` in a key way: **no mutation is needed**. The generator just follows the script and the spec violation falls out naturally. Because the proofs are valid, the resolver cannot reject on signature failure — it must catch the semantic rule.
+
+#### Other candidate scenarios
+
+| Scenario | Violated rule |
+| --- | --- |
+| `migrate-non-portable` | Domain change without `portable: true` |
+| `update-after-deactivate` | Any update after a deactivation entry |
+| `double-deactivate` | Second deactivation entry on an already-deactivated DID |
+| `pre-rotation-wrong-key` | Update whose signing key hash does not appear in the previous entry's `nextKeyHashes` |
+| `witness-threshold-unmet` | Resolution where the witness proof collection does not meet the declared threshold |
+
+#### Generator changes needed
+
+The generator needs:
+
+1. A `migrate` op (or a `domain:` field on `update`) that rewrites the `state.id` domain — currently only expressible via `DidWebVh.migrate()` in the TS library.
+2. Tolerance for executing steps that would fail validation in a normal production library — the generator may need a "permissive" mode that produces signed entries even when the library's own guard clauses would refuse.
+3. The top-level `negative: true` flag already proposed for `corrupt`-step vectors applies here too; harnesses use the same logic: check `negative`, call `resolveDID`, compare against `resolutionResult.json` which expresses the expected error.
 
 ### Cross-Language Error Vectors
 

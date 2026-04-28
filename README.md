@@ -232,6 +232,17 @@ cargo run --manifest-path implementations/rust/Cargo.toml --bin test-vectors
 
 Resolves every vector in `vectors/` against the Rust `did-webvh` library.
 
+### Java (`implementations/java/`)
+
+Requires Java 11+ and Maven 3.6+.
+
+```bash
+cd implementations/java
+mvn compile exec:java
+```
+
+Resolves every vector in `vectors/` against the [didwebvh-java](https://github.com/IVIR3zaM/didwebvh-java) library (v0.2.0).  See `implementations/java/README.md` for current test status and known compatibility issues.
+
 ### Roadmap
 
 The harnesses in `implementations/` are intended to be **temporary homes**. The plan is to move each one into its respective implementation repository (e.g. `didwebvh-py`, `didwebvh-rs`) so that compliance testing runs as part of each project's own CI/CD pipeline, with this repo consumed as a git submodule pinned to a specific commit. Once migrated, `implementations/` will be removed from this repo.

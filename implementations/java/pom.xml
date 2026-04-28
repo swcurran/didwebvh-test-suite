@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.didwebvh</groupId>
+    <artifactId>didwebvh-compliance-java</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>didwebvh-compliance-java</name>
+    <description>Compliance test harness for did:webvh using the didwebvh-java library</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- did:webvh Java implementation -->
+        <dependency>
+            <groupId>io.github.ivir3zam</groupId>
+            <artifactId>didwebvh-core</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <!-- JSON Canonicalization Scheme (RFC 8785) for comparison -->
+        <dependency>
+            <groupId>io.github.erdtman</groupId>
+            <artifactId>java-json-canonicalization</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <!-- Gson (transitive via didwebvh-core; explicit for clarity) -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>org.didwebvh.compliance.TestVectors</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
