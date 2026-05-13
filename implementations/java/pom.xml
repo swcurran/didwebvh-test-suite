@@ -39,6 +39,20 @@
             <artifactId>gson</artifactId>
             <version>2.10.1</version>
         </dependency>
+
+        <!-- BouncyCastle: Ed25519 key derivation for deterministic vector generation -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.70</version>
+        </dependency>
+
+        <!-- SnakeYAML: parse vectors/<scenario>/script.yaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -50,6 +64,14 @@
                 <configuration>
                     <mainClass>org.didwebvh.compliance.TestVectors</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-vectors</id>
+                        <configuration>
+                            <mainClass>org.didwebvh.compliance.GenerateVectors</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

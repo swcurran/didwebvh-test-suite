@@ -30,6 +30,7 @@ from did_webvh.core.state import DocumentState
 from did_webvh.resolver import resolve_did
 
 VECTORS_ROOT = Path(__file__).parent.parent.parent / "vectors"
+TS_IMPL = "ts"
 
 DID_CONTEXT = "https://www.w3.org/ns/did/v1"
 MULTIKEY_CONTEXT = "https://w3id.org/security/multikey/v1"
@@ -176,20 +177,26 @@ def _create_params(
     portable: bool = False,
     next_key_hashes: list[str] | None = None,
     witness: dict | None = None,
+    omit_empty_nkh: bool = False,
 ) -> dict:
     """
     TS COMPAT — create params defaults.
     TS always serialises portable/nextKeyHashes/watchers/witness/deactivated
     even when they are default-valued (false / [] / {} ).
+    Set omit_empty_nkh=True when generating Python-native artifacts to avoid
+    passing nextKeyHashes:[] which the Python library rejects.
     """
-    return {
+    nkh = next_key_hashes if next_key_hashes is not None else []
+    params = {
         "updateKeys": [str(sk.multikey) for sk in update_keys],
         "portable": portable,
-        "nextKeyHashes": next_key_hashes if next_key_hashes is not None else [],
         "watchers": [],
         "witness": witness if witness is not None else {},
         "deactivated": False,
     }
+    if nkh or not omit_empty_nkh:
+        params["nextKeyHashes"] = nkh
+    return params
 
 
 def _update_params_delta(
@@ -197,18 +204,23 @@ def _update_params_delta(
     *,
     next_key_hashes: list[str] | None = None,
     witness: dict | None = None,
+    omit_empty_nkh: bool = False,
 ) -> dict:
     """
     TS COMPAT — update params delta.
     TS always includes updateKeys/nextKeyHashes/witness/watchers in every
     non-deactivation update delta.
+    Set omit_empty_nkh=True when generating Python-native artifacts.
     """
-    return {
+    nkh = next_key_hashes if next_key_hashes is not None else []
+    params = {
         "updateKeys": [str(sk.multikey) for sk in update_keys],
-        "nextKeyHashes": next_key_hashes if next_key_hashes is not None else [],
         "witness": witness if witness is not None else {},
         "watchers": [],
     }
+    if nkh or not omit_empty_nkh:
+        params["nextKeyHashes"] = nkh
+    return params
 
 
 def _deactivate_params_delta(update_keys: list[AskarSigningKey]) -> dict:
@@ -294,13 +306,16 @@ def _build_witness_param(config: dict, key_map: dict) -> dict:
     }
 
 
-def _run_script(script: dict) -> tuple[list[dict], list[dict], list[dict]]:
+def _run_script(script: dict, omit_empty_nkh: bool = False) -> tuple[list[dict], list[dict], list[dict]]:
     """
     Execute a script and return (log_entries, witness_proofs, resolve_results).
 
     log_entries      — list of history_line() dicts in order
     witness_proofs   — list of {versionId, proof:[...]} dicts (did-witness.json format)
     resolve_results  — list of {filename, result} for each resolve step
+
+    Set omit_empty_nkh=True when generating Python-native artifacts so that
+    nextKeyHashes is omitted when empty (Python library rejects []).
     """
     key_map = {k["id"]: _key_from_seed(k["seed"]) for k in script["keys"]}
 
@@ -346,6 +361,7 @@ def _run_script(script: dict) -> tuple[list[dict], list[dict], list[dict]]:
                 portable=bool(params_spec.get("portable")),
                 next_key_hashes=next_key_hashes,
                 witness=witness_param,
+                omit_empty_nkh=omit_empty_nkh,
             )
             ts = step.get("timestamp")
             state = DocumentState.initial(params=params, document=doc, timestamp=ts)
@@ -390,6 +406,7 @@ def _run_script(script: dict) -> tuple[list[dict], list[dict], list[dict]]:
                 new_update_keys,
                 next_key_hashes=next_key_hashes,
                 witness=witness_param,
+                omit_empty_nkh=omit_empty_nkh,
             )
             ts = step.get("timestamp")
             state = state.create_next(new_doc, params_update=delta, timestamp=ts)
@@ -452,7 +469,7 @@ def test_generate(scenario: str) -> None:
     vector_dir = VECTORS_ROOT / scenario
     script = yaml.safe_load((vector_dir / "script.yaml").read_text())
 
-    committed_log_path = vector_dir / "did.jsonl"
+    committed_log_path = vector_dir / TS_IMPL / "did.jsonl"
 
     if _log_has_empty_next_key_hashes(committed_log_path):
         pytest.xfail(
@@ -478,7 +495,7 @@ def test_generate(scenario: str) -> None:
         assert generated == committed, f"Log entry {i + 1} mismatch"
 
     # --- 2. Compare witness proofs ---
-    committed_witness_path = vector_dir / "did-witness.json"
+    committed_witness_path = vector_dir / TS_IMPL / "did-witness.json"
     if committed_witness_path.exists():
         committed_witness = json.loads(committed_witness_path.read_text())
         assert witness_proofs == committed_witness, "did-witness.json mismatch"
@@ -499,7 +516,7 @@ def test_generate(scenario: str) -> None:
         did = log_entries[0]["state"]["id"]
 
         for rs in resolve_steps:
-            expected_path = vector_dir / rs["filename"]
+            expected_path = vector_dir / TS_IMPL / rs["filename"]
             expected = json.loads(expected_path.read_text())
 
             kwargs = {"version_number": rs["versionNumber"]} if rs["versionNumber"] is not None else {}

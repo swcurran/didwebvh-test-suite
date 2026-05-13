@@ -1,0 +1,12 @@
+{
+  "didDocument": null,
+  "didDocumentMetadata": null,
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json",
+    "error": "invalidDid",
+    "problemDetails": {
+      "type": "https://didwebvh.info/main/resolution-errors/#witness-verification-failed",
+      "title": "Insufficient witness proofs."
+    }
+  }
+}

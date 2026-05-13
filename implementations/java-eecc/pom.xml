@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.didwebvh</groupId>
+    <artifactId>didwebvh-compliance-java-eecc</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>didwebvh-compliance-java-eecc</name>
+    <description>Compliance test harness for did:webvh using the EECC didwebvh-java library</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- did:webvh Java implementation (European EPC Competence Center) -->
+        <dependency>
+            <groupId>io.github.european-epc-competence-center</groupId>
+            <artifactId>didwebvh-java</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- JSON Canonicalization Scheme (RFC 8785) for comparison -->
+        <dependency>
+            <groupId>io.github.erdtman</groupId>
+            <artifactId>java-json-canonicalization</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <!-- BouncyCastle: marked optional in the library but required at runtime for Ed25519 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>1.79</version>
+        </dependency>
+
+        <!-- SLF4J simple binding to suppress library log output during testing -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+
+        <!-- SnakeYAML: parse vectors/<scenario>/script.yaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>org.didwebvh.compliance.TestVectors</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-vectors</id>
+                        <configuration>
+                            <mainClass>org.didwebvh.compliance.GenerateVectors</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

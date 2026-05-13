@@ -1,0 +1,45 @@
+{
+  "didDocument" : {
+    "@context" : [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1" ],
+    "id" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com",
+    "controller" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com",
+    "assertionMethod" : [ ],
+    "keyAgreement" : [ ],
+    "capabilityDelegation" : [ ],
+    "capabilityInvocation" : [ ],
+    "verificationMethod" : [ {
+      "id" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#P5RDjVJG",
+      "type" : "Multikey",
+      "controller" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com",
+      "publicKeyMultibase" : "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    }, {
+      "id" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#ufuXSdxf",
+      "type" : "Multikey",
+      "controller" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com",
+      "publicKeyMultibase" : "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
+    } ],
+    "authentication" : [ "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#P5RDjVJG", "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#ufuXSdxf" ],
+    "alsoKnownAs" : [ "did:web:example.com" ],
+    "service" : [ {
+      "id" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#files",
+      "type" : "relativeRef",
+      "serviceEndpoint" : "https://example.com/"
+    }, {
+      "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+      "id" : "did:webvh:QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP:example.com#whois",
+      "type" : "LinkedVerifiablePresentation",
+      "serviceEndpoint" : "https://example.com/whois.vp"
+    } ]
+  },
+  "didDocumentMetadata" : {
+    "created" : "2026-05-12T22:56:01Z",
+    "updated" : "2026-05-12T22:56:01Z",
+    "versionId" : "2-QmaXfYp3i2rzD3cznSotTQJ7r1a3mpeyttC3rZ1BahJHA4",
+    "versionNumber" : 2,
+    "versionTime" : "2026-05-12T22:56:01Z",
+    "scid" : "QmXyNArJj58bPqqHDcdEwiRVHUhBz42QVCgy3RySmK75kP"
+  },
+  "didResolutionMetadata" : {
+    "contentType" : "application/did+ld+json"
+  }
+}

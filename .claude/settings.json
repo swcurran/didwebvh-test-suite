@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"getVerificationMethodId\\\\|AbstractCrypto\" /d2/repos/didwebvh-test-suite/node_modules/didwebvh-ts/dist/esm/index.js | head -20)",
+      "Read(//d2/repos/didwebvh-ts/dist/esm/**)",
+      "Bash(mvn exec:java)",
+      "Bash(grep -v \"^\\\\[INFO\\\\] \\\\\\(Scan\\\\|Build\\\\|\\\\-\\\\-\\\\-\\\\|$\\\\\\)\")",
+      "Bash(grep -v \"^\\\\[INFO\\\\]$\")",
+      "Bash(mvn compile *)",
+      "Bash(mvn exec:java@generate-vectors)",
+      "Bash(git mv *)",
+      "Bash(bun run *)",
+      "Bash(cargo build *)",
+      "Bash(cargo run *)"
+    ]
+  }
+}

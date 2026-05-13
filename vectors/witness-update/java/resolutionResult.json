@@ -1,0 +1,32 @@
+{
+  "didDocument": {
+    "@context": "https://www.w3.org/ns/did/v1",
+    "id": "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com",
+    "controller": "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com",
+    "verificationMethod": [
+      {
+        "id": "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com#P5RDjVJG",
+        "type": "Multikey",
+        "controller": "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com",
+        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+      }
+    ],
+    "authentication": [
+      "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com#P5RDjVJG"
+    ],
+    "assertionMethod": [
+      "did:webvh:QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    ]
+  },
+  "didDocumentMetadata": {
+    "created": "2026-05-12T22:55:20Z",
+    "updated": "2026-05-12T22:55:21Z",
+    "versionId": "2-QmY1XUJiEudbdEeLnJkZVgm7jiGjHtZaPh2o5DnW8bnxYH",
+    "versionNumber": 2,
+    "versionTime": "2026-05-12T22:55:21Z",
+    "scid": "QmeuSHFBxjJDFWaNPgpFdeqWDc2eZWq5Ab85xdNuxCe8Dp"
+  },
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json"
+  }
+}

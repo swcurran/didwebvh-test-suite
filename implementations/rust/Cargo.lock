@@ -28,9 +28,9 @@ dependencies = [
 
 [[package]]
 name = "affinidi-data-integrity"
-version = "0.5.4"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e04fb16a512e6a52c6f29cd2a9c3c225fca9bdb459dd4cf5922dfdc970e822cc"
+checksum = "6ce7f611e7bcad221aee953b8ef91d23e0f18ef319c711211357f03f14f63450"
 dependencies = [
  "affinidi-crypto",
  "affinidi-did-common",
@@ -468,16 +468,21 @@ dependencies = [
 name = "didwebvh-compliance"
 version = "0.1.0"
 dependencies = [
+ "ahash",
  "didwebvh-rs",
+ "hex",
+ "serde",
  "serde_jcs",
  "serde_json",
+ "serde_yaml",
+ "similar",
  "tokio",
 ]
 
 [[package]]
 name = "didwebvh-rs"
-version = "0.5.0"
-source = "git+https://github.com/decentralized-identity/didwebvh-rs#90c7f4e8143642fd688daaf7eaacb918ddf181ac"
+version = "0.5.2"
+source = "git+https://github.com/decentralized-identity/didwebvh-rs#656f4a298bb0d806518a437e6f94787b217a1fcf"
 dependencies = [
  "affinidi-data-integrity",
  "affinidi-did-common",
@@ -1223,6 +1228,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
 
 [[package]]
+name = "ryu"
+version = "1.0.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f"
+
+[[package]]
 name = "ryu-js"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1375,6 +1386,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_yaml"
+version = "0.9.34+deprecated"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6a8b1a1a2ebf674015cc02edccce75287f1a0130d394307b36743c2f5d504b47"
+dependencies = [
+ "indexmap 2.14.0",
+ "itoa",
+ "ryu",
+ "serde",
+ "unsafe-libyaml",
+]
+
+[[package]]
 name = "sha2"
 version = "0.10.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1411,6 +1435,12 @@ dependencies = [
  "digest 0.10.7",
  "rand_core 0.6.4",
 ]
+
+[[package]]
+name = "similar"
+version = "2.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbbb5d9659141646ae647b42fe094daf6c6192d1620870b449d9557f748b2daa"
 
 [[package]]
 name = "smallvec"
@@ -1613,6 +1643,12 @@ name = "unicode-xid"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853"
+
+[[package]]
+name = "unsafe-libyaml"
+version = "0.2.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "673aac59facbab8a9007c7f6108d11f63b603f7cabff99fabf650fea5c32b861"
 
 [[package]]
 name = "unsigned-varint"

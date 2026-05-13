@@ -8,8 +8,17 @@ description = "Compliance test harness for did:webvh using the didwebvh-rs libra
 name = "test-vectors"
 path = "src/main.rs"
 
+[[bin]]
+name = "generate-vectors"
+path = "src/generate.rs"
+
 [dependencies]
 didwebvh-rs = { git = "https://github.com/decentralized-identity/didwebvh-rs", default-features = false }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 serde_json = "1"
 serde_jcs = "0.2.0"
+similar = "2"
+serde_yaml = "0.9"
+hex = "0.4"
+serde = { version = "1", features = ["derive"] }
+ahash = "0.8"

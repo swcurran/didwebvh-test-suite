@@ -10,7 +10,7 @@ import type { Script, CreateStep, UpdateStep, DeactivateStep, ResolveStep } from
 import * as ed25519 from '@stablelib/ed25519';
 
 const REPO_ROOT = path.resolve(import.meta.dir, '../../..');
-const SCRIPTS_DIR = path.join(REPO_ROOT, 'scripts');
+const TS_IMPL_DIR = path.join(REPO_ROOT, 'implementations/ts');
 const VECTORS_DIR = path.join(REPO_ROOT, 'vectors');
 
 // Reimplement deriveHash and deriveNextKeyHash from didwebvh-ts (not publicly exported)
@@ -135,8 +135,8 @@ function toResolutionResult(doc: any, meta: any) {
 }
 
 async function processScript(scriptPath: string, verify: boolean): Promise<void> {
-  const scriptName = path.basename(scriptPath, '.yaml');
-  const outDir = path.join(VECTORS_DIR, scriptName);
+  const scenarioName = path.basename(path.dirname(scriptPath));
+  const outDir = path.join(VECTORS_DIR, scenarioName, 'ts');
 
   const script = yamlLoad(fs.readFileSync(scriptPath, 'utf8')) as Script;
   const keyMap = buildKeyMap(script);
@@ -331,7 +331,6 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
   }
 
   fs.mkdirSync(outDir, { recursive: true });
-  fs.copyFileSync(scriptPath, path.join(outDir, 'script.yaml'));
   fs.writeFileSync(path.join(outDir, 'did.jsonl'), log.map(e => JSON.stringify(e)).join('\n') + '\n');
   if (witnessProofs.length > 0) {
     fs.writeFileSync(path.join(outDir, 'did-witness.json'), JSON.stringify(witnessProofs, null, 2) + '\n');
@@ -341,30 +340,250 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
   }
 }
 
+// ---------------------------------------------------------------------------
+// Config
+// ---------------------------------------------------------------------------
+
+function readConfig(): { version: string } {
+  try {
+    const cfg = yamlLoad(fs.readFileSync(path.join(TS_IMPL_DIR, 'config.yaml'), 'utf8')) as any;
+    return { version: cfg.version ?? '' };
+  } catch {
+    return { version: '' };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Cross-resolution helpers
+// ---------------------------------------------------------------------------
+
+function extractVersionNumber(filename: string): number | null {
+  const parts = path.basename(filename, '.json').split('.');
+  if (parts.length > 1) {
+    const n = parseInt(parts[1]);
+    if (!isNaN(n)) return n;
+  }
+  return null;
+}
+
+function computeUnifiedDiff(expected: unknown, actual: unknown): string {
+  const expLines = JSON.stringify(expected, null, 2).split('\n');
+  const actLines = JSON.stringify(actual, null, 2).split('\n');
+  const m = expLines.length, n = actLines.length;
+
+  const dp: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = m - 1; i >= 0; i--) {
+    for (let j = n - 1; j >= 0; j--) {
+      dp[i][j] = expLines[i] === actLines[j]
+        ? dp[i + 1][j + 1] + 1
+        : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+
+  type Edit = { t: ' ' | '-' | '+'; l: string };
+  const edits: Edit[] = [];
+  let i = 0, j = 0;
+  while (i < m || j < n) {
+    if (i < m && j < n && expLines[i] === actLines[j]) {
+      edits.push({ t: ' ', l: expLines[i++] }); j++;
+    } else if (j < n && (i >= m || dp[i][j + 1] >= dp[i + 1][j])) {
+      edits.push({ t: '+', l: actLines[j++] });
+    } else {
+      edits.push({ t: '-', l: expLines[i++] });
+    }
+  }
+
+  const CONTEXT = 3;
+  const changeIdxs = edits.map((e, k) => e.t !== ' ' ? k : -1).filter(k => k >= 0);
+  if (changeIdxs.length === 0) return '';
+
+  const hunks: Array<[number, number]> = [];
+  let hs = -1, he = -1;
+  for (const idx of changeIdxs) {
+    const s = Math.max(0, idx - CONTEXT);
+    const e = Math.min(edits.length - 1, idx + CONTEXT);
+    if (hs < 0) { hs = s; he = e; }
+    else if (s <= he + 1) { he = Math.max(he, e); }
+    else { hunks.push([hs, he]); hs = s; he = e; }
+  }
+  if (hs >= 0) hunks.push([hs, he]);
+
+  const out: string[] = ['--- expected', '+++ actual (ts resolver)'];
+  for (const [start, end] of hunks) {
+    const slice = edits.slice(start, end + 1);
+    const beforeOld = edits.slice(0, start).filter(e => e.t !== '+').length;
+    const beforeNew = edits.slice(0, start).filter(e => e.t !== '-').length;
+    out.push(`@@ -${beforeOld + 1},${slice.filter(e => e.t !== '+').length} +${beforeNew + 1},${slice.filter(e => e.t !== '-').length} @@`);
+    for (const e of slice) out.push(`${e.t}${e.l}`);
+  }
+  return out.join('\n');
+}
+
+async function runVectorTest(
+  implDir: string,
+  resultFile: string,
+): Promise<{ type: 'pass' | 'fail' | 'diff'; diff?: string; reason?: string }> {
+  try {
+    const logContent = fs.readFileSync(path.join(implDir, 'did.jsonl'), 'utf8');
+    const expected = JSON.parse(fs.readFileSync(path.join(implDir, resultFile), 'utf8'));
+
+    const logLines = logContent.trim().split('\n').filter((l: string) => l.trim());
+    if (logLines.length === 0) return { type: 'fail', reason: 'empty did.jsonl' };
+    const log = logLines.map((l: string) => JSON.parse(l)) as DIDLog;
+
+    let witnessProofs: WitnessProofFileEntry[] = [];
+    const witnessPath = path.join(implDir, 'did-witness.json');
+    if (fs.existsSync(witnessPath)) {
+      witnessProofs = JSON.parse(fs.readFileSync(witnessPath, 'utf8'));
+    }
+
+    const versionNumber = extractVersionNumber(resultFile);
+    const dummyVM = keyFromSeed('0'.repeat(64));
+    const verifier = new PermissiveVerifier({ verificationMethod: dummyVM });
+
+    const opts: Record<string, unknown> = { verifier, fastResolve: false };
+    if (witnessProofs.length > 0) opts.witnessProofs = witnessProofs;
+    if (versionNumber !== null) opts.versionNumber = versionNumber;
+
+    const { doc, meta } = await resolveDIDFromLog(log, opts as any);
+    const actual = toResolutionResult(doc, meta);
+
+    if (canonicalize(actual) === canonicalize(expected)) return { type: 'pass' };
+    return { type: 'diff', diff: computeUnifiedDiff(expected, actual) };
+  } catch (e: any) {
+    return { type: 'fail', reason: e.message };
+  }
+}
+
+interface RowEntry { logSource: string; result: string; notes: string }
+interface DiffEntry { logSource: string; filename: string; diff: string }
+
+async function crossResolveStatus(
+  scenarioName: string
+): Promise<{ rows: RowEntry[]; diffs: DiffEntry[] }> {
+  const scenarioDir = path.join(VECTORS_DIR, scenarioName);
+
+  const implDirs = fs.readdirSync(scenarioDir)
+    .filter((d: string) => fs.statSync(path.join(scenarioDir, d)).isDirectory())
+    .sort();
+
+  const rows: RowEntry[] = [];
+  const diffs: DiffEntry[] = [];
+
+  for (const implName of implDirs) {
+    const implDir = path.join(scenarioDir, implName);
+    if (!fs.existsSync(path.join(implDir, 'did.jsonl'))) {
+      rows.push({ logSource: implName, result: '⚠️ SKIP', notes: 'no did.jsonl' });
+      continue;
+    }
+
+    const resultFiles = fs.readdirSync(implDir)
+      .filter((f: string) => f.startsWith('resolutionResult') && f.endsWith('.json'))
+      .sort();
+
+    if (resultFiles.length === 0) {
+      rows.push({ logSource: implName, result: '⚠️ SKIP', notes: 'no resolutionResult files' });
+      continue;
+    }
+
+    let outcome: 'pass' | 'fail' | 'diff' = 'pass';
+    let failReason = '';
+
+    for (const rf of resultFiles) {
+      const r = await runVectorTest(implDir, rf);
+      if (r.type === 'fail') {
+        if (outcome !== 'diff') { outcome = 'fail'; failReason = r.reason ?? 'error'; }
+      } else if (r.type === 'diff') {
+        if (outcome === 'pass') outcome = 'diff';
+        diffs.push({ logSource: implName, filename: rf, diff: r.diff! });
+      }
+    }
+
+    const label = implName === 'ts' ? 'ts (self)' : implName;
+    rows.push({
+      logSource: label,
+      result: outcome === 'pass' ? '✅ PASS' : outcome === 'diff' ? '🔶 DIFF' : '❌ FAIL',
+      notes: outcome === 'fail' ? failReason : outcome === 'diff' ? 'see diffs.txt' : '',
+    });
+  }
+
+  return { rows, diffs };
+}
+
+// ---------------------------------------------------------------------------
+// Entry point
+// ---------------------------------------------------------------------------
+
 async function main() {
   const args = process.argv.slice(2);
   const verify = args.includes('--verify');
   const targets = args.filter((a: string) => !a.startsWith('--'));
 
   const scriptPaths = targets.length > 0
-    ? targets
-    : fs.readdirSync(SCRIPTS_DIR)
-        .filter((f: string) => f.endsWith('.yaml'))
+    ? targets.map((t: string) =>
+        fs.existsSync(t) ? t : path.join(VECTORS_DIR, t, 'script.yaml')
+      )
+    : fs.readdirSync(VECTORS_DIR)
+        .filter((d: string) => {
+          const p = path.join(VECTORS_DIR, d);
+          return fs.statSync(p).isDirectory() && fs.existsSync(path.join(p, 'script.yaml'));
+        })
         .sort()
-        .map((f: string) => path.join(SCRIPTS_DIR, f));
+        .map((d: string) => path.join(VECTORS_DIR, d, 'script.yaml'));
+
+  const statusPath = path.join(TS_IMPL_DIR, 'status.md');
+  const diffsPath = path.join(TS_IMPL_DIR, 'diffs.txt');
+
+  if (!verify) {
+    if (fs.existsSync(statusPath)) fs.unlinkSync(statusPath);
+    if (fs.existsSync(diffsPath)) fs.unlinkSync(diffsPath);
+  }
+
+  const allRows: Array<{ testCase: string } & RowEntry> = [];
+  const allDiffs: Array<{ testCase: string } & DiffEntry> = [];
 
   let hasError = false;
   for (const scriptPath of scriptPaths) {
-    const name = path.basename(scriptPath, '.yaml');
+    const name = path.basename(path.dirname(scriptPath));
     process.stdout.write(`${verify ? 'Verifying' : 'Generating'} ${name}... `);
     try {
       await processScript(scriptPath, verify);
-      if (!verify) console.log('done');
+      if (!verify) {
+        console.log('done');
+        process.stdout.write(`  Cross-resolving ${name}... `);
+        const { rows, diffs } = await crossResolveStatus(name);
+        for (const row of rows) allRows.push({ testCase: name, ...row });
+        for (const diff of diffs) allDiffs.push({ testCase: name, ...diff });
+
+        const oldStatus = path.join(VECTORS_DIR, name, 'ts', 'status.md');
+        if (fs.existsSync(oldStatus)) fs.unlinkSync(oldStatus);
+
+        console.log('done');
+      }
     } catch (e: any) {
       console.error(`ERROR: ${e.message}`);
       hasError = true;
     }
   }
+
+  if (!verify && allRows.length > 0) {
+    const cfg = readConfig();
+    const header = cfg.version ? `Implementation: didwebvh-ts ${cfg.version}\n\n` : '';
+    const tableRows = allRows
+      .map(r => `| ${r.testCase} | ${r.logSource} | ${r.result} | ${r.notes} |`)
+      .join('\n');
+    fs.writeFileSync(statusPath,
+      `# ts cross-resolution status\n\n${header}| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n${tableRows}\n`
+    );
+
+    if (allDiffs.length > 0) {
+      const diffContent = allDiffs
+        .map(d => `=== ${d.testCase} / ${d.logSource} — ${d.filename} ===\n${d.diff}`)
+        .join('\n\n') + '\n';
+      fs.writeFileSync(diffsPath, diffContent);
+    }
+  }
+
   if (hasError) process.exit(1);
 }
 

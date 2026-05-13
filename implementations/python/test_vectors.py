@@ -2,6 +2,9 @@
 Compliance test harness: runs each committed vector through the Python did_webvh
 resolver and compares results.
 
+Parametrized over (scenario, impl, result_file) so every implementation's
+committed logs are tested against the Python resolver.
+
 Normalization functions labelled "TS COMPAT" compensate for known differences
 between what the TypeScript generator writes into vectors/ and what the Python
 library produces.  Each one is a candidate for community discussion — see the
@@ -27,16 +30,19 @@ VECTORS_ROOT = Path(__file__).parent.parent.parent / "vectors"
 # Test collection helpers
 # ---------------------------------------------------------------------------
 
-def _collect_cases() -> list[tuple[str, str]]:
-    """Return (scenario_name, result_filename) pairs for all vectors."""
+def _collect_cases() -> list[tuple[str, str, str]]:
+    """Return (scenario_name, impl_name, result_filename) for all impl vectors."""
     cases = []
     for vdir in sorted(VECTORS_ROOT.iterdir()):
         if not vdir.is_dir():
             continue
-        if not (vdir / "did.jsonl").exists():
-            continue
-        for rf in sorted(vdir.glob("resolutionResult*.json")):
-            cases.append((vdir.name, rf.name))
+        for impl_dir in sorted(vdir.iterdir()):
+            if not impl_dir.is_dir():
+                continue
+            if not (impl_dir / "did.jsonl").exists():
+                continue
+            for rf in sorted(impl_dir.glob("resolutionResult*.json")):
+                cases.append((vdir.name, impl_dir.name, rf.name))
     return cases
 
 
@@ -60,17 +66,12 @@ def _log_has_empty_next_key_hashes(log_path: Path) -> bool:
     TS COMPAT ISSUE — nextKeyHashes: []
     The TS generator writes nextKeyHashes: [] for every non-pre-rotation entry
     (it always serialises the field, defaulting to an empty list).
-    The Python library rejects an empty list during update validation: its
-    validator for the *previous* entry's nextKeyHashes requires the field to be
-    either absent or a non-empty list of strings (state.py: `not next_keys`
-    rejects []).  Single-entry logs (create only) are not affected because the
-    update path is never reached.
-    Resolution needed: either the TS generator should omit the field when empty,
-    or the Python library should treat [] as equivalent to absent.
+    The Python library rejects an empty list during update validation.
+    Single-entry logs (create only) are not affected.
     """
     lines = log_path.read_text().splitlines()
     if len(lines) < 2:
-        return False  # single-entry log; update path never reached
+        return False
     for line in lines:
         params = json.loads(line).get("parameters", {})
         if params.get("nextKeyHashes") == []:
@@ -86,9 +87,7 @@ def _normalize_top_level_context(actual: dict) -> None:
     """
     TS COMPAT — resolution envelope @context
     The Python library always adds "@context": "https://w3id.org/did-resolution/v1"
-    to the resolution envelope.  The TS generator does not include this key in
-    the committed vectors.  Removed here pending community decision on whether
-    vectors should include it.
+    to the resolution envelope.  The TS generator does not include this key.
     """
     actual.pop("@context", None)
 
@@ -97,9 +96,7 @@ def _normalize_service_ids(doc: dict | None) -> None:
     """
     TS COMPAT — service ID form
     The TS generator writes implicit service IDs as bare fragments: "#files",
-    "#whois".  The Python library expands them to absolute DID URLs:
-    "did:webvh:...#files".  Both are valid per the DID spec; normalise to the
-    bare-fragment form used by the TS vectors.
+    "#whois".  The Python library expands them to absolute DID URLs.
     """
     if not doc:
         return
@@ -112,9 +109,7 @@ def _normalize_service_ids(doc: dict | None) -> None:
 def _normalize_service_endpoints(doc: dict | None) -> None:
     """
     TS COMPAT — implicit service endpoint trailing slash
-    The Python library appends a trailing slash to the #files serviceEndpoint
-    (e.g. "https://example.com/").  The TS generator omits it.  Strip for
-    comparison.
+    The Python library appends a trailing slash to the #files serviceEndpoint.
     """
     if not doc:
         return
@@ -129,8 +124,7 @@ def _normalize_resolution_metadata(actual: dict, expected: dict) -> None:
     TS COMPAT — didResolutionMetadata null vs {contentType: ...}
     For successful resolutions the TS vectors commit
     didResolutionMetadata: {"contentType": "application/did+ld+json"}.
-    The Python library returns null for the same case.  Treat null as
-    equivalent to the minimal contentType-only object.
+    The Python library returns null for the same case.
     """
     if actual.get("didResolutionMetadata") is None:
         if expected.get("didResolutionMetadata") == {"contentType": "application/did+ld+json"}:
@@ -140,13 +134,8 @@ def _normalize_resolution_metadata(actual: dict, expected: dict) -> None:
 def _normalize_document_metadata(actual: dict, expected: dict) -> None:
     """
     TS COMPAT — extra didDocumentMetadata fields
-    The Python library emits additional fields not present in the TS vectors:
-    deactivated (bool), portable (bool), scid (str), watchers (list),
-    witness (dict).  The TS vectors include only the fields they explicitly
-    assert.  Compare only the keys that appear in the expected metadata so
-    that extra Python fields do not cause spurious failures.
-    Note: when the TS vector does include a field (e.g. deactivated: true on a
-    deactivated DID) it will still be checked because it is present in expected.
+    The Python library emits additional fields not present in the TS vectors.
+    Compare only the keys that appear in the expected metadata.
     """
     act_meta = actual.get("didDocumentMetadata")
     exp_meta = expected.get("didDocumentMetadata")
@@ -158,10 +147,18 @@ def _normalize_document_metadata(actual: dict, expected: dict) -> None:
 # Parametrised test
 # ---------------------------------------------------------------------------
 
-@pytest.mark.parametrize("scenario,result_file", _collect_cases())
-def test_vector(scenario: str, result_file: str) -> None:
-    log = VECTORS_ROOT / scenario / "did.jsonl"
-    expected = json.loads((VECTORS_ROOT / scenario / result_file).read_text())
+@pytest.fixture
+def _status_data(request):
+    """Passes actual/expected to conftest.py for diff generation in status files."""
+    data: dict = {}
+    request.node._status_data = data
+    return data
+
+
+@pytest.mark.parametrize("scenario,impl,result_file", _collect_cases())
+def test_vector(scenario: str, impl: str, result_file: str, _status_data: dict) -> None:
+    log = VECTORS_ROOT / scenario / impl / "did.jsonl"
+    expected = json.loads((VECTORS_ROOT / scenario / impl / result_file).read_text())
 
     if _log_has_empty_next_key_hashes(log):
         pytest.xfail(
@@ -184,4 +181,6 @@ def test_vector(scenario: str, result_file: str) -> None:
     _normalize_resolution_metadata(actual, expected)
     _normalize_document_metadata(actual, expected)
 
+    _status_data["actual"] = actual
+    _status_data["expected"] = expected
     assert jsoncanon.canonicalize(actual) == jsoncanon.canonicalize(expected)
