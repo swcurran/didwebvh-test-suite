@@ -192,12 +192,34 @@ public class TestVectors {
     private void writeCombinedOutput() {
         String versionLine = readConfigVersion();
         StringBuilder content = new StringBuilder();
-        content.append("# ").append(IMPL_NAME).append(" cross-resolution status\n\n");
+        content.append("# ").append(IMPL_NAME).append(" status\n\n");
         if (!versionLine.isEmpty()) {
             content.append("Implementation: ").append(IMPL_NAME)
                    .append(" ").append(versionLine).append("\n\n");
         }
 
+        // DID Creation table from gen_results.json written by GenerateVectors
+        Path genResultsPath = IMPL_ROOT.resolve("gen_results.json");
+        if (Files.exists(genResultsPath)) {
+            try {
+                JsonNode genArr = MAPPER.readTree(Files.readString(genResultsPath));
+                if (genArr.isArray() && genArr.size() > 0) {
+                    content.append("## DID Creation\n\n");
+                    content.append("| Test Case | Result | Notes |\n|---|---|---|\n");
+                    for (JsonNode row : genArr) {
+                        content.append("| ").append(row.get("testCase").asText())
+                               .append(" | ").append(row.get("result").asText())
+                               .append(" | ").append(row.get("notes").asText())
+                               .append(" |\n");
+                    }
+                    content.append("\n");
+                }
+            } catch (Exception e) {
+                System.err.println("warning: could not read gen_results.json: " + e.getMessage());
+            }
+        }
+
+        content.append("## Cross-Resolution\n\n");
         content.append("| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n");
         for (String[] row : allRows) {
             content.append("| ").append(row[0]).append(" | ").append(row[1])

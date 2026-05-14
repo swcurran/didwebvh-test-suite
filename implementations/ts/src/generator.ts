@@ -457,6 +457,7 @@ async function runVectorTest(
 
 interface RowEntry { logSource: string; result: string; notes: string }
 interface DiffEntry { logSource: string; filename: string; diff: string }
+interface GenRow { testCase: string; result: string; notes: string }
 
 async function crossResolveStatus(
   scenarioName: string
@@ -539,6 +540,7 @@ async function main() {
     if (fs.existsSync(diffsPath)) fs.unlinkSync(diffsPath);
   }
 
+  const genRows: GenRow[] = [];
   const allRows: Array<{ testCase: string } & RowEntry> = [];
   const allDiffs: Array<{ testCase: string } & DiffEntry> = [];
 
@@ -550,6 +552,7 @@ async function main() {
       await processScript(scriptPath, verify);
       if (!verify) {
         console.log('done');
+        genRows.push({ testCase: name, result: '✅ PASS', notes: '' });
         process.stdout.write(`  Cross-resolving ${name}... `);
         const { rows, diffs } = await crossResolveStatus(name);
         for (const row of rows) allRows.push({ testCase: name, ...row });
@@ -562,18 +565,28 @@ async function main() {
       }
     } catch (e: any) {
       console.error(`ERROR: ${e.message}`);
+      if (!verify) genRows.push({ testCase: name, result: '❌ FAIL', notes: e.message });
       hasError = true;
     }
   }
 
-  if (!verify && allRows.length > 0) {
+  if (!verify && (genRows.length > 0 || allRows.length > 0)) {
     const cfg = readConfig();
     const header = cfg.version ? `Implementation: didwebvh-ts ${cfg.version}\n\n` : '';
+
+    const genTable = genRows.length > 0
+      ? `## DID Creation\n\n| Test Case | Result | Notes |\n|---|---|---|\n${genRows.map(r => `| ${r.testCase} | ${r.result} | ${r.notes} |`).join('\n')}\n\n`
+      : '';
+
     const tableRows = allRows
       .map(r => `| ${r.testCase} | ${r.logSource} | ${r.result} | ${r.notes} |`)
       .join('\n');
+    const crossTable = allRows.length > 0
+      ? `## Cross-Resolution\n\n| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n${tableRows}\n`
+      : '';
+
     fs.writeFileSync(statusPath,
-      `# ts cross-resolution status\n\n${header}| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n${tableRows}\n`
+      `# ts status\n\n${header}${genTable}${crossTable}`
     );
 
     if (allDiffs.length > 0) {

@@ -10,7 +10,7 @@ The approach is a **multi-implementation cross-resolution** pattern:
 
 1. Human-readable YAML scripts in `vectors/<scenario>/script.yaml` describe the intent of each test scenario.
 2. Each implementation reads the scripts and produces its own signed artifacts — committed under `vectors/<scenario>/<impl>/`.
-3. Each implementation resolves every other implementation's committed logs and writes `implementations/<impl>/status.md` (and `diffs.txt`) showing cross-resolution results.
+3. Each implementation generates its DID logs and resolves every other implementation's committed logs, then writes `implementations/<impl>/status.md` (and `diffs.txt`) showing both DID Creation results and cross-resolution results.
 4. Divergences surface as differences in `status.md` across implementations — these are candidates for Working Group discussion and spec clarification.
 
 There is no single "reference" implementation. The spec and Working Group are the arbiter of correctness.
@@ -43,7 +43,7 @@ implementations/
       generator.ts              # reads vectors/<scenario>/script.yaml, writes vectors/<scenario>/ts/
       cryptography.ts
       interfaces.ts
-    status.md                   # cross-resolution results (generated, do not edit by hand)
+    status.md                   # two sections: DID Creation + Cross-Resolution (generated, do not edit by hand)
     diffs.txt                   # diff details for any DIFF results
     config.yaml                 # implementation metadata (version, home_repo, commit)
   python/

@@ -1,4 +1,24 @@
-# java cross-resolution status
+# java status
+
+## DID Creation
+
+| Test Case | Result | Notes |
+|---|---|---|
+| basic-create | ✅ PASS |  |
+| basic-update | ✅ PASS |  |
+| deactivate | ✅ PASS |  |
+| key-rotation | ✅ PASS |  |
+| multi-update | ✅ PASS |  |
+| multiple-update-keys | ⚠️ SKIP | multiple-update-keys at create time not supported by ivir3zam API |
+| portable | ✅ PASS |  |
+| portable-move | ✅ PASS |  |
+| pre-rotation | ✅ PASS |  |
+| pre-rotation-consume | ⚠️ SKIP | resolver rejected generated log: Invalid DID log: signing key not in active updateKeys at entry 2 |
+| services | ✅ PASS |  |
+| witness-threshold | ✅ PASS |  |
+| witness-update | ✅ PASS |  |
+
+## Cross-Resolution
 
 | Test Case | Log Source | Result | Notes |
 |---|---|---|---|

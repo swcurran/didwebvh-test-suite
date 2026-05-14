@@ -469,6 +469,7 @@ name = "didwebvh-compliance"
 version = "0.1.0"
 dependencies = [
  "ahash",
+ "chrono",
  "didwebvh-rs",
  "hex",
  "serde",

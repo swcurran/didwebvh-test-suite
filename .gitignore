@@ -11,11 +11,16 @@ build/
 
 # Rust build output
 implementations/rust/target/
+implementations/rust/gen_results.json
 
 # Python virtualenv and cache
 implementations/python/.venv/
 implementations/python/__pycache__/
 implementations/python/.pytest_cache/
+implementations/python/gen_results.json
+
+implementations/java/gen_results.json
+implementations/java-eecc/gen_results.json
 
 # Claude Code local config
 CLAUDE.local.md

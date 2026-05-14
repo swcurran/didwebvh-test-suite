@@ -167,12 +167,33 @@ async fn main() {
         let header = if version.is_empty() { String::new() } else {
             format!("Implementation: didwebvh-rs {version}\n\n")
         };
+
+        let gen_results_path = impl_dir.join("gen_results.json");
+        let gen_table = match std::fs::read_to_string(&gen_results_path)
+            .ok()
+            .and_then(|s| serde_json::from_str::<Vec<Value>>(&s).ok())
+            .filter(|rows| !rows.is_empty())
+        {
+            Some(rows) => {
+                let rows_text = rows.iter()
+                    .map(|r| format!("| {} | {} | {} |",
+                        r["testCase"].as_str().unwrap_or(""),
+                        r["result"].as_str().unwrap_or(""),
+                        r["notes"].as_str().unwrap_or(""),
+                    ))
+                    .collect::<Vec<_>>()
+                    .join("\n");
+                format!("## DID Creation\n\n| Test Case | Result | Notes |\n|---|---|---|\n{rows_text}\n\n")
+            }
+            None => String::new(),
+        };
+
         let table_rows: String = all_rows.iter()
             .map(|(tc, ls, r, n)| format!("| {tc} | {ls} | {r} | {n} |"))
             .collect::<Vec<_>>()
             .join("\n");
         let content = format!(
-            "# rust cross-resolution status\n\n{header}| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n{table_rows}\n"
+            "# rust status\n\n{header}{gen_table}## Cross-Resolution\n\n| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n{table_rows}\n"
         );
         if let Err(e) = std::fs::write(&status_path, &content) {
             eprintln!("warning: could not write status.md: {e}");

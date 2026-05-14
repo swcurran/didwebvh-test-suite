@@ -1,4 +1,24 @@
-# java-eecc cross-resolution status
+# java-eecc status
+
+## DID Creation
+
+| Test Case | Result | Notes |
+|---|---|---|
+| basic-create | ✅ PASS |  |
+| basic-update | ✅ PASS |  |
+| deactivate | ✅ PASS |  |
+| key-rotation | ✅ PASS |  |
+| multi-update | ✅ PASS |  |
+| multiple-update-keys | ✅ PASS |  |
+| portable | ✅ PASS |  |
+| portable-move | ⚠️ SKIP | domain migration (portable-move) not supported by EECC UpdateOptions |
+| pre-rotation | ✅ PASS |  |
+| pre-rotation-consume | ✅ PASS |  |
+| services | ✅ PASS |  |
+| witness-threshold | ✅ PASS |  |
+| witness-update | ✅ PASS |  |
+
+## Cross-Resolution
 
 | Test Case | Log Source | Result | Notes |
 |---|---|---|---|

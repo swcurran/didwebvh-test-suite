@@ -252,6 +252,7 @@ async fn main() {
 
     let mut ok = 0u32;
     let mut err = 0u32;
+    let mut gen_rows: Vec<serde_json::Value> = Vec::new();
 
     for scenario in &scenarios {
         let name = scenario.file_name().to_string_lossy().to_string();
@@ -261,12 +262,24 @@ async fn main() {
         if !scenario.path().join("script.yaml").exists() { continue; }
         print!("generate {name} ... ");
         match run_scenario(&scenario.path()).await {
-            Ok(()) => { println!("ok"); ok += 1; }
-            Err(e) => { println!("ERROR: {e}"); err += 1; }
+            Ok(()) => {
+                println!("ok"); ok += 1;
+                gen_rows.push(json!({"testCase": name, "result": "✅ PASS", "notes": ""}));
+            }
+            Err(e) => {
+                println!("ERROR: {e}"); err += 1;
+                gen_rows.push(json!({"testCase": name, "result": "❌ FAIL", "notes": e}));
+            }
         }
     }
 
     println!("\n{ok} generated, {err} errors");
+
+    let gen_results_path = Path::new(env!("CARGO_MANIFEST_DIR")).join("gen_results.json");
+    if let Ok(s) = serde_json::to_string_pretty(&gen_rows) {
+        let _ = std::fs::write(&gen_results_path, s + "\n");
+    }
+
     if err > 0 { std::process::exit(1); }
 }
 

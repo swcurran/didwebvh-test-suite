@@ -79,12 +79,28 @@ def pytest_sessionfinish(session, exitstatus):
 
     version = _read_version()
     header = f"Implementation: did-webvh python {version}\n\n" if version else ""
+
+    gen_results_path = IMPL_DIR / "gen_results.json"
+    gen_table = ""
+    if gen_results_path.exists():
+        gen_rows = json.loads(gen_results_path.read_text())
+        if gen_rows:
+            rows_text = "\n".join(
+                f"| {r['testCase']} | {r['result']} | {r['notes']} |"
+                for r in gen_rows
+            )
+            gen_table = (
+                f"## DID Creation\n\n"
+                f"| Test Case | Result | Notes |\n|---|---|---|\n{rows_text}\n\n"
+            )
+
     table_rows = "\n".join(
         f"| {r['testCase']} | {r['logSource']} | {r['result']} | {r['notes']} |"
         for r in _rows
     )
     STATUS_PATH.write_text(
-        f"# python cross-resolution status\n\n{header}"
+        f"# python status\n\n{header}{gen_table}"
+        f"## Cross-Resolution\n\n"
         f"| Test Case | Log Source | Result | Notes |\n|---|---|---|---|\n{table_rows}\n"
     )
 

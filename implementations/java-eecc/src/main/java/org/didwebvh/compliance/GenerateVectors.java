@@ -37,8 +37,8 @@ public class GenerateVectors {
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    private static final Path VECTORS_ROOT = Paths.get(System.getProperty("user.dir"))
-            .resolve("../../vectors").normalize();
+    private static final Path IMPL_ROOT = Paths.get(System.getProperty("user.dir"));
+    private static final Path VECTORS_ROOT = IMPL_ROOT.resolve("../../vectors").normalize();
     private static final String IMPL_NAME = "java-eecc";
 
     // ---------------------------------------------------------------------------
@@ -67,6 +67,7 @@ public class GenerateVectors {
         }
 
         int generated = 0, skipped = 0, failed = 0;
+        List<String[]> genRows = new ArrayList<>();  // [testCase, result, notes]
         for (Path scenarioDir : scenarios) {
             Path scriptPath = scenarioDir.resolve("script.yaml");
             if (!Files.exists(scriptPath)) continue;
@@ -82,16 +83,34 @@ public class GenerateVectors {
                 processScenario(scenarioDir, script);
                 System.out.println("done");
                 generated++;
+                genRows.add(new String[]{scenarioName, "✅ PASS", ""});
             } catch (UnsupportedOperationException e) {
                 System.out.println("SKIP (" + e.getMessage() + ")");
                 skipped++;
+                genRows.add(new String[]{scenarioName, "⚠️ SKIP", e.getMessage()});
             } catch (Exception e) {
                 System.out.println("FAIL: " + e.getMessage());
                 e.printStackTrace(System.err);
                 failed++;
+                genRows.add(new String[]{scenarioName, "❌ FAIL", e.getMessage()});
             }
         }
         System.out.println("\n" + generated + " generated, " + skipped + " skipped, " + failed + " failed");
+
+        try {
+            ArrayNode genArr = MAPPER.createArrayNode();
+            for (String[] row : genRows) {
+                genArr.addObject()
+                        .put("testCase", row[0])
+                        .put("result", row[1])
+                        .put("notes", row[2]);
+            }
+            Files.writeString(IMPL_ROOT.resolve("gen_results.json"),
+                    MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(genArr));
+        } catch (Exception e) {
+            System.err.println("warning: could not write gen_results.json: " + e.getMessage());
+        }
+
         System.exit(failed > 0 ? 1 : 0);
     }
 
