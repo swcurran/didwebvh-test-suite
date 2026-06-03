@@ -110,3 +110,6 @@ Implementation: java-eecc 0.3.1
 | witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust | 🔶 DIFF | see diffs.txt |
 | witness-update | ts | 🔶 DIFF | see diffs.txt |
+
+---
+Built from: https://github.com/european-epc-competence-center/didwebvh @ main (c2bd56f)

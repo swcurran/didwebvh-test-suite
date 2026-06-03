@@ -110,3 +110,6 @@ Implementation: didwebvh-java 0.3.0-SNAPSHOT @ c50db5b
 | witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust | 🔶 DIFF | see diffs.txt |
 | witness-update | ts | 🔶 DIFF | see diffs.txt |
+
+---
+Built from: https://github.com/decentralized-identity/didwebvh-java @ main (220508b)

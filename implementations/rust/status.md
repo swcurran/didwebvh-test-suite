@@ -90,7 +90,7 @@ Implementation: didwebvh-rs 0.5.3 @ f8f7d751
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust (self) | ✅ PASS |  |
 | pre-rotation | ts | 🔶 DIFF | see diffs.txt |
-| pre-rotation-consume | java | ⚠️ SKIP | no did.jsonl |
+| pre-rotation-consume | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust (self) | ✅ PASS |  |
@@ -110,3 +110,6 @@ Implementation: didwebvh-rs 0.5.3 @ f8f7d751
 | witness-update | python | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
 | witness-update | rust (self) | ✅ PASS |  |
 | witness-update | ts | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
+
+---
+Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (f8f7d75)

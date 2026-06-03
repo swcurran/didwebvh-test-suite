@@ -80,6 +80,7 @@ def main():
         scenario_names = sorted(
             d.name for d in VECTORS_ROOT.iterdir()
             if d.is_dir() and (d / "script.yaml").exists()
+            and not yaml.safe_load((d / "script.yaml").read_text()).get("negative", False)
         )
 
     gen_rows = []

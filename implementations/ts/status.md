@@ -24,7 +24,7 @@ Implementation: didwebvh-ts 2.7.4
 
 | Test Case | Expected Error | Result | Notes |
 |---|---|---|---|
-| negative-cross-did-witness-replay | invalidDid | ❌ FAIL | expected error "invalidDid" but resolution succeeded |
+| negative-cross-did-witness-replay | invalidDid | ✅ PASS |  |
 | negative-did-key-body-fragment-mismatch | invalidProof | ✅ PASS |  |
 | negative-duplicate-witness-ids | invalidParameters | ✅ PASS |  |
 | negative-fragment-leaks-into-domain | invalidDid | ❌ FAIL | resolver fetched URL: https://127.0.0.1/.well-known/did.jsonl |
@@ -110,3 +110,6 @@ Implementation: didwebvh-ts 2.7.4
 | witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust | ❌ FAIL | Witness DIDs must be did:key format |
 | witness-update | ts (self) | ✅ PASS |  |
+
+---
+Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (ab41190)

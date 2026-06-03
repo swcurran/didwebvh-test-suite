@@ -5,7 +5,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -13,7 +13,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -103,7 +103,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -111,7 +111,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -200,7 +200,7 @@
 @@ -16,6 +16,19 @@
      ],
      "assertionMethod": [
-       "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+       "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 +    ],
 +    "service": [
 +      {
@@ -302,7 +302,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -310,7 +310,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -397,22 +397,22 @@
 --- expected
 +++ actual (python resolver)
 @@ -5,27 +5,31 @@
-     "controller": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com",
+     "controller": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com",
      "verificationMethod": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
-+        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#P5RDjVJG",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#P5RDjVJG",
          "type": "Multikey",
-         "controller": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com",
+         "controller": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com",
          "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
        }
      ],
      "authentication": [
--      "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
-+      "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#P5RDjVJG"
+-      "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++      "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#P5RDjVJG"
      ],
      "assertionMethod": [
-       "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+       "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
      ],
 +    "alsoKnownAs": [
 +      "did:web:example.com",
@@ -420,7 +420,7 @@
 +    ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -428,7 +428,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -436,16 +436,16 @@
 @@ -33,10 +37,10 @@
    },
    "didDocumentMetadata": {
-     "created": "2026-05-28T18:58:18Z",
--    "updated": "2026-05-28T18:58:18Z",
--    "versionId": "1-QmZJebdzMGB7sogtGWYdws7ieNuMExfD45iu6ZHs1LKEh5",
+     "created": "2026-06-03T22:45:32Z",
+-    "updated": "2026-06-03T22:45:32Z",
+-    "versionId": "1-QmfHRE2Leo6i2R6vUxJqjQPBE2np2jLD1otLziAHiz6vzh",
 -    "versionNumber": 1,
--    "versionTime": "2026-05-28T18:58:18Z",
-+    "updated": "2026-05-28T18:58:20Z",
-+    "versionId": "3-QmRXHVyqoXyw8LQRb5gHnXW2d6ATwaZX1atYyxrRZF9Zi9",
+-    "versionTime": "2026-06-03T22:45:32Z",
++    "updated": "2026-06-03T22:45:34Z",
++    "versionId": "3-QmUzAFH2RmPkJy8qLrGQfRa5WmhBqjf84mns3brmvo7isP",
 +    "versionNumber": 3,
-+    "versionTime": "2026-05-28T18:58:20Z",
-     "scid": "QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn"
++    "versionTime": "2026-06-03T22:45:34Z",
+     "scid": "QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN"
    },
    "didResolutionMetadata": {
 
@@ -453,7 +453,7 @@
 --- expected
 +++ actual (python resolver)
 @@ -18,17 +18,18 @@
-       "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+       "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
      ],
      "alsoKnownAs": [
 -      "did:web:example.com"
@@ -462,7 +462,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -470,7 +470,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -478,16 +478,16 @@
 @@ -36,10 +37,10 @@
    },
    "didDocumentMetadata": {
-     "created": "2026-05-28T18:58:18Z",
--    "updated": "2026-05-28T18:58:19Z",
--    "versionId": "2-QmNyKmg3uCTSSJjk41VgKxZkGjm9p56pcPf6QEWnGUUjBT",
+     "created": "2026-06-03T22:45:32Z",
+-    "updated": "2026-06-03T22:45:33Z",
+-    "versionId": "2-QmRdWPfdzAN2QgQ5AS6G1CWwDSUW8bgebswd4a5JmZuQGw",
 -    "versionNumber": 2,
--    "versionTime": "2026-05-28T18:58:19Z",
-+    "updated": "2026-05-28T18:58:20Z",
-+    "versionId": "3-QmRXHVyqoXyw8LQRb5gHnXW2d6ATwaZX1atYyxrRZF9Zi9",
+-    "versionTime": "2026-06-03T22:45:33Z",
++    "updated": "2026-06-03T22:45:34Z",
++    "versionId": "3-QmUzAFH2RmPkJy8qLrGQfRa5WmhBqjf84mns3brmvo7isP",
 +    "versionNumber": 3,
-+    "versionTime": "2026-05-28T18:58:20Z",
-     "scid": "QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn"
++    "versionTime": "2026-06-03T22:45:34Z",
+     "scid": "QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN"
    },
    "didResolutionMetadata": {
 
@@ -498,7 +498,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#files",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -506,7 +506,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmePZQxDW6wr4ohW61LLra4jm8SU3Go6EnCKcVbvzXkNtn:example.com#whois",
+-        "id": "did:webvh:QmP2Es4gZ6W77oZJRg4qMLUMjsXdVpG4X5cqPxBQkwvSjN:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -517,7 +517,7 @@
 +++ actual (python resolver)
 @@ -21,11 +21,15 @@
      "authentication": [
-       "did:webvh:QmXq3qKkf4miH65SnSpkaMbAcXixyR6JU4yt8p4W8ftGWx:example.com#P5RDjVJG"
+       "did:webvh:QmTa5pqxcyT2XtkDuEjcbqe2AHvX5uPbKVj8x3Ra5H2bKJ:example.com#P5RDjVJG"
      ],
 +    "alsoKnownAs": [
 +      "did:web:example.com",
@@ -535,16 +535,16 @@
 @@ -37,10 +41,10 @@
    },
    "didDocumentMetadata": {
-     "created": "2026-05-26T18:45:06Z",
--    "updated": "2026-05-26T18:45:06Z",
--    "versionId": "1-QmWc66oUVWRAdjUGAay4SAtdXL5721A8awa8ntha5TUrnJ",
+     "created": "2026-06-03T22:50:23Z",
+-    "updated": "2026-06-03T22:50:23Z",
+-    "versionId": "1-QmXJAKfDwYhhHf5BvucEbNs881FXTmEUD6GQkBfdNbYE36",
 -    "versionNumber": 1,
--    "versionTime": "2026-05-26T18:45:06Z",
-+    "updated": "2026-05-26T18:45:08Z",
-+    "versionId": "3-QmbFthJC5iCmPW4VSQxgjeHYw5RgsU1LHG1xHkY4NcUYvs",
+-    "versionTime": "2026-06-03T22:50:23Z",
++    "updated": "2026-06-03T22:50:25Z",
++    "versionId": "3-QmaJXzqv3w3de5sZjiMjTN3c2gScrJ8PbxiMpgxc6H47Vw",
 +    "versionNumber": 3,
-+    "versionTime": "2026-05-26T18:45:08Z",
-     "scid": "QmXq3qKkf4miH65SnSpkaMbAcXixyR6JU4yt8p4W8ftGWx"
++    "versionTime": "2026-06-03T22:50:25Z",
+     "scid": "QmTa5pqxcyT2XtkDuEjcbqe2AHvX5uPbKVj8x3Ra5H2bKJ"
    },
    "didResolutionMetadata": {
 
@@ -552,7 +552,7 @@
 --- expected
 +++ actual (python resolver)
 @@ -22,13 +22,14 @@
-       "did:webvh:QmXq3qKkf4miH65SnSpkaMbAcXixyR6JU4yt8p4W8ftGWx:example.com#P5RDjVJG"
+       "did:webvh:QmTa5pqxcyT2XtkDuEjcbqe2AHvX5uPbKVj8x3Ra5H2bKJ:example.com#P5RDjVJG"
      ],
      "alsoKnownAs": [
 -      "did:web:example.com"
@@ -571,16 +571,16 @@
 @@ -40,10 +41,10 @@
    },
    "didDocumentMetadata": {
-     "created": "2026-05-26T18:45:06Z",
--    "updated": "2026-05-26T18:45:07Z",
--    "versionId": "2-QmeJtPUqLYmrzPoMDbnADCzkp1baK39NvSCM6GoKnoaFgB",
+     "created": "2026-06-03T22:50:23Z",
+-    "updated": "2026-06-03T22:50:24Z",
+-    "versionId": "2-QmQFQ7MubBtfZg1bV3MtGpwuUNY8ahTkJHAcjnH1NRdNuX",
 -    "versionNumber": 2,
--    "versionTime": "2026-05-26T18:45:07Z",
-+    "updated": "2026-05-26T18:45:08Z",
-+    "versionId": "3-QmbFthJC5iCmPW4VSQxgjeHYw5RgsU1LHG1xHkY4NcUYvs",
+-    "versionTime": "2026-06-03T22:50:24Z",
++    "updated": "2026-06-03T22:50:25Z",
++    "versionId": "3-QmaJXzqv3w3de5sZjiMjTN3c2gScrJ8PbxiMpgxc6H47Vw",
 +    "versionNumber": 3,
-+    "versionTime": "2026-05-26T18:45:08Z",
-     "scid": "QmXq3qKkf4miH65SnSpkaMbAcXixyR6JU4yt8p4W8ftGWx"
++    "versionTime": "2026-06-03T22:50:25Z",
+     "scid": "QmTa5pqxcyT2XtkDuEjcbqe2AHvX5uPbKVj8x3Ra5H2bKJ"
    },
    "didResolutionMetadata": {
 
@@ -839,7 +839,7 @@
 === multi-update / ts — resolutionResult.1.json ===
 --- expected
 +++ actual (python resolver)
-@@ -21,6 +21,10 @@
+@@ -22,6 +22,10 @@
      "keyAgreement": [],
      "capabilityDelegation": [],
      "capabilityInvocation": [],
@@ -850,16 +850,16 @@
      "service": [
        {
          "id": "#files",
-@@ -37,10 +41,10 @@
+@@ -38,10 +42,10 @@
    },
    "didDocumentMetadata": {
      "created": "2000-01-01T00:00:00Z",
 -    "updated": "2000-01-01T00:00:00Z",
--    "versionId": "1-QmPFhMuZH9gjY2JZgyyrgRuFTywQ4mDhoKGVoGE8uy7hFD",
+-    "versionId": "1-Qme7MrtMydsarZEeqvYPfV39KFtW1bPzytSdF4QmTx4YJj",
 -    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z"
 +    "updated": "2000-01-03T00:00:00Z",
-+    "versionId": "3-QmcBmgKUvnyuNyVVUkZYzt3yor9QfAFm2hwGwToaLLH6HK",
++    "versionId": "3-QmQR2fWA8kbMWRSFjqXDeKG7PeW9p7MkTydvLiABUQjVSM",
 +    "versionNumber": 3,
 +    "versionTime": "2000-01-03T00:00:00Z"
    },
@@ -869,7 +869,7 @@
 === multi-update / ts — resolutionResult.2.json ===
 --- expected
 +++ actual (python resolver)
-@@ -22,7 +22,8 @@
+@@ -23,7 +23,8 @@
      "capabilityDelegation": [],
      "capabilityInvocation": [],
      "alsoKnownAs": [
@@ -879,16 +879,16 @@
      ],
      "service": [
        {
-@@ -40,10 +41,10 @@
+@@ -41,10 +42,10 @@
    },
    "didDocumentMetadata": {
      "created": "2000-01-01T00:00:00Z",
 -    "updated": "2000-01-02T00:00:00Z",
--    "versionId": "2-QmXbbxspnFjjt5FX9QEdn8C6D8FZJsFceQdoHFTx89fyT4",
+-    "versionId": "2-QmTWXUmXrDE4DyvQHJ45VyN5ujPcaSxTKjvVAVHAAtLwmt",
 -    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z"
 +    "updated": "2000-01-03T00:00:00Z",
-+    "versionId": "3-QmcBmgKUvnyuNyVVUkZYzt3yor9QfAFm2hwGwToaLLH6HK",
++    "versionId": "3-QmQR2fWA8kbMWRSFjqXDeKG7PeW9p7MkTydvLiABUQjVSM",
 +    "versionNumber": 3,
 +    "versionTime": "2000-01-03T00:00:00Z"
    },
@@ -980,7 +980,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.com#files",
+-        "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -988,7 +988,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.com#whois",
+-        "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -1078,47 +1078,47 @@
  {
 -  "didDocument": {
 -    "@context": "https://www.w3.org/ns/did/v1",
--    "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org",
--    "controller": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org",
+-    "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org",
+-    "controller": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org",
 -    "verificationMethod": [
 -      {
--        "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
+-        "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
 -        "type": "Multikey",
--        "controller": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org",
+-        "controller": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org",
 -        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -      }
 -    ],
 -    "authentication": [
--      "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+-      "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -    ],
 -    "assertionMethod": [
--      "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+-      "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -    ],
 -    "alsoKnownAs": [
--      "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.com"
+-      "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.com"
 -    ],
 -    "service": [
 -      {
--        "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org#files",
+-        "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org#files",
 -        "type": "relativeRef",
 -        "serviceEndpoint": "https://example.org/"
 -      },
 -      {
 -        "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org#whois",
+-        "id": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org#whois",
 -        "type": "LinkedVerifiablePresentation",
 -        "serviceEndpoint": "https://example.org/whois.vp"
 -      }
 -    ]
 -  },
 -  "didDocumentMetadata": {
--    "created": "2026-05-28T18:58:18Z",
--    "updated": "2026-05-28T18:58:19Z",
--    "versionId": "2-Qmc1XPRd8L7k3fP3qDeAXxWtPEUYbJCPDSSzXHMfsUzmL7",
+-    "created": "2026-06-03T22:45:32Z",
+-    "updated": "2026-06-03T22:45:33Z",
+-    "versionId": "2-QmcGgkab85aFJChUiV6fqaC721XtHmMuZVEN83nESNSVkY",
 -    "versionNumber": 2,
--    "versionTime": "2026-05-28T18:58:19Z",
+-    "versionTime": "2026-06-03T22:45:33Z",
 -    "portable": true,
--    "scid": "QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt"
+-    "scid": "QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo"
 -  },
 +  "didDocument": null,
 +  "didDocumentMetadata": null,
@@ -1130,8 +1130,8 @@
 +      "type": "https://didwebvh.info/main/resolution-errors/#did-log-id-mismatch",
 +      "title": "Document ID mismatch",
 +      "detail": "A DID Log File was found, but the id in the DID Document does not match the DID being resolved.",
-+      "found": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.org",
-+      "expected": "did:webvh:QmQiYG3nvN7emB3XFxk4PxE8z8w39vWZc8qAfRskN99BYt:example.com"
++      "found": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.org",
++      "expected": "did:webvh:QmWLw1hxPgKbtXHrozRqNEdEiovfrgQRYyhXzBzHcuBJzo:example.com"
 +    }
    }
  }
@@ -1146,25 +1146,25 @@
 -      "https://www.w3.org/ns/did/v1",
 -      "https://w3id.org/security/multikey/v1"
 -    ],
--    "id": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.org",
--    "controller": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.org",
+-    "id": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.org",
+-    "controller": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.org",
 -    "assertionMethod": [],
 -    "keyAgreement": [],
 -    "capabilityDelegation": [],
 -    "capabilityInvocation": [],
 -    "verificationMethod": [
 -      {
--        "id": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.com#P5RDjVJG",
+-        "id": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.com#P5RDjVJG",
 -        "type": "Multikey",
--        "controller": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.com",
+-        "controller": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.com",
 -        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -      }
 -    ],
 -    "authentication": [
--      "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.com#P5RDjVJG"
+-      "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.com#P5RDjVJG"
 -    ],
 -    "alsoKnownAs": [
--      "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.com"
+-      "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.com"
 -    ],
 -    "service": [
 -      {
@@ -1181,13 +1181,13 @@
 -    ]
 -  },
 -  "didDocumentMetadata": {
--    "created": "2026-05-26T18:45:06Z",
--    "updated": "2026-05-26T18:45:07Z",
--    "versionId": "2-QmcLmnXHhnTA6WMCwtskfLLmrGqPgtDF2foTVitB5vVhQj",
+-    "created": "2026-06-03T22:50:23Z",
+-    "updated": "2026-06-03T22:50:24Z",
+-    "versionId": "2-QmPaYsLvvQC3j8U4fzfT3vUUfnXTq84rC7u2YorobuzUEC",
 -    "versionNumber": 2,
--    "versionTime": "2026-05-26T18:45:07Z",
+-    "versionTime": "2026-06-03T22:50:24Z",
 -    "portable": true,
--    "scid": "QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv"
+-    "scid": "QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL"
 -  },
 +  "didDocument": null,
 +  "didDocumentMetadata": null,
@@ -1199,8 +1199,8 @@
 +      "type": "https://didwebvh.info/main/resolution-errors/#did-log-id-mismatch",
 +      "title": "Document ID mismatch",
 +      "detail": "A DID Log File was found, but the id in the DID Document does not match the DID being resolved.",
-+      "found": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.org",
-+      "expected": "did:webvh:QmVFPaPZ4UKDxXP18MV4bTtw2NpvmWJkWGYf4CohqMVfFv:example.com"
++      "found": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.org",
++      "expected": "did:webvh:QmbyS82FvyUEwNX4sMtW2Kz3UaNbNyByqoweTL2JLLm8SL:example.com"
 +    }
    }
  }
@@ -1276,7 +1276,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmNVNZuRuHpTQSwHymPCdrD2Tfu2iDJjEpiC18udqmY7oB:example.com#files",
+-        "id": "did:webvh:QmNkeAsdB8f5SDsHRcH6ngZDtwc2usb1usWQNHwjoMG6LD:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -1284,7 +1284,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmNVNZuRuHpTQSwHymPCdrD2Tfu2iDJjEpiC18udqmY7oB:example.com#whois",
+-        "id": "did:webvh:QmNkeAsdB8f5SDsHRcH6ngZDtwc2usb1usWQNHwjoMG6LD:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -1374,7 +1374,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmNVNZuRuHpTQSwHymPCdrD2Tfu2iDJjEpiC18udqmY7oB:example.com#files",
+-        "id": "did:webvh:QmNkeAsdB8f5SDsHRcH6ngZDtwc2usb1usWQNHwjoMG6LD:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -1382,7 +1382,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmNVNZuRuHpTQSwHymPCdrD2Tfu2iDJjEpiC18udqmY7oB:example.com#whois",
+-        "id": "did:webvh:QmNkeAsdB8f5SDsHRcH6ngZDtwc2usb1usWQNHwjoMG6LD:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -1472,7 +1472,7 @@
          "serviceEndpoint": "https://example.com/didcomm"
        },
        {
--        "id": "did:webvh:QmWGqHMYsShoNu8Sm1R9tLPGersH8EHwnqMEhJitruJ94M:example.com#files",
+-        "id": "did:webvh:QmdvhFKkNViXzZKY4dDJaLQepZN5CFWpM2aC2gKg2YXSTG:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -1480,7 +1480,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmWGqHMYsShoNu8Sm1R9tLPGersH8EHwnqMEhJitruJ94M:example.com#whois",
+-        "id": "did:webvh:QmdvhFKkNViXzZKY4dDJaLQepZN5CFWpM2aC2gKg2YXSTG:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -1553,7 +1553,7 @@
      ],
      "service": [
        {
--        "id": "did:webvh:QmVVo7PVBXzxBAvYrSLaauyoRK1tHUe81J8TxCYyuRe8Vy:example.com#files",
+-        "id": "did:webvh:QmSRxSc3PcKcxdzSjucaobArKu4BtoeCxG16Ng8xtMvKGJ:example.com#files",
 +        "id": "#files",
          "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
@@ -1561,7 +1561,7 @@
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmVVo7PVBXzxBAvYrSLaauyoRK1tHUe81J8TxCYyuRe8Vy:example.com#whois",
+-        "id": "did:webvh:QmSRxSc3PcKcxdzSjucaobArKu4BtoeCxG16Ng8xtMvKGJ:example.com#whois",
 +        "id": "#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
@@ -1681,43 +1681,43 @@
  {
 -  "didDocument": {
 -    "@context": "https://www.w3.org/ns/did/v1",
--    "id": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com",
--    "controller": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com",
+-    "id": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com",
+-    "controller": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com",
 -    "verificationMethod": [
 -      {
--        "id": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com#P5RDjVJG",
+-        "id": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com#P5RDjVJG",
 -        "type": "Multikey",
--        "controller": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com",
+-        "controller": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com",
 -        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -      }
 -    ],
 -    "authentication": [
--      "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com#P5RDjVJG"
+-      "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com#P5RDjVJG"
 -    ],
 -    "assertionMethod": [
--      "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+-      "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -    ],
 -    "service": [
 -      {
--        "id": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com#files",
+-        "id": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com#files",
 -        "type": "relativeRef",
 -        "serviceEndpoint": "https://example.com/"
 -      },
 -      {
 -        "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "did:webvh:QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7:example.com#whois",
+-        "id": "did:webvh:QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g:example.com#whois",
 -        "type": "LinkedVerifiablePresentation",
 -        "serviceEndpoint": "https://example.com/whois.vp"
 -      }
 -    ]
 -  },
 -  "didDocumentMetadata": {
--    "created": "2026-05-28T18:58:18Z",
--    "updated": "2026-05-28T18:58:19Z",
--    "versionId": "2-Qmd6iz7EYgtAVsYeEm1pwJpBuLkR2jGfqE2VihwSUiHLFH",
+-    "created": "2026-06-03T22:45:32Z",
+-    "updated": "2026-06-03T22:45:33Z",
+-    "versionId": "2-QmafDj7NWzBFB1V9nbFciEfWMMaYUaruuPqwRqD8tz1vfV",
 -    "versionNumber": 2,
--    "versionTime": "2026-05-28T18:58:19Z",
--    "scid": "QmT2kBTvMQ6o27mHTBke8EdRQY6M2iDjiqGPdFk7p8E1V7"
+-    "versionTime": "2026-06-03T22:45:33Z",
+-    "scid": "QmQRoyi7U6dZ358pFjfkdtmuVZs2XBUY35tq8hUn9eAF5g"
 -  },
 +  "didDocument": null,
 +  "didDocumentMetadata": null,
@@ -1830,25 +1830,26 @@
 === witness-update / ts — resolutionResult.json ===
 --- expected
 +++ actual (python resolver)
-@@ -1,48 +1,12 @@
+@@ -1,49 +1,12 @@
  {
 -  "didDocument": {
 -    "@context": [
 -      "https://www.w3.org/ns/did/v1",
 -      "https://w3id.org/security/multikey/v1"
 -    ],
--    "id": "did:webvh:QmTYXE8TR3uLUWWrefCtFCLhdFWDBk7Eyq5DQRmiHFVAEL:example.com",
--    "controller": "did:webvh:QmTYXE8TR3uLUWWrefCtFCLhdFWDBk7Eyq5DQRmiHFVAEL:example.com",
+-    "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
+-    "controller": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
 -    "verificationMethod": [
 -      {
 -        "type": "Multikey",
 -        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
 -        "purpose": "authentication",
--        "id": "did:webvh:QmTYXE8TR3uLUWWrefCtFCLhdFWDBk7Eyq5DQRmiHFVAEL:example.com#P5RDjVJG"
+-        "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#P5RDjVJG",
+-        "controller": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com"
 -      }
 -    ],
 -    "authentication": [
--      "did:webvh:QmTYXE8TR3uLUWWrefCtFCLhdFWDBk7Eyq5DQRmiHFVAEL:example.com#P5RDjVJG"
+-      "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#P5RDjVJG"
 -    ],
 -    "assertionMethod": [],
 -    "keyAgreement": [],
@@ -1871,7 +1872,7 @@
 -  "didDocumentMetadata": {
 -    "created": "2000-01-01T00:00:00Z",
 -    "updated": "2000-01-02T00:00:00Z",
--    "versionId": "2-QmUypo5ojQ7vyTXuju5XudsLcgYbXfwmVb39JePLT8oYgw",
+-    "versionId": "2-QmcRmyDP523pLsvKvr49BNEVsevhjNGYZhxMGtPyhut9Hy",
 -    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z"
 -  },

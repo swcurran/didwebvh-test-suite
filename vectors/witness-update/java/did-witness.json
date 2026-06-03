@@ -1,35 +1,35 @@
 [
   {
-    "versionId": "1-QmdhcqsVbZ9KsVKbZDeksJueuF8uX8KvH8v8eocCK5i427",
+    "versionId": "1-QmXYfGpxqjJkBQgzm4j1aKkvNHN63WhdAj6C9aAPa6Afxj",
     "proof": [
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
-        "created": "2026-05-28T18:58:18Z",
+        "created": "2026-06-03T22:51:53Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z5yxKwYxm2tWiKcN7KaGbkSceFiSKvc3sSjv3m8Vp9FkE3kHxEQJy78WXWkQH52k4vQUPkfpJM3d1ye3RvZGAJrER"
+        "proofValue": "z4qzWRiuDE4sjEVmm4jmccbnofUcQ1s7Fvu33nkYsNBUvbKFWgcmnkwZqR7iTp55EnQrWXgyGxo7SkNWcHJJWrm7h"
       },
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP#z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP",
-        "created": "2026-05-28T18:58:18Z",
+        "created": "2026-06-03T22:51:53Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z3NCmGG8NKpr8Zh8BoFRmTW3n8zooVSnn2bxfX8v8Qbr8UVV8M5c2FzaeKJacoVsAP3rNEX4W6w85MHePXa2jQdNX"
+        "proofValue": "z2otizzaJ8GrQa2ns2Aq9UaimLS8WkpH81wMZccR8eFLBVGuoRWzoEmpA7aqKArqxCLESctWN1hn9wsnhyo8i98Fj"
       }
     ]
   },
   {
-    "versionId": "2-Qmd6iz7EYgtAVsYeEm1pwJpBuLkR2jGfqE2VihwSUiHLFH",
+    "versionId": "2-QmTBehaJfJ6FF694BUzfvt87VHBYTLvbGZLb4R8bXcbPHe",
     "proof": [
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
-        "created": "2026-05-28T18:58:18Z",
+        "created": "2026-06-03T22:51:53Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z3CYgQAcTTLv4vTahCbJrzs9GFToakrDGPYZXJYj1vknXW4drXbTZnoqaqfw4EyZzBnwk2hpSvGXHVeaawq6Xp7Db"
+        "proofValue": "zsAECEAWvPDXVRpyo3YwWuDLz8KFtaxnaKtwPHVgeqqMaTKDACAAbsaizUjdmQBSM78MjCPkDJhykr8uMSLTSPB2"
       }
     ]
   }

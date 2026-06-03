@@ -119,3 +119,6 @@ Implementation: did-webvh python 1.0.0
 | witness-update | python | ✅ PASS |  |
 | witness-update | rust | 🔶 DIFF | see diffs.txt |
 | witness-update | ts | 🔶 DIFF | see diffs.txt |
+
+---
+Built from: https://github.com/decentralized-identity/didwebvh-py @ main (dc32e19)

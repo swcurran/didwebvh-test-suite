@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# run-all [<impl> ...]
+#
+# Two-pass run of all (or specified) implementations.
+#
+# Pass 1 — each impl generates its own fresh vectors and cross-resolves
+#           whatever other impls have committed so far.
+# Pass 2 — all impls cross-resolve with the now-fresh vectors from pass 1.
+#
+# Run a subset:  scripts/run-all ts python
+# Run all:       scripts/run-all
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+RUN="$SCRIPT_DIR/run"
+
+ALL_IMPLS=(ts python rust java java-eecc)
+
+if [[ $# -gt 0 ]]; then
+  IMPLS=("$@")
+else
+  IMPLS=("${ALL_IMPLS[@]}")
+fi
+
+echo ""
+echo "════════════════════════════════════════════"
+echo "  Pass 1: generate + resolve (may be stale)"
+echo "════════════════════════════════════════════"
+for impl in "${IMPLS[@]}"; do
+  "$RUN" "$impl"
+  echo ""
+done
+
+echo ""
+echo "════════════════════════════════════════════"
+echo "  Pass 2: resolve with fresh vectors"
+echo "════════════════════════════════════════════"
+for impl in "${IMPLS[@]}"; do
+  "$RUN" "$impl"
+  echo ""
+done
+
+echo "✅ run-all complete"
