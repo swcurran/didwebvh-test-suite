@@ -1,5 +1,7 @@
 # ts status
 
+Implementation: didwebvh-ts 2.7.4
+
 ## DID Creation
 
 | Test Case | Result | Notes |
@@ -88,7 +90,7 @@
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation | ts (self) | ✅ PASS |  |
-| pre-rotation-consume | java | ⚠️ SKIP | no did.jsonl |
+| pre-rotation-consume | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust | 🔶 DIFF | see diffs.txt |

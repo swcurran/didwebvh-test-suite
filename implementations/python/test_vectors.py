@@ -77,27 +77,6 @@ def _version_number_from_stem(stem: str) -> int | None:
     return None
 
 
-# ---------------------------------------------------------------------------
-# Pre-flight checks for known hard failures
-# ---------------------------------------------------------------------------
-
-def _log_has_empty_next_key_hashes(log_path: Path) -> bool:
-    """
-    TS COMPAT ISSUE — nextKeyHashes: []
-    The TS generator writes nextKeyHashes: [] for every non-pre-rotation entry
-    (it always serialises the field, defaulting to an empty list).
-    The Python library rejects an empty list during update validation.
-    Single-entry logs (create only) are not affected.
-    """
-    lines = log_path.read_text().splitlines()
-    if len(lines) < 2:
-        return False
-    for line in lines:
-        params = json.loads(line).get("parameters", {})
-        if params.get("nextKeyHashes") == []:
-            return True
-    return False
-
 
 # ---------------------------------------------------------------------------
 # TS COMPAT normalizations applied to the actual (Python) result
@@ -179,13 +158,6 @@ def _status_data(request):
 def test_vector(scenario: str, impl: str, result_file: str, _status_data: dict) -> None:
     log = VECTORS_ROOT / scenario / impl / "did.jsonl"
     expected = json.loads((VECTORS_ROOT / scenario / impl / result_file).read_text())
-
-    if _log_has_empty_next_key_hashes(log):
-        pytest.xfail(
-            "TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation "
-            "entries; Python library rejects an empty list. Fix: TS should omit the "
-            "field when empty, OR Python should accept []."
-        )
 
     did = json.loads(log.read_text().splitlines()[0])["state"]["id"]
 

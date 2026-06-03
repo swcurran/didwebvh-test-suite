@@ -1,5 +1,7 @@
 # python status
 
+Implementation: did-webvh python 1.0.0
+
 ## DID Creation
 
 | Test Case | Result | Notes |
@@ -52,17 +54,17 @@
 | basic-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | basic-update | python | 🔶 DIFF | see diffs.txt |
 | basic-update | rust | 🔶 DIFF | see diffs.txt |
-| basic-update | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| basic-update | ts | ✅ PASS |  |
 | deactivate | java | 🔶 DIFF | see diffs.txt |
 | deactivate | java-eecc | 🔶 DIFF | see diffs.txt |
 | deactivate | python | 🔶 DIFF | see diffs.txt |
 | deactivate | rust | 🔶 DIFF | see diffs.txt |
-| deactivate | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| deactivate | ts | ✅ PASS |  |
 | key-rotation | java | 🔶 DIFF | see diffs.txt |
 | key-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | key-rotation | python | 🔶 DIFF | see diffs.txt |
 | key-rotation | rust | 🔶 DIFF | see diffs.txt |
-| key-rotation | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| key-rotation | ts | ✅ PASS |  |
 | multi-update | java | 🔶 DIFF | see diffs.txt |
 | multi-update | java | 🔶 DIFF | see diffs.txt |
 | multi-update | java | 🔶 DIFF | see diffs.txt |
@@ -75,13 +77,13 @@
 | multi-update | rust | 🔶 DIFF | see diffs.txt |
 | multi-update | rust | 🔶 DIFF | see diffs.txt |
 | multi-update | rust | 🔶 DIFF | see diffs.txt |
-| multi-update | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
-| multi-update | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
-| multi-update | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| multi-update | ts | 🔶 DIFF | see diffs.txt |
+| multi-update | ts | 🔶 DIFF | see diffs.txt |
+| multi-update | ts | ✅ PASS |  |
 | multiple-update-keys | java-eecc | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | python | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | rust | 🔶 DIFF | see diffs.txt |
-| multiple-update-keys | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| multiple-update-keys | ts | ✅ PASS |  |
 | portable | java | 🔶 DIFF | see diffs.txt |
 | portable | java-eecc | 🔶 DIFF | see diffs.txt |
 | portable | python | 🔶 DIFF | see diffs.txt |
@@ -91,12 +93,13 @@
 | portable-move | java-eecc | 🔶 DIFF | see diffs.txt |
 | portable-move | python | 🔶 DIFF | see diffs.txt |
 | portable-move | rust | 🔶 DIFF | see diffs.txt |
-| portable-move | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| portable-move | ts | ✅ PASS |  |
 | pre-rotation | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation | ts | ✅ PASS |  |
+| pre-rotation-consume | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust | 🔶 DIFF | see diffs.txt |
@@ -105,7 +108,7 @@
 | services | java-eecc | 🔶 DIFF | see diffs.txt |
 | services | python | 🔶 DIFF | see diffs.txt |
 | services | rust | 🔶 DIFF | see diffs.txt |
-| services | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| services | ts | ✅ PASS |  |
 | witness-threshold | java | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
@@ -115,4 +118,4 @@
 | witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-update | python | ✅ PASS |  |
 | witness-update | rust | 🔶 DIFF | see diffs.txt |
-| witness-update | ts | ⚠️ XFAIL | TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation entries; Python library rejects an empty list. Fix |
+| witness-update | ts | 🔶 DIFF | see diffs.txt |
