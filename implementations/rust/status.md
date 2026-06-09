@@ -105,7 +105,7 @@ Implementation: didwebvh-rs 0.5.3 @ ad614934
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
 | witness-threshold | rust (self) | ✅ PASS |  |
 | witness-threshold | ts | 🔶 DIFF | see diffs.txt |
-| witness-update | java | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
+| witness-update | java | 🔶 DIFF | see diffs.txt |
 | witness-update | java-eecc | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
 | witness-update | python | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
 | witness-update | rust (self) | ✅ PASS |  |
