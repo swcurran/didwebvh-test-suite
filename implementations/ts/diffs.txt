@@ -6,7 +6,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmdGGvtwr51pxxA62eSGjHiADYtTxszWGuVLvcbRmRbbg5:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -14,17 +14,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmdGGvtwr51pxxA62eSGjHiADYtTxszWGuVLvcbRmRbbg5:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:52Z",
-     "versionId": "1-QmQgHdvfcb6HttiaPxvxy5GgvFQoCm5wXxcYLMdDPzJkDt",
+     "updated": "2026-06-09T14:45:21Z",
+     "versionId": "1-QmZokFhyfBGb8kUYzQBNXNPTNZ22xCc4GJ3XB8BF7nazqD",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:51:52Z"
--    "versionTime": "2026-06-03T22:51:52Z",
--    "scid": "QmdGGvtwr51pxxA62eSGjHiADYtTxszWGuVLvcbRmRbbg5"
++    "versionTime": "2026-06-09T14:45:21Z"
+-    "versionTime": "2026-06-09T14:45:21Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -42,12 +42,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:11Z",
-     "versionId": "1-QmQ4HgWMKXpwk26d7YTzJqoiNBJY3sjvPk5cgB5xw6zEA4",
+     "updated": "2026-06-09T14:45:47Z",
+     "versionId": "1-QmYyrWigowpnwbfNUTAju3CsGxnRAwvW84jTzYR5nb4HSm",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:52:11Z"
--    "versionTime": "2026-06-03T22:52:11Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:47Z"
+-    "versionTime": "2026-06-09T14:45:47Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -158,7 +158,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -166,17 +166,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -39,8 +39,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-QmSVqAUJmFk972BcC5Q7QjVRKkLrWzrATmgrKyWYQBGrPV",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmaP8i8Xkez6EAWPYF8QzuwqS7rjvAWmVFGkjDhRKauqL9",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -194,12 +194,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -43,8 +43,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-QmXgoJdXhcHLZTavuAGr3mFaU32gyUuidwN3mkNvBjV9NY",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmWir2uLWbYcGi166ug2WKD7rinN9VveJtq95spehS4WRa",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -308,7 +308,7 @@
 @@ -16,6 +16,19 @@
      ],
      "assertionMethod": [
-       "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+       "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 +    ],
 +    "service": [
 +      {
@@ -326,12 +326,12 @@
    },
    "didDocumentMetadata": {
 @@ -24,8 +37,7 @@
-     "versionId": "2-QmUreaWvnHSdFsrUSPkxdjeP9jjL5EUb3nnHPGz9b7WQtb",
+     "versionId": "2-QmURStrDavPF1tXG5xNgabEPfsHDLB3ioty7rBrgFzCTqV",
      "versionNumber": 2,
-     "versionTime": "2026-06-03T22:51:54Z",
+     "versionTime": "2026-06-09T14:45:22Z",
 +    "deactivated": true
 -    "deactivated": true,
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -349,12 +349,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -41,8 +41,7 @@
-     "versionId": "2-QmWnBzC5p2KmVPkbJGVZX3AZajDYLfapmRakWYs1pYMTeQ",
+     "versionId": "2-QmTKTQwF6Bp5tAiSnxNYrWs4YGxm9kJRuRggbzFJNpwD9K",
      "versionNumber": 2,
-     "versionTime": "2026-06-03T22:52:12Z",
+     "versionTime": "2026-06-09T14:45:48Z",
 +    "deactivated": true
 -    "deactivated": true,
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -446,10 +446,10 @@
 -    "deactivated": true,
 -    "portable": false,
 -    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2026-06-03T23:04:56Z",
-     "versionId": "2-QmVzMc7j2APazvjcoRzt9AMaqYt9VdZ9S9DsQhWjmuRnxn",
+     "updated": "2026-06-09T14:44:27Z",
+     "versionId": "2-QmaSwTnQnvJ4HKNHiCDbKAAdsnmrdB6o3aTSkRiQwviWz2",
      "versionNumber": 2,
-     "versionTime": "2026-06-03T23:04:56Z",
+     "versionTime": "2026-06-09T14:44:27Z",
 +    "deactivated": true
 -    "watchers": null,
 -    "witness": null
@@ -465,7 +465,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -473,17 +473,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-QmcEpfe8s7zwGhA3VukdVvPS79BuCT4bWiSaQenokXp1CN",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmaKvRqtGjfK4pH5JkqSaFW6jgiTDuF7zQ42cBrUAnKfio",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -501,12 +501,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-Qmdq9jetRPfUiEkM1SboxGfu3N5rahgcuVTQ6d4UNkDoyH",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmWkqcDPxyAzHxJSXqDDc7xSgmHbZPDwXv2AG79Ki4FFfC",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -617,7 +617,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -625,17 +625,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:53Z",
-     "versionId": "1-QmZ5TCWrMKpriVFWU91M753cL7seXfqDZ7SCJZCbxi7BFf",
+     "updated": "2026-06-09T14:45:21Z",
+     "versionId": "1-QmZokFhyfBGb8kUYzQBNXNPTNZ22xCc4GJ3XB8BF7nazqD",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:51:53Z"
--    "versionTime": "2026-06-03T22:51:53Z",
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
++    "versionTime": "2026-06-09T14:45:21Z"
+-    "versionTime": "2026-06-09T14:45:21Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -648,7 +648,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -656,17 +656,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -39,8 +39,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-QmSVqAUJmFk972BcC5Q7QjVRKkLrWzrATmgrKyWYQBGrPV",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmaP8i8Xkez6EAWPYF8QzuwqS7rjvAWmVFGkjDhRKauqL9",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -679,7 +679,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -687,17 +687,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
+-        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:51:55Z",
-     "versionId": "3-QmS6hD6haDJJTtvA6VcYnz7Wws5QoLQiQjqwMXnDtvAMR5",
+     "updated": "2026-06-09T14:45:23Z",
+     "versionId": "3-QmYFwaBAB4gwV9N9srj5Kh1ybnNiP2CRiH7fTMn5rRDRVk",
      "versionNumber": 3,
-+    "versionTime": "2026-06-03T22:51:55Z"
--    "versionTime": "2026-06-03T22:51:55Z",
--    "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB"
++    "versionTime": "2026-06-09T14:45:23Z"
+-    "versionTime": "2026-06-09T14:45:23Z",
+-    "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -715,12 +715,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:11Z",
-     "versionId": "1-QmQ4HgWMKXpwk26d7YTzJqoiNBJY3sjvPk5cgB5xw6zEA4",
+     "updated": "2026-06-09T14:45:47Z",
+     "versionId": "1-QmYyrWigowpnwbfNUTAju3CsGxnRAwvW84jTzYR5nb4HSm",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:52:11Z"
--    "versionTime": "2026-06-03T22:52:11Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:47Z"
+-    "versionTime": "2026-06-09T14:45:47Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -738,12 +738,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -43,8 +43,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-QmXgoJdXhcHLZTavuAGr3mFaU32gyUuidwN3mkNvBjV9NY",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmWir2uLWbYcGi166ug2WKD7rinN9VveJtq95spehS4WRa",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -761,12 +761,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -44,8 +44,7 @@
-     "updated": "2026-06-03T22:52:13Z",
-     "versionId": "3-QmUkKkcgaBe3o1YFVkXEEXy2UmXo2hu31WbSzRfq37XaPD",
+     "updated": "2026-06-09T14:45:49Z",
+     "versionId": "3-QmcuF4oZHFD7EK8Js7D4HpHQaHVtVeBvgMb473x2m4fTGp",
      "versionNumber": 3,
-+    "versionTime": "2026-06-03T22:52:13Z"
--    "versionTime": "2026-06-03T22:52:13Z",
--    "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
++    "versionTime": "2026-06-09T14:45:49Z"
+-    "versionTime": "2026-06-09T14:45:49Z",
+-    "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1100,12 +1100,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -50,8 +50,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-QmZgRJSch8rRofnGmMezMPrSZsguKQw3vnXnfuHQBfNZ6r",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmdRMhqonkwf2KPYEXjj4yYHtbxDfK9nztWbfUAgt31Gom",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
--    "scid": "QmVuvHSJDbpStCjwNYFr4gvRrrWufUNkzPSs917VKWJKhx"
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
+-    "scid": "QmSVH4JwnhyGAySHXyvvufkH8d6ZEu8mGdtPm9hkqVLp1P"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1216,7 +1216,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.com#files",
+-        "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -1224,18 +1224,18 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.com#whois",
+-        "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,9 +36,7 @@
-     "updated": "2026-06-03T22:51:53Z",
-     "versionId": "1-QmQJqfaNABjEtP13eJRpDqJvbE9Xdcsf4oUuZcom58FGYi",
+     "updated": "2026-06-09T14:45:21Z",
+     "versionId": "1-QmXcLiQaxLoSMuN8WzirtSvZjUizAh1uGfonWs1yzghGtw",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:51:53Z"
--    "versionTime": "2026-06-03T22:51:53Z",
++    "versionTime": "2026-06-09T14:45:21Z"
+-    "versionTime": "2026-06-09T14:45:21Z",
 -    "portable": true,
--    "scid": "QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w"
+-    "scid": "QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1253,13 +1253,13 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,9 +40,7 @@
-     "updated": "2026-06-03T22:52:11Z",
-     "versionId": "1-QmampfMfZcidgJBDFyuBgypggz37mKPkN2YVAhVgfXos7x",
+     "updated": "2026-06-09T14:45:47Z",
+     "versionId": "1-QmXxBWTePh9dP6jzaqbpZiZcioJasfbmzMMeXkmatAbGmU",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:52:11Z"
--    "versionTime": "2026-06-03T22:52:11Z",
++    "versionTime": "2026-06-09T14:45:47Z"
+-    "versionTime": "2026-06-09T14:45:47Z",
 -    "portable": true,
--    "scid": "QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c"
+-    "scid": "QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1370,7 +1370,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.org#files",
+-        "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.org#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.org"
 -        "serviceEndpoint": "https://example.org/"
@@ -1378,18 +1378,18 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.org#whois",
+-        "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.org#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.org/whois.vp"
        }
 @@ -39,9 +39,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-QmdAmztkDdZsgLV52VTDiixvE5YpLaFdWE2hcPBJgM3ug7",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmU9keYaqnFsQsmgqSLXZEJHFVpkie8cSKSpPq2Gjx2kkh",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
 -    "portable": true,
--    "scid": "QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w"
+-    "scid": "QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1407,13 +1407,13 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -43,9 +43,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-QmPNf7tKqeht7WyhuBV1Urowmg9j8Ja7FjKqpv7RJWDCpq",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmZyZX7mguT1bG1Gjom8FWwJhiDz9rW9zDDraduUoiUU4N",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
 -    "portable": true,
--    "scid": "QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c"
+-    "scid": "QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1524,7 +1524,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#files",
+-        "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -1532,17 +1532,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#whois",
+-        "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:53Z",
-     "versionId": "1-QmUDyYTQu85kaZx893Htf4fYzXs2k9JmQiANaK3ngsXjzk",
+     "updated": "2026-06-09T14:45:21Z",
+     "versionId": "1-QmSZe6hL5s2qmTsJ5d3WFH4bdwECohdrb8X5PTPa1uDJ6o",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:51:53Z"
--    "versionTime": "2026-06-03T22:51:53Z",
--    "scid": "QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W"
++    "versionTime": "2026-06-09T14:45:21Z"
+-    "versionTime": "2026-06-09T14:45:21Z",
+-    "scid": "Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1560,12 +1560,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:11Z",
-     "versionId": "1-QmbLMANKvAruGTYN7VMqErTRRaePecfoaTBngRMWqELwo3",
+     "updated": "2026-06-09T14:45:47Z",
+     "versionId": "1-QmTp8Ad5po7QAPGHymVjnLDCPNXSpHFvYQ53iqucVa4XRR",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:52:11Z"
--    "versionTime": "2026-06-03T22:52:11Z",
--    "scid": "QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg"
++    "versionTime": "2026-06-09T14:45:47Z"
+-    "versionTime": "2026-06-09T14:45:47Z",
+-    "scid": "QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1676,7 +1676,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#files",
+-        "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -1684,17 +1684,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#whois",
+-        "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:55Z",
-     "versionId": "3-QmXsjrPMmzju3kkL39HDQwUziSJwJke2FEVcat3bNTz5nh",
+     "updated": "2026-06-09T14:45:23Z",
+     "versionId": "3-QmTmUR9CAqrHhWJfomT1a3xLyjQJ7aLyYufP3Cu2Z81PCb",
      "versionNumber": 3,
-+    "versionTime": "2026-06-03T22:51:55Z"
--    "versionTime": "2026-06-03T22:51:55Z",
--    "scid": "QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W"
++    "versionTime": "2026-06-09T14:45:23Z"
+-    "versionTime": "2026-06-09T14:45:23Z",
+-    "scid": "Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1712,12 +1712,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:13Z",
-     "versionId": "3-QmNPPpYMieX4dqxDtUbGvaH7EzYcoxMzULZcQw4kjWBHi8",
+     "updated": "2026-06-09T14:45:49Z",
+     "versionId": "3-QmcJdgjJ7Tmc7GMdxSzNdSjHj96QprK67Qyi27VwkEeboH",
      "versionNumber": 3,
-+    "versionTime": "2026-06-03T22:52:13Z"
--    "versionTime": "2026-06-03T22:52:13Z",
--    "scid": "QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg"
++    "versionTime": "2026-06-09T14:45:49Z"
+-    "versionTime": "2026-06-09T14:45:49Z",
+-    "scid": "QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1828,7 +1828,7 @@
        },
        {
 +        "id": "#files",
--        "id": "did:webvh:QmPah1W6qvZa8fEADq8YP5hLgsRMbS4d3D76pCmzYA2a2g:example.com#files",
+-        "id": "did:webvh:QmNmNNVuPrdxMCWvdLDNm3H9R9PMPCnkK8Vk9r5LsztN7S:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -1836,17 +1836,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmPah1W6qvZa8fEADq8YP5hLgsRMbS4d3D76pCmzYA2a2g:example.com#whois",
+-        "id": "did:webvh:QmNmNNVuPrdxMCWvdLDNm3H9R9PMPCnkK8Vk9r5LsztN7S:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -46,8 +46,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-Qmb15PEzQwTDGWq9PWHxcxdWEhA7cETQQeU3yNf3iJJohi",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmYyHJ7rVfZpzikFmtetcmuhvNfqHyVy8HzqyKv3vtPZK7",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
--    "scid": "QmPah1W6qvZa8fEADq8YP5hLgsRMbS4d3D76pCmzYA2a2g"
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
+-    "scid": "QmNmNNVuPrdxMCWvdLDNm3H9R9PMPCnkK8Vk9r5LsztN7S"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1864,12 +1864,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -50,8 +50,7 @@
-     "updated": "2026-06-03T22:52:12Z",
-     "versionId": "2-QmZYyq8W8SJuVnFwECdrqjgJpqn9QA3VGh3S4gSA8k6eUA",
+     "updated": "2026-06-09T14:45:48Z",
+     "versionId": "2-QmQ52JJ5HDYbCfLqYKQxkKysfWYtDhhqi1qGJcEWg6UAs6",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
--    "versionTime": "2026-06-03T22:52:12Z",
--    "scid": "QmdxDH5hV91DgUBK5RwdNUySFMmSu2NjjaHWh51UvXi5sF"
++    "versionTime": "2026-06-09T14:45:48Z"
+-    "versionTime": "2026-06-09T14:45:48Z",
+-    "scid": "QmYRvj3Qi1GaKGTsXQLxs5wCHCgPv5hdiqUL91dc9Uuezn"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -1965,7 +1965,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:Qmcq2qMK5ZTatFkPhvgDGTJe52zFGTLJCDPoc4bns2ZA3U:example.com#files",
+-        "id": "did:webvh:QmQ18rwBv4Rv7xZkzGMXVctGTtgHoNAaZ4LvLKK6rMVTRz:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -1973,17 +1973,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:Qmcq2qMK5ZTatFkPhvgDGTJe52zFGTLJCDPoc4bns2ZA3U:example.com#whois",
+-        "id": "did:webvh:QmQ18rwBv4Rv7xZkzGMXVctGTtgHoNAaZ4LvLKK6rMVTRz:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:53Z",
-     "versionId": "1-QmVKfJQPjWHeRMxouLps6c5WmmyGsiuNWT5CUexBHzNT8s",
+     "updated": "2026-06-09T14:45:21Z",
+     "versionId": "1-Qme1KApwwisQRij3MN4cDRt1J9F4U3cmDEJGkMT3QTKEDM",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:51:53Z"
--    "versionTime": "2026-06-03T22:51:53Z",
--    "scid": "Qmcq2qMK5ZTatFkPhvgDGTJe52zFGTLJCDPoc4bns2ZA3U"
++    "versionTime": "2026-06-09T14:45:21Z"
+-    "versionTime": "2026-06-09T14:45:21Z",
+-    "scid": "QmQ18rwBv4Rv7xZkzGMXVctGTtgHoNAaZ4LvLKK6rMVTRz"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -2001,12 +2001,12 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 @@ -40,8 +40,7 @@
-     "updated": "2026-06-03T22:52:11Z",
-     "versionId": "1-QmbGMMB1ouwqQahcaErV1VvJguwRL3SeB9vGFcwB8hw3nX",
+     "updated": "2026-06-09T14:45:47Z",
+     "versionId": "1-QmUvUCyaTnPWAYHmCcXmiJtjrbBReNqacVEL6823q6mQrb",
      "versionNumber": 1,
-+    "versionTime": "2026-06-03T22:52:11Z"
--    "versionTime": "2026-06-03T22:52:11Z",
--    "scid": "QmNUYzJ5o5dVgN4f318qAkQtpMwExFrySwzu7ZWmNYGCd6"
++    "versionTime": "2026-06-09T14:45:47Z"
+-    "versionTime": "2026-06-09T14:45:47Z",
+-    "scid": "QmPm3CAo8hKFUUPqVsRuBZvnnYdTX43uodqrFhWNSCNWiT"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -2058,6 +2058,71 @@
 -  "didResolutionMetadata": null
  }
 
+=== witness-threshold / rust — resolutionResult.json ===
+--- expected
++++ actual (ts resolver)
+@@ -13,19 +13,6 @@
+     "controller": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com",
+     "id": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com",
+     "keyAgreement": [],
+-    "service": [
+-      {
+-        "id": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com#files",
+-        "serviceEndpoint": "https://example.com",
+-        "type": "relativeRef"
+-      },
+-      {
+-        "@context": "https://identity.foundation/linked-vp/contexts/v1",
+-        "id": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com#whois",
+-        "serviceEndpoint": "https://example.com/whois.vp",
+-        "type": "LinkedVerifiablePresentation"
+-      }
+-    ],
+     "verificationMethod": [
+       {
+         "controller": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com",
+@@ -33,26 +20,27 @@
+         "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
+         "type": "Multikey"
+       }
++    ],
++    "service": [
++      {
++        "id": "#files",
++        "type": "relativeRef",
++        "serviceEndpoint": "https://example.com"
++      },
++      {
++        "@context": "https://identity.foundation/linked-vp/contexts/v1",
++        "id": "#whois",
++        "type": "LinkedVerifiablePresentation",
++        "serviceEndpoint": "https://example.com/whois.vp"
++      }
+     ]
+   },
+   "didDocumentMetadata": {
+     "created": "2000-01-01T00:00:00Z",
+-    "deactivated": false,
+-    "portable": false,
+-    "scid": "QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo",
+     "updated": "2000-01-01T00:00:00Z",
+     "versionId": "1-QmQuf4Ficd9An6KLaZeddjRARvUe7p3iXaYwrxUiy5xqCg",
+     "versionNumber": 1,
++    "versionTime": "2000-01-01T00:00:00Z"
+-    "versionTime": "2000-01-01T00:00:00Z",
+-    "watchers": null,
+-    "witness": {
+-      "threshold": 1,
+-      "witnesses": [
+-        {
+-          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+-        }
+-      ]
+-    }
+   },
+   "didResolutionMetadata": {
+     "contentType": "application/did+ld+json"
+
 === witness-update / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
@@ -2066,7 +2131,7 @@
      "service": [
        {
 +        "id": "#files",
--        "id": "did:webvh:QmQA7SzKErRbXStsM4MQPSADYeXGQi1Ln9B2ZAkUAecRVZ:example.com#files",
+-        "id": "did:webvh:QmTXydGKoU7pmEkm6YBbbWhH9kaRETj8mb1e3hVeZU6CYG:example.com#files",
          "type": "relativeRef",
 +        "serviceEndpoint": "https://example.com"
 -        "serviceEndpoint": "https://example.com/"
@@ -2074,17 +2139,17 @@
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "#whois",
--        "id": "did:webvh:QmQA7SzKErRbXStsM4MQPSADYeXGQi1Ln9B2ZAkUAecRVZ:example.com#whois",
+-        "id": "did:webvh:QmTXydGKoU7pmEkm6YBbbWhH9kaRETj8mb1e3hVeZU6CYG:example.com#whois",
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
 @@ -36,8 +36,7 @@
-     "updated": "2026-06-03T22:51:54Z",
-     "versionId": "2-QmTBehaJfJ6FF694BUzfvt87VHBYTLvbGZLb4R8bXcbPHe",
+     "updated": "2026-06-09T14:45:22Z",
+     "versionId": "2-QmUCByKUEFhcHnFts2BEHwZBBgxf3TerYYcrgfJAHXPK6a",
      "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:51:54Z"
--    "versionTime": "2026-06-03T22:51:54Z",
--    "scid": "QmQA7SzKErRbXStsM4MQPSADYeXGQi1Ln9B2ZAkUAecRVZ"
++    "versionTime": "2026-06-09T14:45:22Z"
+-    "versionTime": "2026-06-09T14:45:22Z",
+-    "scid": "QmTXydGKoU7pmEkm6YBbbWhH9kaRETj8mb1e3hVeZU6CYG"
    },
    "didResolutionMetadata": {
      "contentType": "application/did+ld+json"
@@ -2099,22 +2164,22 @@
 +      "https://www.w3.org/ns/did/v1",
 +      "https://w3id.org/security/multikey/v1"
 +    ],
-+    "id": "did:webvh:QmQiYKHrqemYcE2Eftt7eZjthbcgH1mqCRxqPc6E8PeLyJ:example.com",
-+    "controller": "did:webvh:QmQiYKHrqemYcE2Eftt7eZjthbcgH1mqCRxqPc6E8PeLyJ:example.com",
++    "id": "did:webvh:QmSoDhfmvSPBq5wyYgKXe41kBT58N16QF9WCyvxfHaxKw1:example.com",
++    "controller": "did:webvh:QmSoDhfmvSPBq5wyYgKXe41kBT58N16QF9WCyvxfHaxKw1:example.com",
 +    "assertionMethod": [],
 +    "keyAgreement": [],
 +    "capabilityDelegation": [],
 +    "capabilityInvocation": [],
 +    "verificationMethod": [
 +      {
-+        "id": "did:webvh:QmQiYKHrqemYcE2Eftt7eZjthbcgH1mqCRxqPc6E8PeLyJ:example.com#P5RDjVJG",
++        "id": "did:webvh:QmSoDhfmvSPBq5wyYgKXe41kBT58N16QF9WCyvxfHaxKw1:example.com#P5RDjVJG",
 +        "type": "Multikey",
-+        "controller": "did:webvh:QmQiYKHrqemYcE2Eftt7eZjthbcgH1mqCRxqPc6E8PeLyJ:example.com",
++        "controller": "did:webvh:QmSoDhfmvSPBq5wyYgKXe41kBT58N16QF9WCyvxfHaxKw1:example.com",
 +        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 +      }
 +    ],
 +    "authentication": [
-+      "did:webvh:QmQiYKHrqemYcE2Eftt7eZjthbcgH1mqCRxqPc6E8PeLyJ:example.com#P5RDjVJG"
++      "did:webvh:QmSoDhfmvSPBq5wyYgKXe41kBT58N16QF9WCyvxfHaxKw1:example.com#P5RDjVJG"
 +    ],
 +    "service": [
 +      {
@@ -2131,11 +2196,11 @@
 +    ]
 +  },
 +  "didDocumentMetadata": {
-+    "created": "2026-06-03T22:52:11Z",
-+    "updated": "2026-06-03T22:52:12Z",
-+    "versionId": "2-QmPtCRePDwLywzejwotokg1CazwiXq7N1NLMemDVUiTrNg",
++    "created": "2026-06-09T14:45:47Z",
++    "updated": "2026-06-09T14:45:48Z",
++    "versionId": "2-QmRCqqLsM3tEkwHNb7sicWSt4RfW9rR999whFhyBRT2LD6",
 +    "versionNumber": 2,
-+    "versionTime": "2026-06-03T22:52:12Z"
++    "versionTime": "2026-06-09T14:45:48Z"
 +  },
 -  "didDocument": null,
 -  "didDocumentMetadata": {},
@@ -2203,3 +2268,71 @@
 -    }
    }
  }
+
+=== witness-update / rust — resolutionResult.json ===
+--- expected
++++ actual (ts resolver)
+@@ -13,19 +13,6 @@
+     "controller": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com",
+     "id": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com",
+     "keyAgreement": [],
+-    "service": [
+-      {
+-        "id": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com#files",
+-        "serviceEndpoint": "https://example.com",
+-        "type": "relativeRef"
+-      },
+-      {
+-        "@context": "https://identity.foundation/linked-vp/contexts/v1",
+-        "id": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com#whois",
+-        "serviceEndpoint": "https://example.com/whois.vp",
+-        "type": "LinkedVerifiablePresentation"
+-      }
+-    ],
+     "verificationMethod": [
+       {
+         "controller": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com",
+@@ -33,29 +20,27 @@
+         "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
+         "type": "Multikey"
+       }
++    ],
++    "service": [
++      {
++        "id": "#files",
++        "type": "relativeRef",
++        "serviceEndpoint": "https://example.com"
++      },
++      {
++        "@context": "https://identity.foundation/linked-vp/contexts/v1",
++        "id": "#whois",
++        "type": "LinkedVerifiablePresentation",
++        "serviceEndpoint": "https://example.com/whois.vp"
++      }
+     ]
+   },
+   "didDocumentMetadata": {
+     "created": "2000-01-01T00:00:00Z",
+-    "deactivated": false,
+-    "portable": false,
+-    "scid": "QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc",
+     "updated": "2000-01-02T00:00:00Z",
+     "versionId": "2-QmT9zq4vRpeRfFxB5T3E93rCa4K3hGxvXGsQPFNx8Dzmka",
+     "versionNumber": 2,
++    "versionTime": "2000-01-02T00:00:00Z"
+-    "versionTime": "2000-01-02T00:00:00Z",
+-    "watchers": null,
+-    "witness": {
+-      "threshold": 2,
+-      "witnesses": [
+-        {
+-          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+-        },
+-        {
+-          "id": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP"
+-        }
+-      ]
+-    }
+   },
+   "didResolutionMetadata": {
+     "contentType": "application/did+ld+json"

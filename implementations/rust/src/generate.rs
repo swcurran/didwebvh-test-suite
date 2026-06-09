@@ -178,7 +178,7 @@ fn build_parameters(p: &StepParams, keys: &HashMap<String, KeyInfo>) -> Result<P
 
 fn all_witness_secrets(keys: &HashMap<String, KeyInfo>) -> HashMap<String, Secret> {
     keys.values()
-        .map(|k| (k.pub_multibase.clone(), k.secret.clone()))
+        .map(|k| (format!("did:key:{}", k.pub_multibase), k.secret.clone()))
         .collect()
 }
 

@@ -1,6 +1,6 @@
 # rust status
 
-Implementation: didwebvh-rs 0.5.3 @ f8f7d751
+Implementation: didwebvh-rs 0.5.3 @ ad614934
 
 ## DID Creation
 
@@ -112,4 +112,4 @@ Implementation: didwebvh-rs 0.5.3 @ f8f7d751
 | witness-update | ts | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (f8f7d75)
+Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (ad61493)

@@ -103,12 +103,12 @@ Implementation: didwebvh-ts 2.7.4
 | witness-threshold | java | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
-| witness-threshold | rust | ❌ FAIL | Witness DIDs must be did:key format |
+| witness-threshold | rust | 🔶 DIFF | see diffs.txt |
 | witness-threshold | ts (self) | ✅ PASS |  |
 | witness-update | java | 🔶 DIFF | see diffs.txt |
 | witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-update | python | 🔶 DIFF | see diffs.txt |
-| witness-update | rust | ❌ FAIL | Witness DIDs must be did:key format |
+| witness-update | rust | 🔶 DIFF | see diffs.txt |
 | witness-update | ts (self) | ✅ PASS |  |
 
 ---

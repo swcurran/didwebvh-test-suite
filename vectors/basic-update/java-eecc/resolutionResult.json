@@ -1,19 +1,19 @@
 {
   "didDocument" : {
     "@context" : [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1" ],
-    "id" : "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com",
-    "controller" : "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com",
+    "id" : "did:webvh:QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ:example.com",
+    "controller" : "did:webvh:QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ:example.com",
     "assertionMethod" : [ ],
     "keyAgreement" : [ ],
     "capabilityDelegation" : [ ],
     "capabilityInvocation" : [ ],
     "verificationMethod" : [ {
-      "id" : "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#P5RDjVJG",
+      "id" : "did:webvh:QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ:example.com#P5RDjVJG",
       "type" : "Multikey",
-      "controller" : "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com",
+      "controller" : "did:webvh:QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ:example.com",
       "publicKeyMultibase" : "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
     } ],
-    "authentication" : [ "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#P5RDjVJG" ],
+    "authentication" : [ "did:webvh:QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ:example.com#P5RDjVJG" ],
     "alsoKnownAs" : [ "did:web:example.com" ],
     "service" : [ {
       "id" : "#files",
@@ -27,12 +27,12 @@
     } ]
   },
   "didDocumentMetadata" : {
-    "created" : "2026-06-03T22:52:11Z",
-    "updated" : "2026-06-03T22:52:12Z",
-    "versionId" : "2-QmXgoJdXhcHLZTavuAGr3mFaU32gyUuidwN3mkNvBjV9NY",
+    "created" : "2026-06-09T14:47:21Z",
+    "updated" : "2026-06-09T14:47:22Z",
+    "versionId" : "2-QmY5yRF7ymPEz8qa29Mtk57Z9oDWk3hijvhFgMA9rLwdAS",
     "versionNumber" : 2,
-    "versionTime" : "2026-06-03T22:52:12Z",
-    "scid" : "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7"
+    "versionTime" : "2026-06-09T14:47:22Z",
+    "scid" : "QmTgpsabDZhDT3gc1XpcdVSpZtfdyQ4xQN9MnZychsBUsJ"
   },
   "didResolutionMetadata" : {
     "contentType" : "application/did+ld+json"

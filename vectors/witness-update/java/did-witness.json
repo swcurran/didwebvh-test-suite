@@ -1,35 +1,35 @@
 [
   {
-    "versionId": "1-QmXYfGpxqjJkBQgzm4j1aKkvNHN63WhdAj6C9aAPa6Afxj",
+    "versionId": "1-QmRiAzRcbggjMeFejiJrYDxnCMzhZ8NdaAekXh2z2f9Q59",
     "proof": [
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
-        "created": "2026-06-03T22:51:53Z",
+        "created": "2026-06-09T14:47:02Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z4qzWRiuDE4sjEVmm4jmccbnofUcQ1s7Fvu33nkYsNBUvbKFWgcmnkwZqR7iTp55EnQrWXgyGxo7SkNWcHJJWrm7h"
+        "proofValue": "z2ZCrUqhknodYBaJG9rpM5ToTFPXTDqDdvA64bvN3iCP4JnkemPiZnN1Hfipha5FGK36Rz7Sqbofpwzq3e7ZLFkCb"
       },
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP#z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP",
-        "created": "2026-06-03T22:51:53Z",
+        "created": "2026-06-09T14:47:02Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z2otizzaJ8GrQa2ns2Aq9UaimLS8WkpH81wMZccR8eFLBVGuoRWzoEmpA7aqKArqxCLESctWN1hn9wsnhyo8i98Fj"
+        "proofValue": "z4nAHnUNPyx8NEam1G5rL9gCvsBcKHo3Nw1kGrcbg3wr8Sg59JqcdXtmX7dFG71JRGQWoxR5dop4xuzC91UKXTqL9"
       }
     ]
   },
   {
-    "versionId": "2-QmTBehaJfJ6FF694BUzfvt87VHBYTLvbGZLb4R8bXcbPHe",
+    "versionId": "2-QmanP5aUpDUG8sJQnFHVb3rJqNFHSuGQ6TqFwhXgN3h6Hz",
     "proof": [
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
-        "created": "2026-06-03T22:51:53Z",
+        "created": "2026-06-09T14:47:02Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "zsAECEAWvPDXVRpyo3YwWuDLz8KFtaxnaKtwPHVgeqqMaTKDACAAbsaizUjdmQBSM78MjCPkDJhykr8uMSLTSPB2"
+        "proofValue": "z3G9UYNgFucitDLSPy16DSxdwdVbcDNKqzd3KwWniixbXTSzsZvuvG6AwDdooSf65R2L9nG8U4gnWLpMZHuNwnTkR"
       }
     ]
   }

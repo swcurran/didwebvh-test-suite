@@ -3,7 +3,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmdGGvtwr51pxxA62eSGjHiADYtTxszWGuVLvcbRmRbbg5:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -19,14 +19,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -83,7 +83,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -99,14 +99,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -162,24 +162,24 @@
 --- expected
 +++ actual (rust resolver)
      ],
-     "controller": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com",
-     "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com",
+     "controller": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com",
+     "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com",
 +    "service": [
 +      {
-+        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
++        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 +        "serviceEndpoint": "https://example.com",
 +        "type": "relativeRef"
 +      },
 +      {
 +        "@context": "https://identity.foundation/linked-vp/contexts/v1",
-+        "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#whois",
++        "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#whois",
 +        "serviceEndpoint": "https://example.com/whois.vp",
 +        "type": "LinkedVerifiablePresentation"
 +      }
 +    ],
      "verificationMethod": [
        {
-         "controller": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com",
+         "controller": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com",
 
 
 === deactivate / java-eecc — resolutionResult.json ===
@@ -190,14 +190,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -254,7 +254,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -270,14 +270,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -334,7 +334,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -342,13 +342,13 @@
        {
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-03T22:51:53Z",
-     "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB",
--    "updated": "2026-06-03T22:51:53Z",
-+    "updated": "2026-06-03T22:51:55Z",
-     "versionId": "1-QmZ5TCWrMKpriVFWU91M753cL7seXfqDZ7SCJZCbxi7BFf",
+     "created": "2026-06-09T14:45:21Z",
+     "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx",
+-    "updated": "2026-06-09T14:45:21Z",
++    "updated": "2026-06-09T14:45:23Z",
+     "versionId": "1-QmZokFhyfBGb8kUYzQBNXNPTNZ22xCc4GJ3XB8BF7nazqD",
      "versionNumber": 1,
-     "versionTime": "2026-06-03T22:51:53Z"
+     "versionTime": "2026-06-09T14:45:21Z"
 
 
 === multi-update / java — resolutionResult.2.json ===
@@ -356,7 +356,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -364,13 +364,13 @@
        {
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-03T22:51:53Z",
-     "scid": "QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB",
--    "updated": "2026-06-03T22:51:54Z",
-+    "updated": "2026-06-03T22:51:55Z",
-     "versionId": "2-QmSVqAUJmFk972BcC5Q7QjVRKkLrWzrATmgrKyWYQBGrPV",
+     "created": "2026-06-09T14:45:21Z",
+     "scid": "QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx",
+-    "updated": "2026-06-09T14:45:22Z",
++    "updated": "2026-06-09T14:45:23Z",
+     "versionId": "2-QmaP8i8Xkez6EAWPYF8QzuwqS7rjvAWmVFGkjDhRKauqL9",
      "versionNumber": 2,
-     "versionTime": "2026-06-03T22:51:54Z"
+     "versionTime": "2026-06-09T14:45:22Z"
 
 
 === multi-update / java — resolutionResult.json ===
@@ -378,7 +378,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmShpYgLtveEaeFEnirVQWouwxnctwwoytnqABtvr6AuDB:example.com#files",
+         "id": "did:webvh:QmZqoNjrPDgSPh4KtJkQuKtM1bh1Gkst7c757d1cDAhtUx:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -394,26 +394,26 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-03T22:52:11Z",
-     "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7",
--    "updated": "2026-06-03T22:52:11Z",
-+    "updated": "2026-06-03T22:52:13Z",
-     "versionId": "1-QmQ4HgWMKXpwk26d7YTzJqoiNBJY3sjvPk5cgB5xw6zEA4",
+     "created": "2026-06-09T14:45:47Z",
+     "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH",
+-    "updated": "2026-06-09T14:45:47Z",
++    "updated": "2026-06-09T14:45:49Z",
+     "versionId": "1-QmYyrWigowpnwbfNUTAju3CsGxnRAwvW84jTzYR5nb4HSm",
      "versionNumber": 1,
-     "versionTime": "2026-06-03T22:52:11Z"
+     "versionTime": "2026-06-09T14:45:47Z"
 
 
 === multi-update / java-eecc — resolutionResult.2.json ===
@@ -424,26 +424,26 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-03T22:52:11Z",
-     "scid": "QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7",
--    "updated": "2026-06-03T22:52:12Z",
-+    "updated": "2026-06-03T22:52:13Z",
-     "versionId": "2-QmXgoJdXhcHLZTavuAGr3mFaU32gyUuidwN3mkNvBjV9NY",
+     "created": "2026-06-09T14:45:47Z",
+     "scid": "QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH",
+-    "updated": "2026-06-09T14:45:48Z",
++    "updated": "2026-06-09T14:45:49Z",
+     "versionId": "2-QmWir2uLWbYcGi166ug2WKD7rinN9VveJtq95spehS4WRa",
      "versionNumber": 2,
-     "versionTime": "2026-06-03T22:52:12Z"
+     "versionTime": "2026-06-09T14:45:48Z"
 
 
 === multi-update / java-eecc — resolutionResult.json ===
@@ -454,14 +454,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#files",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYvpWXmYCCm9xtAs6QwcRporibpPNSZ2YUXdKYLRymhR7:example.com#whois",
++        "id": "did:webvh:QmRKiK4ofUS6phoWo4XLfXf2jnXw2B1jYm3SWqCCB29RzH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -664,14 +664,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmVuvHSJDbpStCjwNYFr4gvRrrWufUNkzPSs917VKWJKhx:example.com#files",
++        "id": "did:webvh:QmSVH4JwnhyGAySHXyvvufkH8d6ZEu8mGdtPm9hkqVLp1P:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmVuvHSJDbpStCjwNYFr4gvRrrWufUNkzPSs917VKWJKhx:example.com#whois",
++        "id": "did:webvh:QmSVH4JwnhyGAySHXyvvufkH8d6ZEu8mGdtPm9hkqVLp1P:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -728,7 +728,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.com#files",
+         "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -744,14 +744,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c:example.com#files",
++        "id": "did:webvh:QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c:example.com#whois",
++        "id": "did:webvh:QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -808,7 +808,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmPXYsSDkSXBzD7gJtrZV5ANBvxSXGdAm9pXDdPcbg4o4w:example.org#files",
+         "id": "did:webvh:QmW9wSu3GEESGE1h9AX8TfjNRscmGRDpv5Bh1xMk3gHkgq:example.org#files",
 -        "serviceEndpoint": "https://example.org/",
 +        "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
@@ -824,14 +824,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.org/",
-+        "id": "did:webvh:QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c:example.org#files",
++        "id": "did:webvh:QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z:example.org#files",
 +        "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZEZMPxHHYtXBot9nPrw1FHLP3MBKwPE2K9SzD1CR175c:example.org#whois",
++        "id": "did:webvh:QmSocdasc83K563MSQ7nfFrj9e5rHWLn7YBMLLQeRSoD7z:example.org#whois",
          "serviceEndpoint": "https://example.org/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -888,7 +888,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#files",
+         "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -904,14 +904,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg:example.com#files",
++        "id": "did:webvh:QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg:example.com#whois",
++        "id": "did:webvh:QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -968,7 +968,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmeR8kChdG8Ebd1FoZQgcPfHczniX2MXprrE7JXf7C9P5W:example.com#files",
+         "id": "did:webvh:Qmb37V9DFMyhY9oZjDdHMqXyGkHytLPrqxVW6nL1DJagGA:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -984,14 +984,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg:example.com#files",
++        "id": "did:webvh:QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmPNYqnujuuVfA6C2ifCZ2JjHWNJL4DvC2nem7kjdgpdmg:example.com#whois",
++        "id": "did:webvh:QmTkDX33nXwPQ8smBu1StSp2pjGctkaW6AQNUT5a4t9ajT:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -1048,7 +1048,7 @@
 +++ actual (rust resolver)
        },
        {
-         "id": "did:webvh:QmPah1W6qvZa8fEADq8YP5hLgsRMbS4d3D76pCmzYA2a2g:example.com#files",
+         "id": "did:webvh:QmNmNNVuPrdxMCWvdLDNm3H9R9PMPCnkK8Vk9r5LsztN7S:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1074,14 +1074,14 @@
          "type": "DIDCommMessaging"
        },
        {
-+        "id": "did:webvh:QmdxDH5hV91DgUBK5RwdNUySFMmSu2NjjaHWh51UvXi5sF:example.com#files",
++        "id": "did:webvh:QmYRvj3Qi1GaKGTsXQLxs5wCHCgPv5hdiqUL91dc9Uuezn:example.com#files",
 +        "serviceEndpoint": "https://example.com",
 +        "type": "relativeRef"
 +      },
 +      {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmdxDH5hV91DgUBK5RwdNUySFMmSu2NjjaHWh51UvXi5sF:example.com#whois",
++        "id": "did:webvh:QmYRvj3Qi1GaKGTsXQLxs5wCHCgPv5hdiqUL91dc9Uuezn:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -1149,7 +1149,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmcq2qMK5ZTatFkPhvgDGTJe52zFGTLJCDPoc4bns2ZA3U:example.com#files",
+         "id": "did:webvh:QmQ18rwBv4Rv7xZkzGMXVctGTtgHoNAaZ4LvLKK6rMVTRz:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1165,14 +1165,14 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmNUYzJ5o5dVgN4f318qAkQtpMwExFrySwzu7ZWmNYGCd6:example.com#files",
++        "id": "did:webvh:QmPm3CAo8hKFUUPqVsRuBZvnnYdTX43uodqrFhWNSCNWiT:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmNUYzJ5o5dVgN4f318qAkQtpMwExFrySwzu7ZWmNYGCd6:example.com#whois",
++        "id": "did:webvh:QmPm3CAo8hKFUUPqVsRuBZvnnYdTX43uodqrFhWNSCNWiT:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
