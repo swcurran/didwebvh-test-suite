@@ -14,7 +14,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RUN="$SCRIPT_DIR/run"
 
-ALL_IMPLS=(ts python rust java java-eecc)
+ALL_IMPLS=(ts python rust java java-eecc dart)
 
 if [[ $# -gt 0 ]]; then
   IMPLS=("$@")

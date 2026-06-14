@@ -1,0 +1,55 @@
+{
+  "didDocument": {
+    "@context": "https://www.w3.org/ns/did/v1",
+    "id": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com",
+    "controller": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com",
+    "verificationMethod": [
+      {
+        "id": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com#P5RDjVJG",
+        "type": "Multikey",
+        "controller": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com",
+        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+      }
+    ],
+    "authentication": [
+      "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com#P5RDjVJG"
+    ],
+    "assertionMethod": [
+      "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    ],
+    "service": [
+      {
+        "id": "#linked-domain",
+        "type": "LinkedDomains",
+        "serviceEndpoint": "https://example.com"
+      },
+      {
+        "id": "#messaging",
+        "type": "DIDCommMessaging",
+        "serviceEndpoint": "https://example.com/didcomm"
+      },
+      {
+        "id": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com#files",
+        "type": "relativeRef",
+        "serviceEndpoint": "https://example.com/"
+      },
+      {
+        "@context": "https://identity.foundation/linked-vp/contexts/v1",
+        "id": "did:webvh:QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb:example.com#whois",
+        "type": "LinkedVerifiablePresentation",
+        "serviceEndpoint": "https://example.com/whois.vp"
+      }
+    ]
+  },
+  "didDocumentMetadata": {
+    "created": "2026-06-14T21:41:25Z",
+    "updated": "2026-06-14T21:41:26Z",
+    "versionId": "2-Qmd6ao2R5sZ5o5WWaFTxMR5hxtz717Mbos3L4V6pwscoja",
+    "versionNumber": 2,
+    "versionTime": "2026-06-14T21:41:26Z",
+    "scid": "QmWBrotw5U7pkNDqiYpdgLT3ziHZMjcxztsufLKEmofnHb"
+  },
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json"
+  }
+}
