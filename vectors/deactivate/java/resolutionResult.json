@@ -1,31 +1,31 @@
 {
   "didDocument": {
     "@context": "https://www.w3.org/ns/did/v1",
-    "id": "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com",
-    "controller": "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com",
+    "id": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
+    "controller": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
     "verificationMethod": [
       {
-        "id": "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
+        "id": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
         "type": "Multikey",
-        "controller": "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com",
+        "controller": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
         "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
       }
     ],
     "authentication": [
-      "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+      "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
     ],
     "assertionMethod": [
-      "did:webvh:QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+      "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
     ]
   },
   "didDocumentMetadata": {
-    "created": "2026-06-09T15:54:07Z",
-    "updated": "2026-06-09T15:54:08Z",
-    "versionId": "2-QmefHGBeeEBsZNwTn9Z8cFHJdSekTqZqhmJZGAvGkESA2u",
+    "created": "2026-06-14T21:50:16Z",
+    "updated": "2026-06-14T21:50:17Z",
+    "versionId": "2-QmcAGNiW988A4vFxPewqm6SwbaqXzkX3USs4AheAtNttMz",
     "versionNumber": 2,
-    "versionTime": "2026-06-09T15:54:08Z",
+    "versionTime": "2026-06-14T21:50:17Z",
     "deactivated": true,
-    "scid": "QmWRtdLucVbeebmavNfcrLoaf2VeRunMGj4DNPaYLPKB9e"
+    "scid": "QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT"
   },
   "didResolutionMetadata": {
     "contentType": "application/did+ld+json"

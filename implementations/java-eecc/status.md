@@ -45,66 +45,79 @@ Implementation: java-eecc 0.3.1
 
 | Test Case | Log Source | Result | Notes |
 |---|---|---|---|
+| basic-create | dart | 🔶 DIFF | see diffs.txt |
 | basic-create | java | 🔶 DIFF | see diffs.txt |
 | basic-create | java-eecc (self) | ✅ PASS |  |
 | basic-create | python | 🔶 DIFF | see diffs.txt |
 | basic-create | rust | 🔶 DIFF | see diffs.txt |
 | basic-create | ts | 🔶 DIFF | see diffs.txt |
+| basic-update | dart | 🔶 DIFF | see diffs.txt |
 | basic-update | java | 🔶 DIFF | see diffs.txt |
 | basic-update | java-eecc (self) | ✅ PASS |  |
 | basic-update | python | 🔶 DIFF | see diffs.txt |
 | basic-update | rust | 🔶 DIFF | see diffs.txt |
 | basic-update | ts | 🔶 DIFF | see diffs.txt |
+| deactivate | dart | 🔶 DIFF | see diffs.txt |
 | deactivate | java | 🔶 DIFF | see diffs.txt |
 | deactivate | java-eecc (self) | ✅ PASS |  |
 | deactivate | python | 🔶 DIFF | see diffs.txt |
 | deactivate | rust | 🔶 DIFF | see diffs.txt |
 | deactivate | ts | 🔶 DIFF | see diffs.txt |
+| key-rotation | dart | 🔶 DIFF | see diffs.txt |
 | key-rotation | java | 🔶 DIFF | see diffs.txt |
 | key-rotation | java-eecc (self) | ✅ PASS |  |
 | key-rotation | python | 🔶 DIFF | see diffs.txt |
 | key-rotation | rust | 🔶 DIFF | see diffs.txt |
 | key-rotation | ts | 🔶 DIFF | see diffs.txt |
+| multi-update | dart | 🔶 DIFF | see diffs.txt |
 | multi-update | java | 🔶 DIFF | see diffs.txt |
 | multi-update | java-eecc (self) | ✅ PASS |  |
 | multi-update | python | 🔶 DIFF | see diffs.txt |
 | multi-update | rust | 🔶 DIFF | see diffs.txt |
 | multi-update | ts | 🔶 DIFF | see diffs.txt |
+| multiple-update-keys | dart | ⚠️ SKIP | no did.jsonl present |
 | multiple-update-keys | java | ⚠️ SKIP | no did.jsonl present |
 | multiple-update-keys | java-eecc (self) | ✅ PASS |  |
 | multiple-update-keys | python | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | rust | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | ts | 🔶 DIFF | see diffs.txt |
+| portable | dart | 🔶 DIFF | see diffs.txt |
 | portable | java | 🔶 DIFF | see diffs.txt |
 | portable | java-eecc (self) | ✅ PASS |  |
 | portable | python | 🔶 DIFF | see diffs.txt |
 | portable | rust | 🔶 DIFF | see diffs.txt |
 | portable | ts | 🔶 DIFF | see diffs.txt |
+| portable-move | dart | 🔶 DIFF | see diffs.txt |
 | portable-move | java | 🔶 DIFF | see diffs.txt |
 | portable-move | java-eecc (self) | 🔶 DIFF | see diffs.txt |
 | portable-move | python | 🔶 DIFF | see diffs.txt |
 | portable-move | rust | 🔶 DIFF | see diffs.txt |
 | portable-move | ts | 🔶 DIFF | see diffs.txt |
+| pre-rotation | dart | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java-eecc (self) | ✅ PASS |  |
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation | ts | 🔶 DIFF | see diffs.txt |
+| pre-rotation-consume | dart | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java-eecc (self) | ✅ PASS |  |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | ts | 🔶 DIFF | see diffs.txt |
+| services | dart | 🔶 DIFF | see diffs.txt |
 | services | java | 🔶 DIFF | see diffs.txt |
 | services | java-eecc (self) | ✅ PASS |  |
 | services | python | 🔶 DIFF | see diffs.txt |
 | services | rust | 🔶 DIFF | see diffs.txt |
 | services | ts | 🔶 DIFF | see diffs.txt |
+| witness-threshold | dart | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java-eecc (self) | ✅ PASS |  |
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
 | witness-threshold | rust | 🔶 DIFF | see diffs.txt |
 | witness-threshold | ts | 🔶 DIFF | see diffs.txt |
+| witness-update | dart | 🔶 DIFF | see diffs.txt |
 | witness-update | java | 🔶 DIFF | see diffs.txt |
 | witness-update | java-eecc (self) | ✅ PASS |  |
 | witness-update | python | 🔶 DIFF | see diffs.txt |
