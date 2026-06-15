@@ -30,6 +30,14 @@
         "created": "2000-01-02T00:00:00Z",
         "proofPurpose": "assertionMethod",
         "proofValue": "z217wk9JNVPaDXkbRNjc8SZgoYMwM1UubqNMyoXR3Vn4Vgtqdv8jL78bvVZ2xN1UnWhxRGSxZYXwQc8MZGqmDjgZ3"
+      },
+      {
+        "type": "DataIntegrityProof",
+        "cryptosuite": "eddsa-jcs-2022",
+        "verificationMethod": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP#z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP",
+        "created": "2000-01-02T00:00:00Z",
+        "proofPurpose": "assertionMethod",
+        "proofValue": "z43vxDWipB1Z1tpTDY53M4v61oEZjjCGgxQrLJ9SEWMpG4E1KfMDLxfbc3f8JcYus1CBgF1GWQFnrnBnNa3iQoFSZ"
       }
     ]
   }

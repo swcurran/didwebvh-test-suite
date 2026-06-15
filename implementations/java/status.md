@@ -45,13 +45,13 @@ Implementation: didwebvh-java 0.3.0-SNAPSHOT @ c50db5b
 
 | Test Case | Log Source | Result | Notes |
 |---|---|---|---|
-| basic-create | dart | ✅ PASS |  |
+| basic-create | dart | 🔶 DIFF | see diffs.txt |
 | basic-create | java (self) | ✅ PASS |  |
 | basic-create | java-eecc | 🔶 DIFF | see diffs.txt |
 | basic-create | python | 🔶 DIFF | see diffs.txt |
 | basic-create | rust | 🔶 DIFF | see diffs.txt |
 | basic-create | ts | 🔶 DIFF | see diffs.txt |
-| basic-update | dart | ✅ PASS |  |
+| basic-update | dart | 🔶 DIFF | see diffs.txt |
 | basic-update | java (self) | ✅ PASS |  |
 | basic-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | basic-update | python | 🔶 DIFF | see diffs.txt |
@@ -63,13 +63,13 @@ Implementation: didwebvh-java 0.3.0-SNAPSHOT @ c50db5b
 | deactivate | python | 🔶 DIFF | see diffs.txt |
 | deactivate | rust | 🔶 DIFF | see diffs.txt |
 | deactivate | ts | 🔶 DIFF | see diffs.txt |
-| key-rotation | dart | ✅ PASS |  |
+| key-rotation | dart | 🔶 DIFF | see diffs.txt |
 | key-rotation | java (self) | ✅ PASS |  |
 | key-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | key-rotation | python | 🔶 DIFF | see diffs.txt |
 | key-rotation | rust | 🔶 DIFF | see diffs.txt |
 | key-rotation | ts | 🔶 DIFF | see diffs.txt |
-| multi-update | dart | ✅ PASS |  |
+| multi-update | dart | 🔶 DIFF | see diffs.txt |
 | multi-update | java (self) | ✅ PASS |  |
 | multi-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | multi-update | python | 🔶 DIFF | see diffs.txt |
@@ -93,31 +93,31 @@ Implementation: didwebvh-java 0.3.0-SNAPSHOT @ c50db5b
 | portable-move | python | 🔶 DIFF | see diffs.txt |
 | portable-move | rust | 🔶 DIFF | see diffs.txt |
 | portable-move | ts | 🔶 DIFF | see diffs.txt |
-| pre-rotation | dart | ✅ PASS |  |
+| pre-rotation | dart | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java (self) | ✅ PASS |  |
 | pre-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation | ts | 🔶 DIFF | see diffs.txt |
-| pre-rotation-consume | dart | ✅ PASS |  |
+| pre-rotation-consume | dart | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java (self) | ✅ PASS |  |
 | pre-rotation-consume | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | ts | 🔶 DIFF | see diffs.txt |
-| services | dart | ✅ PASS |  |
+| services | dart | 🔶 DIFF | see diffs.txt |
 | services | java (self) | ✅ PASS |  |
 | services | java-eecc | 🔶 DIFF | see diffs.txt |
 | services | python | 🔶 DIFF | see diffs.txt |
 | services | rust | 🔶 DIFF | see diffs.txt |
 | services | ts | 🔶 DIFF | see diffs.txt |
-| witness-threshold | dart | ✅ PASS |  |
+| witness-threshold | dart | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java (self) | ✅ PASS |  |
 | witness-threshold | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
 | witness-threshold | rust | 🔶 DIFF | see diffs.txt |
 | witness-threshold | ts | 🔶 DIFF | see diffs.txt |
-| witness-update | dart | ✅ PASS |  |
+| witness-update | dart | 🔶 DIFF | see diffs.txt |
 | witness-update | java (self) | ✅ PASS |  |
 | witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-update | python | 🔶 DIFF | see diffs.txt |

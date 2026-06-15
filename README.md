@@ -7,11 +7,13 @@ Language-agnostic compliance test vectors for the [`did:webvh` v1.0 specificatio
 **Multi-implementation cross-resolution pattern:**
 
 1. Human-readable YAML scripts in `vectors/<scenario>/script.yaml` describe each test scenario.
-2. Each implementation reads the scripts and produces its own signed artifacts — committed under `vectors/<scenario>/<impl>/`.
-3. Each implementation resolves every other implementation's committed logs and writes `implementations/<impl>/status.md` showing DID Creation, Negative Resolution, and Cross-Resolution results.
-4. Divergences surface as differences in `status.md` across implementations — candidates for Working Group discussion.
+2. Each implementation reads the scripts, generates its own signed DID log artifacts, and resolves them to produce expected resolution results — all committed under `vectors/<scenario>/<impl>/`.
+3. Each implementation then resolves **every** implementation's committed logs (including its own) and compares raw resolver output against the committed expected results, writing `implementations/<impl>/status.md`.
+4. Divergences surface as differences in `status.md` — candidates for Working Group discussion and spec clarification.
 
 There is no single "reference" implementation. The spec and Working Group are the arbiter of correctness.
+
+**Each implementation stands on its own.** The `resolutionResult.json` files committed for each implementation are the raw output of that implementation's own resolver — no normalization is applied to make them conform to any other implementation's format. When an implementation resolves its own logs, the result should always match exactly (PASS). Cross-resolution DIFFs represent genuine differences in resolver behaviour between implementations and are the primary analytical output of this test suite.
 
 ## Running the Test Suite
 
@@ -77,10 +79,12 @@ Result codes:
 
 | Code | Meaning |
 |---|---|
-| ✅ PASS | Exact match |
-| 🔶 DIFF | Resolved successfully but output differs from the committed expected result |
-| ❌ FAIL | Resolution threw an error |
+| ✅ PASS | Exact match (raw resolver output matches committed expected result) |
+| 🔶 DIFF | Resolved successfully but output differs from the committed expected result — a genuine interop difference to analyse |
+| ❌ FAIL | Resolution threw an error or was incorrectly accepted/rejected |
 | ⚠️ SKIP | No artifacts committed (impl doesn't support this scenario) |
+
+Comparisons use [JCS (JSON Canonicalization Scheme)](https://www.rfc-editor.org/rfc/rfc8785) to eliminate irrelevant differences in key ordering and whitespace, but no semantic normalizations are applied. A DIFF means the two resolvers genuinely disagree on the output.
 
 The footer of each `status.md` records the exact library commit used for that run:
 

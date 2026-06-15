@@ -5,14 +5,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmewvWhWVNDCLkAPVKKohiwjRFJDAFEgjfw7XUFrs3PYre:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmewvWhWVNDCLkAPVKKohiwjRFJDAFEgjfw7XUFrs3PYre:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -20,6 +20,12 @@
 === basic-create / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 1,
      "versionTime": "2000-01-01T00:00:00Z"
    },
@@ -68,14 +74,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -83,6 +89,12 @@
 === basic-update / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -128,24 +140,24 @@
 --- expected
 +++ actual (dart resolver)
      ],
-     "controller": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
-     "id": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
+     "controller": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
 +    "service": [
 +      {
-+        "id": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com#files",
++        "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 +        "serviceEndpoint": "https://example.com/",
 +        "type": "relativeRef"
 +      },
 +      {
 +        "@context": "https://identity.foundation/linked-vp/contexts/v1",
-+        "id": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com#whois",
++        "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#whois",
 +        "serviceEndpoint": "https://example.com/whois.vp",
 +        "type": "LinkedVerifiablePresentation"
 +      }
 +    ],
      "verificationMethod": [
        {
-         "controller": "did:webvh:QmXqkXXRCvUs6fmBsyhsjJCpiw6k3ttMmiiwUcSCAXRDyT:example.com",
+         "controller": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
 
 === deactivate / java-eecc — resolutionResult.json ===
 --- expected
@@ -154,14 +166,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -169,6 +181,12 @@
 === deactivate / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -217,14 +235,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -232,6 +250,12 @@
 === key-rotation / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -280,14 +304,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -299,14 +323,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -318,14 +342,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmbHerjtthNyZKdERgpVXAG1n48DK1WaHJkhq8YPYJk3Eq:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -333,6 +357,9 @@
 === multi-update / python — resolutionResult.1.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
        "https://w3id.org/security/multikey/v1"
@@ -365,6 +392,11 @@
 === multi-update / python — resolutionResult.2.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
        "https://w3id.org/security/multikey/v1"
      ],
      "alsoKnownAs": [
@@ -396,6 +428,12 @@
 === multi-update / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 3,
      "versionTime": "2000-01-03T00:00:00Z"
    },
@@ -526,14 +564,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmVBDCZVy7UAAHUXbnLYfXLaXHJYnuS5f3iLMS2qvpk25n:example.com#files",
++        "id": "did:webvh:QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmVBDCZVy7UAAHUXbnLYfXLaXHJYnuS5f3iLMS2qvpk25n:example.com#whois",
++        "id": "did:webvh:QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -541,6 +579,12 @@
 === multiple-update-keys / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -589,14 +633,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmYR2eFJi7yQSbG1aEKekYMVE8nQYgQ8EP6DSoS83FVVfp:example.com#files",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYR2eFJi7yQSbG1aEKekYMVE8nQYgQ8EP6DSoS83FVVfp:example.com#whois",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -604,6 +648,12 @@
 === portable / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 1,
      "versionTime": "2000-01-01T00:00:00Z"
    },
@@ -652,14 +702,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmYR2eFJi7yQSbG1aEKekYMVE8nQYgQ8EP6DSoS83FVVfp:example.org#files",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.org#files",
          "serviceEndpoint": "https://example.org/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmYR2eFJi7yQSbG1aEKekYMVE8nQYgQ8EP6DSoS83FVVfp:example.org#whois",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.org#whois",
          "serviceEndpoint": "https://example.org/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -667,6 +717,12 @@
 === portable-move / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -715,14 +771,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmVX6uJw9wB9uonJr1Fh8dGuJwrRRsPz8PeLJpucHTYHva:example.com#files",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmVX6uJw9wB9uonJr1Fh8dGuJwrRRsPz8PeLJpucHTYHva:example.com#whois",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -730,6 +786,12 @@
 === pre-rotation / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 1,
      "versionTime": "2000-01-01T00:00:00Z"
    },
@@ -778,14 +840,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmVX6uJw9wB9uonJr1Fh8dGuJwrRRsPz8PeLJpucHTYHva:example.com#files",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmVX6uJw9wB9uonJr1Fh8dGuJwrRRsPz8PeLJpucHTYHva:example.com#whois",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -793,6 +855,12 @@
 === pre-rotation-consume / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 3,
      "versionTime": "2000-01-03T00:00:00Z"
    },
@@ -837,7 +905,7 @@
 === services / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
-     "id": "did:webvh:QmVmbSsnmYWpHu5JXdKJTv7CmnunCQuwFZ3otC1kWFxi7m:example.com",
+     "id": "did:webvh:QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr:example.com",
      "keyAgreement": [],
      "service": [
 -      {
@@ -854,14 +922,14 @@
          "type": "DIDCommMessaging"
 +      },
 +      {
-+        "id": "did:webvh:QmVmbSsnmYWpHu5JXdKJTv7CmnunCQuwFZ3otC1kWFxi7m:example.com#files",
++        "id": "did:webvh:QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr:example.com#files",
 +        "serviceEndpoint": "https://example.com/",
 +        "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmVmbSsnmYWpHu5JXdKJTv7CmnunCQuwFZ3otC1kWFxi7m:example.com#whois",
++        "id": "did:webvh:QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -869,6 +937,12 @@
 === services / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 2,
      "versionTime": "2000-01-02T00:00:00Z"
    },
@@ -929,14 +1003,14 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmPynGx5tJeNRZTymd8GrspKvsEyM5WVPo2F27GZCgimba:example.com#files",
++        "id": "did:webvh:QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK:example.com#files",
          "serviceEndpoint": "https://example.com/",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmPynGx5tJeNRZTymd8GrspKvsEyM5WVPo2F27GZCgimba:example.com#whois",
++        "id": "did:webvh:QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
@@ -944,6 +1018,12 @@
 === witness-threshold / python — resolutionResult.json ===
 --- expected
 +++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
      "versionNumber": 1,
      "versionTime": "2000-01-01T00:00:00Z"
    },
@@ -984,6 +1064,43 @@
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
+
+=== witness-update / java-eecc — resolutionResult.json ===
+--- expected
++++ actual (dart resolver)
+     "keyAgreement": [],
+     "service": [
+       {
+-        "id": "#files",
++        "id": "did:webvh:QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT:example.com#files",
+         "serviceEndpoint": "https://example.com/",
+         "type": "relativeRef"
+       },
+       {
+         "@context": "https://identity.foundation/linked-vp/contexts/v1",
+-        "id": "#whois",
++        "id": "did:webvh:QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT:example.com#whois",
+         "serviceEndpoint": "https://example.com/whois.vp",
+         "type": "LinkedVerifiablePresentation"
+       }
+
+=== witness-update / python — resolutionResult.json ===
+--- expected
++++ actual (dart resolver)
+ {
+-  "@context": "https://w3id.org/did-resolution/v1",
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+...
+     "versionNumber": 2,
+     "versionTime": "2000-01-02T00:00:00Z"
+   },
+-  "didResolutionMetadata": null
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  }
+ }
 
 === witness-update / rust — resolutionResult.json ===
 --- expected

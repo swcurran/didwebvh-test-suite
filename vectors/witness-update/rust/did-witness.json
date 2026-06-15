@@ -5,18 +5,18 @@
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
-        "created": "2026-06-14T21:49:58Z",
+        "created": "2026-06-15T01:48:10Z",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
         "proofPurpose": "assertionMethod",
-        "proofValue": "zLpneYyoRrnE1eNey2Po7JToNRCUPdERrsAkdhYAVDtwW7dG2m3jmMeseJoDUXzPg8po9iuGQqkRYYg622KByYQR"
+        "proofValue": "z5bXXagE99ZdzF9kNo4boyamXHGMTVGpZLKZk3NvjkUeCNMup9dNMTM1jZCjZkfXjcxDnBzaRxqrKc1xSgH6bU6nc"
       },
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
-        "created": "2026-06-14T21:49:58Z",
+        "created": "2026-06-15T01:48:10Z",
         "verificationMethod": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP#z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z3i73k1T8MXHB1TSdAsVNuApCGfdMmz6wxF9eaKr78GR7AdYg1CHZW4C8fxD2UKnM3y4GzZbCDGPHm8kzCdPC8Xu4"
+        "proofValue": "z5WqUb3PiP3B6Ci7pYi9gNXkWB1CTQsgZ4dcfjiV3AMez8Wu6wWaNhyPNiWXrx357jAzsDDFbCiJfiPera3Fqm7RT"
       }
     ]
   }

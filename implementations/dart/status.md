@@ -119,8 +119,8 @@ Implementation: didwebvh-dart 0.1.2
 | witness-threshold | ts | 🔶 DIFF | see diffs.txt |
 | witness-update | dart (self) | ✅ PASS |  |
 | witness-update | java | ✅ PASS |  |
-| witness-update | java-eecc | ❌ FAIL | resolve error: Invalid witness proofs: insufficient witness proofs for entry 2-QmWtYgGyVUCpXPQKCwXuSH1QwyM1ynTV58HYhwTb4HLML6: need 2, got 1 |
-| witness-update | python | ❌ FAIL | resolve error: Invalid witness proofs: insufficient witness proofs for entry 2-QmUjrsFsAwy2csZnbRrQv6fHKVPhsFDxBwTpYdxbWXS9sB: need 2, got 1 |
+| witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
+| witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust | 🔶 DIFF | see diffs.txt |
 | witness-update | ts | ❌ FAIL | resolve error: Invalid witness proofs: insufficient witness proofs for entry 2-QmcRmyDP523pLsvKvr49BNEVsevhjNGYZhxMGtPyhut9Hy: need 2, got 1 |
 

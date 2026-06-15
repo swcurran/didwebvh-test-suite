@@ -421,7 +421,7 @@ public class GenerateVectors {
             }
             if (meta.getVersionTime() != null) metaObj.addProperty("versionTime", meta.getVersionTime());
             if (Boolean.TRUE.equals(meta.getDeactivated())) metaObj.addProperty("deactivated", true);
-            if (Boolean.TRUE.equals(meta.getPortable()))    metaObj.addProperty("portable", true);
+            if (meta.getPortable() != null)                  metaObj.addProperty("portable", meta.getPortable());
             if (meta.getScid() != null)        metaObj.addProperty("scid", meta.getScid());
         }
         actual.add("didDocumentMetadata", metaObj);

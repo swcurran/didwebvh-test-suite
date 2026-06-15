@@ -428,7 +428,6 @@ public class TestVectors {
             }
 
             JsonObject actual = buildActualResult(didDocJson, result.getMetadata());
-            normalizePair(actual, expected);
 
             String actualJcs = canonicalize(actual.toString());
             String expectedJcs = canonicalize(expected.toString());
@@ -524,51 +523,6 @@ public class TestVectors {
         actual.add("didResolutionMetadata", resMeta);
 
         return actual;
-    }
-
-    // ---------------------------------------------------------------------------
-    // Bidirectional normalisation applied to both sides before comparison
-    // ---------------------------------------------------------------------------
-
-    private void normalizePair(JsonObject actual, JsonObject expected) {
-        // Sort services on both sides
-        sortServices(actual);
-        sortServices(expected);
-
-        // Restrict didDocumentMetadata to intersection of keys in both
-        JsonObject actMeta = asObject(actual.get("didDocumentMetadata"));
-        JsonObject expMeta = asObject(expected.get("didDocumentMetadata"));
-        if (actMeta != null && expMeta != null) {
-            Set<String> common = new HashSet<>(actMeta.keySet());
-            common.retainAll(expMeta.keySet());
-            JsonObject filteredAct = new JsonObject();
-            JsonObject filteredExp = new JsonObject();
-            for (String k : common) {
-                filteredAct.add(k, actMeta.get(k));
-                filteredExp.add(k, expMeta.get(k));
-            }
-            actual.add("didDocumentMetadata", filteredAct);
-            expected.add("didDocumentMetadata", filteredExp);
-        }
-    }
-
-    private void sortServices(JsonObject result) {
-        JsonObject didDoc = asObject(result.get("didDocument"));
-        if (didDoc == null) return;
-        JsonArray services = asArray(didDoc.get("service"));
-        if (services == null) return;
-        List<JsonElement> list = new ArrayList<>();
-        for (JsonElement el : services) list.add(el);
-        list.sort(Comparator.comparing(e -> {
-            if (e.isJsonObject()) {
-                JsonElement id = e.getAsJsonObject().get("id");
-                if (id != null && id.isJsonPrimitive()) return id.getAsString();
-            }
-            return "";
-        }));
-        JsonArray sorted = new JsonArray();
-        list.forEach(sorted::add);
-        didDoc.add("service", sorted);
     }
 
     // ---------------------------------------------------------------------------

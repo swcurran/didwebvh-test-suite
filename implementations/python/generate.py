@@ -60,7 +60,6 @@ def _process_scenario(scenario_name: str) -> tuple[bool, str]:
                 kwargs = {"version_number": rs["versionNumber"]} if rs.get("versionNumber") is not None else {}
                 result = asyncio.run(resolve_did(did, local_history=tmp_path / "did.jsonl", **kwargs))
                 actual = result.serialize()
-                actual.pop("@context", None)
                 (out_dir / rs["filename"]).write_text(json.dumps(actual, indent=2) + "\n")
 
     # Remove any stale per-scenario status.md from old generator versions

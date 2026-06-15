@@ -150,6 +150,9 @@ public class GenerateVectors {
         JsonNode currentDoc = null;
         List<String> currentUpdateKeyMks = new ArrayList<>();
         List<WitnessProofCollection.Entry> witnessEntries = new ArrayList<>();
+        // Tracks the currently-active witness config. Any update entry must be signed
+        // by the witnesses from the PREVIOUS active config (spec requirement).
+        Map<String, Object> activeWitnessParams = null;
 
         List<Map<String, Object>> steps = (List<Map<String, Object>>) script.get("steps");
         List<Object[]> resolveQueue = new ArrayList<>(); // [filename, versionNumber]
@@ -194,6 +197,7 @@ public class GenerateVectors {
                 if (witnessParam != null) {
                     witnessEntries.add(makeWitnessEntry(
                             currentLog.latest().versionId(), params, privKeyMap, multikeyMap));
+                    activeWitnessParams = params;
                 }
 
             // ----------------------------------------------------------------
@@ -234,9 +238,14 @@ public class GenerateVectors {
                     currentDid = currentDoc.path("id").asText(currentDid);
                 }
 
-                if (witnessParam != null) {
+                Map<String, Object> signingParams = (activeWitnessParams != null) ? activeWitnessParams
+                        : (witnessParam != null) ? params : null;
+                if (signingParams != null) {
                     witnessEntries.add(makeWitnessEntry(
-                            currentLog.latest().versionId(), params, privKeyMap, multikeyMap));
+                            currentLog.latest().versionId(), signingParams, privKeyMap, multikeyMap));
+                }
+                if (witnessParam != null) {
+                    activeWitnessParams = params;
                 }
 
             // ----------------------------------------------------------------
