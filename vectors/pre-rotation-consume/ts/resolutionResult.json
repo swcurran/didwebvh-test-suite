@@ -4,18 +4,19 @@
       "https://www.w3.org/ns/did/v1",
       "https://w3id.org/security/multikey/v1"
     ],
-    "id": "did:webvh:QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv:example.com",
-    "controller": "did:webvh:QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv:example.com",
+    "id": "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com",
+    "controller": "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com",
     "verificationMethod": [
       {
         "type": "Multikey",
         "publicKeyMultibase": "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ",
         "purpose": "authentication",
-        "id": "did:webvh:QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv:example.com#MiLH3kDQ"
+        "id": "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#MiLH3kDQ",
+        "controller": "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com"
       }
     ],
     "authentication": [
-      "did:webvh:QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv:example.com#MiLH3kDQ"
+      "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#MiLH3kDQ"
     ],
     "assertionMethod": [],
     "keyAgreement": [],
@@ -38,7 +39,7 @@
   "didDocumentMetadata": {
     "created": "2000-01-01T00:00:00Z",
     "updated": "2000-01-03T00:00:00Z",
-    "versionId": "3-QmaX9bpujdGUBPy9NLxyESmurnLff6SrkLiJQpkjtbLZBj",
+    "versionId": "3-QmSjCVCLYuM8LpPYfmnVyNUN2EN3rar2odQPj7iiSJoFYv",
     "versionNumber": 3,
     "versionTime": "2000-01-03T00:00:00Z"
   },

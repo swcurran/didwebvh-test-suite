@@ -1,0 +1,28 @@
+# Keep Docker build contexts small and fast
+
+# Python
+implementations/python/.venv/
+implementations/python/__pycache__/
+implementations/python/.pytest_cache/
+**/__pycache__/
+**/*.pyc
+
+# Node / Bun
+node_modules/
+bun.lockb
+
+# Rust
+implementations/rust/target/
+
+# Java
+implementations/java/target/
+implementations/java-eecc/target/
+
+# Git history
+.git/
+
+# Editor / OS
+.DS_Store
+**/.DS_Store
+*.swp
+*.swo

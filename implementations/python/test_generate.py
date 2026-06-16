@@ -249,50 +249,6 @@ def _witness_proof(version_id: str, witness_key: AskarSigningKey, timestamp: str
 
 
 # ---------------------------------------------------------------------------
-# TS COMPAT normalizations (shared with test_vectors.py)
-# ---------------------------------------------------------------------------
-
-def _normalize_top_level_context(actual: dict) -> None:
-    """TS COMPAT: Python adds @context at envelope level; TS vectors omit it."""
-    actual.pop("@context", None)
-
-
-def _normalize_service_ids(doc: dict | None) -> None:
-    """TS COMPAT: Python expands service IDs to full DID URLs; TS uses #fragment."""
-    if not doc:
-        return
-    for svc in doc.get("service", []):
-        sid = svc.get("id", "")
-        if "#" in sid and not sid.startswith("#"):
-            svc["id"] = "#" + sid.split("#", 1)[1]
-
-
-def _normalize_service_endpoints(doc: dict | None) -> None:
-    """TS COMPAT: Python appends trailing slash to #files serviceEndpoint."""
-    if not doc:
-        return
-    for svc in doc.get("service", []):
-        ep = svc.get("serviceEndpoint")
-        if isinstance(ep, str) and ep.endswith("/"):
-            svc["serviceEndpoint"] = ep.rstrip("/")
-
-
-def _normalize_resolution_metadata(actual: dict, expected: dict) -> None:
-    """TS COMPAT: Python returns null didResolutionMetadata on success."""
-    if actual.get("didResolutionMetadata") is None:
-        if expected.get("didResolutionMetadata") == {"contentType": "application/did+ld+json"}:
-            actual["didResolutionMetadata"] = {"contentType": "application/did+ld+json"}
-
-
-def _normalize_document_metadata(actual: dict, expected: dict) -> None:
-    """TS COMPAT: Python emits extra metadata fields not in TS vectors."""
-    act_meta = actual.get("didDocumentMetadata")
-    exp_meta = expected.get("didDocumentMetadata")
-    if act_meta and exp_meta:
-        actual["didDocumentMetadata"] = {k: act_meta[k] for k in exp_meta if k in act_meta}
-
-
-# ---------------------------------------------------------------------------
 # Script executor
 # ---------------------------------------------------------------------------
 
@@ -326,6 +282,7 @@ def _run_script(script: dict, omit_empty_nkh: bool = False) -> tuple[list[dict],
     state: DocumentState | None = None
     current_update_keys: list[AskarSigningKey] = []
     witness_key_map: dict[str, AskarSigningKey] = {}
+    active_witness_key_map: dict[str, AskarSigningKey] = {}
 
     for step in script["steps"]:
         op = step["op"]
@@ -374,6 +331,7 @@ def _run_script(script: dict, omit_empty_nkh: bool = False) -> tuple[list[dict],
                     for wk in witness_key_map.values()
                 ]
                 witness_proofs.append({"versionId": state.version_id, "proof": proofs})
+                active_witness_key_map = dict(witness_key_map)
 
         elif op == "update":
             assert state is not None
@@ -385,6 +343,7 @@ def _run_script(script: dict, omit_empty_nkh: bool = False) -> tuple[list[dict],
             nkh_ids = params_spec.get("nextKeyHashes", [])
             next_key_hashes = [_next_key_hash(key_map[kid]) for kid in nkh_ids] if nkh_ids else None
 
+            prior_witness_key_map = dict(active_witness_key_map)
             witness_param = None
             if "witness" in params_spec:
                 witness_param = _build_witness_param(params_spec["witness"], key_map)
@@ -414,12 +373,15 @@ def _run_script(script: dict, omit_empty_nkh: bool = False) -> tuple[list[dict],
             current_update_keys = new_update_keys
             log_entries.append(state.history_line())
 
-            if witness_key_map:
+            signing_key_map = prior_witness_key_map if prior_witness_key_map else witness_key_map
+            if signing_key_map:
                 proofs = [
                     _witness_proof(state.version_id, wk, step.get("timestamp"))
-                    for wk in witness_key_map.values()
+                    for wk in signing_key_map.values()
                 ]
                 witness_proofs.append({"versionId": state.version_id, "proof": proofs})
+            if "witness" in params_spec:
+                active_witness_key_map = dict(witness_key_map)
 
         elif op == "deactivate":
             assert state is not None
@@ -522,11 +484,5 @@ def test_generate(scenario: str) -> None:
             kwargs = {"version_number": rs["versionNumber"]} if rs["versionNumber"] is not None else {}
             result = asyncio.run(resolve_did(did, local_history=tmp_path / "did.jsonl", **kwargs))
             actual = result.serialize()
-
-            _normalize_top_level_context(actual)
-            _normalize_service_ids(actual.get("didDocument"))
-            _normalize_service_endpoints(actual.get("didDocument"))
-            _normalize_resolution_metadata(actual, expected)
-            _normalize_document_metadata(actual, expected)
 
             assert actual == expected, f"Resolution mismatch for {rs['filename']}"

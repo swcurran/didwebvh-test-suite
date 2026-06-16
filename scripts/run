@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# run <impl> [<repo>[:<branch>]]
+#
+# Build a Docker image for the given implementation from the specified library
+# repo/branch, then run generate + cross-resolution, writing results back to
+# the local vectors/ and implementations/<impl>/ directories.
+#
+# Examples:
+#   scripts/run ts                                             # main branch of default repo
+#   scripts/run ts main                                        # explicit branch, default repo
+#   scripts/run ts https://github.com/me/didwebvh-ts:my-pr    # custom repo + branch
+#   scripts/run python https://github.com/me/did-webvh-py:fix  # Python PR branch
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+
+IMPL="${1:?Usage: run <impl> [<repo>[:<branch>]]}"
+ARG2="${2:-}"
+
+CONFIG="$REPO_ROOT/implementations/$IMPL/config.yaml"
+if [[ ! -f "$CONFIG" ]]; then
+  echo "error: unknown implementation '$IMPL' (no config.yaml found)" >&2
+  exit 1
+fi
+
+# Read default repo from config.yaml (home_repo field)
+DEFAULT_REPO=$(grep '^home_repo:' "$CONFIG" | awk '{print $2}' | tr -d '"' | tr -d "'")
+DEFAULT_BRANCH=main
+
+# Parse the optional second argument: "repo:branch", "branch", or nothing
+if [[ -z "$ARG2" ]]; then
+  REPO="$DEFAULT_REPO"
+  BRANCH="$DEFAULT_BRANCH"
+elif [[ "$ARG2" == *"://"* ]]; then
+  # Looks like a URL — split on last : only if a branch follows
+  if [[ "$ARG2" == *:* ]] && [[ "${ARG2##*:}" != "//"* ]] && [[ "${ARG2##*:}" =~ ^[a-zA-Z0-9_./-]+$ ]]; then
+    REPO="${ARG2%:*}"
+    BRANCH="${ARG2##*:}"
+  else
+    REPO="$ARG2"
+    BRANCH="$DEFAULT_BRANCH"
+  fi
+else
+  # No :// → treat as a bare branch name using the default repo
+  REPO="$DEFAULT_REPO"
+  BRANCH="$ARG2"
+fi
+
+IMAGE="didwebvh-test-$IMPL:local"
+
+echo "╔══════════════════════════════════════════════════════╗"
+printf "║  impl:   %-43s ║\n" "$IMPL"
+printf "║  repo:   %-43s ║\n" "$REPO"
+printf "║  branch: %-43s ║\n" "$BRANCH"
+echo "╚══════════════════════════════════════════════════════╝"
+
+echo ""
+echo "▶ docker build → $IMAGE"
+docker build \
+  --build-arg "REPO=$REPO" \
+  --build-arg "BRANCH=$BRANCH" \
+  -t "$IMAGE" \
+  -f "$REPO_ROOT/implementations/$IMPL/Dockerfile" \
+  "$REPO_ROOT"
+
+echo ""
+echo "▶ docker run $IMAGE"
+docker run --rm \
+  --user "$(id -u):$(id -g)" \
+  -v "$REPO_ROOT/vectors:/workspace/vectors" \
+  -v "$REPO_ROOT/implementations/$IMPL:/workspace/implementations/$IMPL" \
+  "$IMAGE"
+
+# Append provenance footer to the status.md the container just wrote
+COMMIT=$(docker run --rm --entrypoint cat "$IMAGE" /app/library-commit 2>/dev/null | tr -d '[:space:]')
+COMMIT_SHORT="${COMMIT:0:7}"
+STATUS="$REPO_ROOT/implementations/$IMPL/status.md"
+if [[ -f "$STATUS" ]]; then
+  printf "\n---\nBuilt from: %s @ %s (%s)\n" "$REPO" "$BRANCH" "$COMMIT_SHORT" >> "$STATUS"
+fi
+
+echo ""
+echo "✅ $IMPL done"

@@ -30,7 +30,8 @@ vectors/                        # Committed artifacts, organized by scenario the
       did.jsonl
       resolutionResult*.json
     rust/
-      (no generation yet — rust resolves other impls' logs only)
+      did.jsonl
+      resolutionResult*.json
     java/
       did.jsonl
       resolutionResult*.json
@@ -39,44 +40,85 @@ vectors/                        # Committed artifacts, organized by scenario the
       resolutionResult*.json
 implementations/
   ts/
+    Dockerfile                  # Docker build for the TS harness
+    docker-entrypoint.sh        # (entrypoint baked into image, not this file)
     src/                        # TypeScript generator + resolver
       generator.ts              # reads vectors/<scenario>/script.yaml, writes vectors/<scenario>/ts/
       cryptography.ts
       interfaces.ts
-    status.md                   # two sections: DID Creation + Cross-Resolution (generated, do not edit by hand)
+    status.md                   # generated, do not edit by hand
     diffs.txt                   # diff details for any DIFF results
-    config.yaml                 # implementation metadata (version, home_repo, commit)
+    config.yaml                 # implementation metadata (home_repo, version, commit)
   python/
-    generate.py                 # generates vectors/<scenario>/python/
+    Dockerfile
+    docker-entrypoint.sh
+    generate.py                 # generates vectors/<scenario>/python/ (skips negative scenarios)
     test_vectors.py             # pytest: resolves all impl logs with Python resolver
     test_generate.py            # pytest: verifies Python generates same log as TS
     status.md
     diffs.txt
     config.yaml
   rust/
+    Dockerfile
+    docker-entrypoint.sh
     src/main.rs                 # resolves all impl logs, writes implementations/rust/status.md
+    src/generate.rs             # generates vectors/<scenario>/rust/
     status.md
     diffs.txt
     config.yaml
   java/
+    Dockerfile
+    docker-entrypoint.sh
     src/.../GenerateVectors.java  # reads scripts, writes vectors/<scenario>/java/
     src/.../TestVectors.java      # resolves all impl logs, writes implementations/java/status.md
     status.md
     diffs.txt
     config.yaml
   java-eecc/
-    src/.../GenerateVectors.java  # reads scripts, writes vectors/<scenario>/java-eecc/
-    src/.../TestVectors.java      # resolves all impl logs, writes implementations/java-eecc/status.md
+    Dockerfile
+    docker-entrypoint.sh
+    src/.../GenerateVectors.java
+    src/.../TestVectors.java
     status.md
     diffs.txt
     config.yaml
+scripts/
+  run       # build + run a single implementation via Docker
+  run-all   # two-pass run of all implementations
 package.json
 ```
 
 ## Commands
 
+### Docker (primary — requires Docker, no other toolchain needed)
+
 ```bash
-# Install dependencies
+# Run all implementations (two-pass: generate then cross-resolve with fresh vectors)
+scripts/run-all
+
+# Run a subset
+scripts/run-all ts python
+
+# Run a single implementation at main branch of its library
+scripts/run ts
+scripts/run python
+scripts/run rust
+scripts/run java
+scripts/run java-eecc
+
+# Run against a PR branch (using default repo)
+scripts/run ts feat/my-pr
+
+# Run against a fork + branch
+scripts/run ts https://github.com/me/didwebvh-ts:feat/my-pr
+```
+
+Each `scripts/run` call builds (or rebuilds from cache) a Docker image, runs generate + cross-resolution, and appends a provenance footer to `status.md` with the exact library commit used.
+
+### Direct (without Docker, for local development)
+
+```bash
+# TS — install dependencies
 bun install
 
 # Regenerate all TS vectors from scripts + run TS cross-resolution (writes ts/status.md)
@@ -88,32 +130,32 @@ bun run generate basic-create
 # Verify committed TS vectors match what the generator would produce (CI check)
 bun run verify
 
-# Generate Python vectors
-cd implementations/python && python generate.py
+# Regenerate all negative test vector artifacts (ts/ only)
+bun run generate-negative
 
-# Run Python resolution tests (cross-impl)
-cd implementations/python && pytest test_vectors.py
+# Python — generate vectors (skips negative scenarios automatically)
+cd implementations/python && source .venv/bin/activate && python generate.py
 
-# Generate Rust DID log vectors from scripts
+# Python — cross-resolution + negative tests
+cd implementations/python && source .venv/bin/activate && pytest test_vectors.py
+
+# Rust — generate vectors
 cd implementations/rust && cargo run --bin generate-vectors
 
-# Run Rust resolution tests + generate rust/status.md files
+# Rust — cross-resolution + negative tests (writes rust/status.md)
 cd implementations/rust && cargo run --bin test-vectors
 
-# Generate Java DID log vectors from scripts (writes vectors/<scenario>/java/)
+# Java — generate vectors
 cd implementations/java && mvn compile exec:java@generate-vectors
 
-# Run Java resolution tests + generate java/status.md files
+# Java — cross-resolution + negative tests (writes java/status.md)
 cd implementations/java && mvn compile exec:java
 
-# Generate Java-EECC DID log vectors from scripts (writes vectors/<scenario>/java-eecc/)
+# Java-EECC — generate vectors
 cd implementations/java-eecc && mvn compile exec:java@generate-vectors
 
-# Run Java-EECC resolution tests + generate java-eecc/status.md files
+# Java-EECC — cross-resolution + negative tests
 cd implementations/java-eecc && mvn compile exec:java
-
-# Regenerate all negative test vector artifacts (ts/ only — other impls resolve, not generate)
-bun run generate-negative
 ```
 
 ## Maintenance: Testing Whether XFAILs Are Fixed
@@ -132,7 +174,9 @@ When you give Claude this prompt it will:
 
 1. Identify all active XFAIL guards for that implementation (see locations below).
 2. Temporarily comment them out one at a time (or all at once if independent).
-3. Re-run the harness and read the updated `status.md`.
+3. Re-run the harness with `scripts/run <impl>` and read the updated `status.md`.
+   - The harness source (where guards live) is **mounted from the host**, so guard edits take effect immediately — no Docker rebuild needed.
+   - If a new library version is what's expected to fix the XFAIL, first run `scripts/run <impl> <branch>` to build with the new library, then re-edit the guard and run again.
 4. Report which XFAILs became PASS (guard can be permanently deleted) and which became FAIL or DIFF (library still broken — guard must stay).
 5. Apply whichever permanent changes you approve.
 
@@ -152,7 +196,13 @@ Python's `pytest.xfail()` is **unconditional** — it checks log content, not re
 
 ### Upgrading the library first
 
-Before testing XFAILs, update the library version in the implementation's build file and config.yaml:
+**With Docker (preferred):** just pass the branch to `scripts/run` — the image always clones fresh from the specified branch, so there is nothing to manually update:
+
+```bash
+scripts/run python https://github.com/decentralized-identity/didwebvh-py:my-fix-branch
+```
+
+**Without Docker:** update the library version in the implementation's build file and config.yaml, then recompile/rebuild before running the XFAIL test:
 
 | Implementation | Build file | Key field |
 |---|---|---|
@@ -161,8 +211,6 @@ Before testing XFAILs, update the library version in the implementation's build 
 | Python | `implementations/python/` | `pip install --upgrade did-webvh` then update `config.yaml` |
 | Rust | `implementations/rust/Cargo.toml` | add `rev = "<commit>"` to pin, or remove to track HEAD |
 | TS | `package.json` | version of `didwebvh-ts` |
-
-After updating, recompile/rebuild before running the XFAIL test so you are actually testing the new library.
 
 ## Implementation config.yaml
 

@@ -1,0 +1,67 @@
+[
+  {
+    "testCase": "basic-create",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "basic-update",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "deactivate",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "key-rotation",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "multi-update",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "multiple-update-keys",
+    "result": "⚠️ SKIP",
+    "notes": "multiple-update-keys at create time not supported by didwebvh-dart API"
+  },
+  {
+    "testCase": "portable",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "portable-move",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "pre-rotation",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "pre-rotation-consume",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "services",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "witness-threshold",
+    "result": "✅ PASS",
+    "notes": ""
+  },
+  {
+    "testCase": "witness-update",
+    "result": "✅ PASS",
+    "notes": ""
+  }
+]

@@ -32,6 +32,8 @@ const VECTORS_ROOT: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../../vectors")
 #[derive(Debug, Deserialize)]
 struct Script {
     #[serde(default)]
+    negative: bool,
+    #[serde(default)]
     keys: Vec<KeyDef>,
     steps: Vec<Step>,
 }
@@ -176,7 +178,7 @@ fn build_parameters(p: &StepParams, keys: &HashMap<String, KeyInfo>) -> Result<P
 
 fn all_witness_secrets(keys: &HashMap<String, KeyInfo>) -> HashMap<String, Secret> {
     keys.values()
-        .map(|k| (k.pub_multibase.clone(), k.secret.clone()))
+        .map(|k| (format!("did:key:{}", k.pub_multibase), k.secret.clone()))
         .collect()
 }
 
@@ -252,6 +254,7 @@ async fn main() {
 
     let mut ok = 0u32;
     let mut err = 0u32;
+    let mut skipped = 0u32;
     let mut gen_rows: Vec<serde_json::Value> = Vec::new();
 
     for scenario in &scenarios {
@@ -259,7 +262,20 @@ async fn main() {
         if let Some(ref f) = filter {
             if &name != f { continue; }
         }
-        if !scenario.path().join("script.yaml").exists() { continue; }
+        let script_path = scenario.path().join("script.yaml");
+        if !script_path.exists() { continue; }
+
+        // Skip negative test scenarios — generate-vectors only handles happy-path
+        if let Ok(text) = std::fs::read_to_string(&script_path) {
+            if let Ok(s) = serde_yaml::from_str::<Script>(&text) {
+                if s.negative {
+                    skipped += 1;
+                    println!("generate {name} ... SKIP (negative test)");
+                    continue;
+                }
+            }
+        }
+
         print!("generate {name} ... ");
         match run_scenario(&scenario.path()).await {
             Ok(()) => {
@@ -273,7 +289,7 @@ async fn main() {
         }
     }
 
-    println!("\n{ok} generated, {err} errors");
+    println!("\n{ok} generated, {skipped} skipped, {err} errors");
 
     let gen_results_path = Path::new(env!("CARGO_MANIFEST_DIR")).join("gen_results.json");
     if let Ok(s) = serde_json::to_string_pretty(&gen_rows) {

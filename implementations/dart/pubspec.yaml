@@ -1,0 +1,17 @@
+# Harness package — added to the didwebvh-dart workspace by the Dockerfile.
+name: didwebvh_test_harness
+description: Compliance test harness for did:webvh (Dart implementation)
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: '^3.6.0'
+
+# Resolved via the workspace root; constraints are advisory here.
+resolution: workspace
+
+dependencies:
+  didwebvh: any
+  didwebvh_signing_local: any
+  path: ^1.9.0
+  yaml: ^3.1.0

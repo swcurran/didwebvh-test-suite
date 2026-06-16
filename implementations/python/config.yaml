@@ -1,4 +1,4 @@
 name: python
 home_repo: https://github.com/decentralized-identity/didwebvh-py
-version: ""
-commit: ""
+version: "1.0.0"
+commit: "dc32e19"

@@ -1,6 +1,6 @@
 # rust status
 
-Implementation: didwebvh-rs 0.5.3 @ f8f7d751
+Implementation: didwebvh-rs 0.5.3 @ ad614934
 
 ## DID Creation
 
@@ -45,68 +45,84 @@ Implementation: didwebvh-rs 0.5.3 @ f8f7d751
 
 | Test Case | Log Source | Result | Notes |
 |---|---|---|---|
+| basic-create | dart | 🔶 DIFF | see diffs.txt |
 | basic-create | java | 🔶 DIFF | see diffs.txt |
 | basic-create | java-eecc | 🔶 DIFF | see diffs.txt |
 | basic-create | python | 🔶 DIFF | see diffs.txt |
 | basic-create | rust (self) | ✅ PASS |  |
 | basic-create | ts | 🔶 DIFF | see diffs.txt |
+| basic-update | dart | 🔶 DIFF | see diffs.txt |
 | basic-update | java | 🔶 DIFF | see diffs.txt |
 | basic-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | basic-update | python | 🔶 DIFF | see diffs.txt |
 | basic-update | rust (self) | ✅ PASS |  |
 | basic-update | ts | 🔶 DIFF | see diffs.txt |
+| deactivate | dart | 🔶 DIFF | see diffs.txt |
 | deactivate | java | 🔶 DIFF | see diffs.txt |
 | deactivate | java-eecc | 🔶 DIFF | see diffs.txt |
 | deactivate | python | 🔶 DIFF | see diffs.txt |
 | deactivate | rust (self) | ✅ PASS |  |
 | deactivate | ts | 🔶 DIFF | see diffs.txt |
+| key-rotation | dart | 🔶 DIFF | see diffs.txt |
 | key-rotation | java | 🔶 DIFF | see diffs.txt |
 | key-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | key-rotation | python | 🔶 DIFF | see diffs.txt |
 | key-rotation | rust (self) | ✅ PASS |  |
 | key-rotation | ts | 🔶 DIFF | see diffs.txt |
+| multi-update | dart | 🔶 DIFF | see diffs.txt |
 | multi-update | java | 🔶 DIFF | see diffs.txt |
 | multi-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | multi-update | python | 🔶 DIFF | see diffs.txt |
 | multi-update | rust (self) | ✅ PASS |  |
 | multi-update | ts | 🔶 DIFF | see diffs.txt |
+| multiple-update-keys | dart | ⚠️ SKIP | no did.jsonl |
 | multiple-update-keys | java | ⚠️ SKIP | no did.jsonl |
 | multiple-update-keys | java-eecc | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | python | 🔶 DIFF | see diffs.txt |
 | multiple-update-keys | rust (self) | ✅ PASS |  |
 | multiple-update-keys | ts | 🔶 DIFF | see diffs.txt |
+| portable | dart | 🔶 DIFF | see diffs.txt |
 | portable | java | 🔶 DIFF | see diffs.txt |
 | portable | java-eecc | 🔶 DIFF | see diffs.txt |
 | portable | python | 🔶 DIFF | see diffs.txt |
 | portable | rust (self) | ✅ PASS |  |
 | portable | ts | 🔶 DIFF | see diffs.txt |
+| portable-move | dart | 🔶 DIFF | see diffs.txt |
 | portable-move | java | 🔶 DIFF | see diffs.txt |
 | portable-move | java-eecc | 🔶 DIFF | see diffs.txt |
 | portable-move | python | 🔶 DIFF | see diffs.txt |
 | portable-move | rust (self) | ✅ PASS |  |
 | portable-move | ts | 🔶 DIFF | see diffs.txt |
+| pre-rotation | dart | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation | rust (self) | ✅ PASS |  |
 | pre-rotation | ts | 🔶 DIFF | see diffs.txt |
-| pre-rotation-consume | java | ⚠️ SKIP | no did.jsonl |
+| pre-rotation-consume | dart | 🔶 DIFF | see diffs.txt |
+| pre-rotation-consume | java | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | java-eecc | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | python | 🔶 DIFF | see diffs.txt |
 | pre-rotation-consume | rust (self) | ✅ PASS |  |
 | pre-rotation-consume | ts | 🔶 DIFF | see diffs.txt |
+| services | dart | 🔶 DIFF | see diffs.txt |
 | services | java | 🔶 DIFF | see diffs.txt |
 | services | java-eecc | 🔶 DIFF | see diffs.txt |
 | services | python | 🔶 DIFF | see diffs.txt |
 | services | rust (self) | ✅ PASS |  |
 | services | ts | 🔶 DIFF | see diffs.txt |
+| witness-threshold | dart | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java | 🔶 DIFF | see diffs.txt |
 | witness-threshold | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-threshold | python | 🔶 DIFF | see diffs.txt |
 | witness-threshold | rust (self) | ✅ PASS |  |
 | witness-threshold | ts | 🔶 DIFF | see diffs.txt |
-| witness-update | java | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
-| witness-update | java-eecc | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
-| witness-update | python | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
+| witness-update | dart | 🔶 DIFF | see diffs.txt |
+| witness-update | java | 🔶 DIFF | see diffs.txt |
+| witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
+| witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust (self) | ✅ PASS |  |
 | witness-update | ts | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
+
+---
+Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (cbf35ef)

@@ -396,89 +396,6 @@ fn extract_version_number(result_file: &str) -> Option<u32> {
 }
 
 // ---------------------------------------------------------------------------
-// Normalizations applied to both sides before comparison
-// ---------------------------------------------------------------------------
-
-fn normalize_services(value: &mut Value) {
-    if let Some(services) = value
-        .get_mut("didDocument")
-        .and_then(|d| d.get_mut("service"))
-        .and_then(|s| s.as_array_mut())
-    {
-        services.sort_by(|a, b| {
-            let a_id = a.get("id").and_then(|v| v.as_str()).unwrap_or("");
-            let b_id = b.get("id").and_then(|v| v.as_str()).unwrap_or("");
-            a_id.cmp(b_id)
-        });
-    }
-}
-
-fn normalize_pair(actual: &mut Value, expected: &mut Value) {
-    // Remove @context from actual (Rust library always includes it)
-    if let Some(obj) = actual.as_object_mut() {
-        obj.remove("@context");
-    }
-
-    // Null didResolutionMetadata → default contentType (Rust returns null on success)
-    if actual.get("didResolutionMetadata").map(|v| v.is_null()).unwrap_or(false) {
-        if expected.get("didResolutionMetadata")
-            == Some(&json!({"contentType": "application/did+ld+json"}))
-        {
-            if let Some(obj) = actual.as_object_mut() {
-                obj.insert(
-                    "didResolutionMetadata".to_string(),
-                    json!({"contentType": "application/did+ld+json"}),
-                );
-            }
-        }
-    }
-
-    // Sort services on both sides (order-independent comparison)
-    normalize_services(actual);
-    normalize_services(expected);
-
-    // Restrict didDocumentMetadata to the intersection of keys present in both
-    let act_keys: std::collections::BTreeSet<String> = actual
-        .get("didDocumentMetadata")
-        .and_then(|v| v.as_object())
-        .map(|o| o.keys().cloned().collect())
-        .unwrap_or_default();
-    let exp_keys: std::collections::BTreeSet<String> = expected
-        .get("didDocumentMetadata")
-        .and_then(|v| v.as_object())
-        .map(|o| o.keys().cloned().collect())
-        .unwrap_or_default();
-    let common: std::collections::BTreeSet<&String> = act_keys.intersection(&exp_keys).collect();
-
-    if !common.is_empty() {
-        if let Some(act_meta) = actual
-            .get("didDocumentMetadata")
-            .and_then(|v| v.as_object())
-            .cloned()
-        {
-            let filtered_act: serde_json::Map<String, Value> = common
-                .iter()
-                .filter_map(|k| act_meta.get(*k).map(|v| ((*k).clone(), v.clone())))
-                .collect();
-            actual.as_object_mut().unwrap()
-                .insert("didDocumentMetadata".to_string(), Value::Object(filtered_act));
-        }
-        if let Some(exp_meta) = expected
-            .get("didDocumentMetadata")
-            .and_then(|v| v.as_object())
-            .cloned()
-        {
-            let filtered_exp: serde_json::Map<String, Value> = common
-                .iter()
-                .filter_map(|k| exp_meta.get(*k).map(|v| ((*k).clone(), v.clone())))
-                .collect();
-            expected.as_object_mut().unwrap()
-                .insert("didDocumentMetadata".to_string(), Value::Object(filtered_exp));
-        }
-    }
-}
-
-// ---------------------------------------------------------------------------
 // Core test logic
 // ---------------------------------------------------------------------------
 
@@ -560,8 +477,6 @@ async fn run_vector_test(impl_dir: &Path, result_file: &str) -> TestOutcome {
         "didDocumentMetadata": did_document_metadata,
         "didResolutionMetadata": {"contentType": "application/did+ld+json"},
     });
-
-    normalize_pair(&mut actual, &mut expected);
 
     let actual_jcs = match serde_jcs::to_vec(&actual) {
         Ok(b) => b,

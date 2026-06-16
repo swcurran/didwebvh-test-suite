@@ -77,91 +77,6 @@ def _version_number_from_stem(stem: str) -> int | None:
     return None
 
 
-# ---------------------------------------------------------------------------
-# Pre-flight checks for known hard failures
-# ---------------------------------------------------------------------------
-
-def _log_has_empty_next_key_hashes(log_path: Path) -> bool:
-    """
-    TS COMPAT ISSUE — nextKeyHashes: []
-    The TS generator writes nextKeyHashes: [] for every non-pre-rotation entry
-    (it always serialises the field, defaulting to an empty list).
-    The Python library rejects an empty list during update validation.
-    Single-entry logs (create only) are not affected.
-    """
-    lines = log_path.read_text().splitlines()
-    if len(lines) < 2:
-        return False
-    for line in lines:
-        params = json.loads(line).get("parameters", {})
-        if params.get("nextKeyHashes") == []:
-            return True
-    return False
-
-
-# ---------------------------------------------------------------------------
-# TS COMPAT normalizations applied to the actual (Python) result
-# ---------------------------------------------------------------------------
-
-def _normalize_top_level_context(actual: dict) -> None:
-    """
-    TS COMPAT — resolution envelope @context
-    The Python library always adds "@context": "https://w3id.org/did-resolution/v1"
-    to the resolution envelope.  The TS generator does not include this key.
-    """
-    actual.pop("@context", None)
-
-
-def _normalize_service_ids(doc: dict | None) -> None:
-    """
-    TS COMPAT — service ID form
-    The TS generator writes implicit service IDs as bare fragments: "#files",
-    "#whois".  The Python library expands them to absolute DID URLs.
-    """
-    if not doc:
-        return
-    for svc in doc.get("service", []):
-        sid = svc.get("id", "")
-        if "#" in sid and not sid.startswith("#"):
-            svc["id"] = "#" + sid.split("#", 1)[1]
-
-
-def _normalize_service_endpoints(doc: dict | None) -> None:
-    """
-    TS COMPAT — implicit service endpoint trailing slash
-    The Python library appends a trailing slash to the #files serviceEndpoint.
-    """
-    if not doc:
-        return
-    for svc in doc.get("service", []):
-        ep = svc.get("serviceEndpoint")
-        if isinstance(ep, str) and ep.endswith("/"):
-            svc["serviceEndpoint"] = ep.rstrip("/")
-
-
-def _normalize_resolution_metadata(actual: dict, expected: dict) -> None:
-    """
-    TS COMPAT — didResolutionMetadata null vs {contentType: ...}
-    For successful resolutions the TS vectors commit
-    didResolutionMetadata: {"contentType": "application/did+ld+json"}.
-    The Python library returns null for the same case.
-    """
-    if actual.get("didResolutionMetadata") is None:
-        if expected.get("didResolutionMetadata") == {"contentType": "application/did+ld+json"}:
-            actual["didResolutionMetadata"] = {"contentType": "application/did+ld+json"}
-
-
-def _normalize_document_metadata(actual: dict, expected: dict) -> None:
-    """
-    TS COMPAT — extra didDocumentMetadata fields
-    The Python library emits additional fields not present in the TS vectors.
-    Compare only the keys that appear in the expected metadata.
-    """
-    act_meta = actual.get("didDocumentMetadata")
-    exp_meta = expected.get("didDocumentMetadata")
-    if act_meta and exp_meta:
-        actual["didDocumentMetadata"] = {k: act_meta[k] for k in exp_meta if k in act_meta}
-
 
 # ---------------------------------------------------------------------------
 # Parametrised test
@@ -180,13 +95,6 @@ def test_vector(scenario: str, impl: str, result_file: str, _status_data: dict) 
     log = VECTORS_ROOT / scenario / impl / "did.jsonl"
     expected = json.loads((VECTORS_ROOT / scenario / impl / result_file).read_text())
 
-    if _log_has_empty_next_key_hashes(log):
-        pytest.xfail(
-            "TS COMPAT: TS generator writes nextKeyHashes: [] for non-pre-rotation "
-            "entries; Python library rejects an empty list. Fix: TS should omit the "
-            "field when empty, OR Python should accept []."
-        )
-
     did = json.loads(log.read_text().splitlines()[0])["state"]["id"]
 
     version_number = _version_number_from_stem(Path(result_file).stem)
@@ -194,12 +102,6 @@ def test_vector(scenario: str, impl: str, result_file: str, _status_data: dict) 
 
     result = asyncio.run(resolve_did(did, local_history=log, **kwargs))
     actual = result.serialize()
-
-    _normalize_top_level_context(actual)
-    _normalize_service_ids(actual.get("didDocument"))
-    _normalize_service_endpoints(actual.get("didDocument"))
-    _normalize_resolution_metadata(actual, expected)
-    _normalize_document_metadata(actual, expected)
 
     _status_data["actual"] = actual
     _status_data["expected"] = expected

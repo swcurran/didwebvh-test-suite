@@ -161,6 +161,9 @@ public class GenerateVectors {
         String currentDid = null;
         List<String> currentUpdateKeyMks = new ArrayList<>();
         List<WitnessProofEntry> witnessEntries = new ArrayList<>();
+        // Tracks the currently-active witness config. Any log entry (update or create)
+        // must be signed by the witnesses from the PREVIOUS active config, not the new one.
+        Map<String, Object> activeWitnessParams = null;
 
         List<Map<String, Object>> steps = (List<Map<String, Object>>) script.get("steps");
 
@@ -224,6 +227,7 @@ public class GenerateVectors {
                 if (witnessParam != null) {
                     String versionId = result.getLogEntry().getVersionId();
                     witnessEntries.add(makeWitnessEntry(versionId, params, privKeyMap, multikeyMap));
+                    activeWitnessParams = params;
                 }
 
             // ----------------------------------------------------------------
@@ -293,9 +297,18 @@ public class GenerateVectors {
                 UpdateDidResult result = updateCfg.execute();
                 currentState.appendEntry(result.getLogEntry());
 
-                if (witnessParam != null) {
+                // Sign this entry with whoever was active before this update.
+                // If the update changes the witness config, the previous witnesses
+                // must approve the transition (spec requirement). If witness config
+                // is unchanged but witnesses are active, they still must witness it.
+                Map<String, Object> signingParams = (activeWitnessParams != null) ? activeWitnessParams
+                        : (witnessParam != null) ? params : null;
+                if (signingParams != null) {
                     String versionId = result.getLogEntry().getVersionId();
-                    witnessEntries.add(makeWitnessEntry(versionId, params, privKeyMap, multikeyMap));
+                    witnessEntries.add(makeWitnessEntry(versionId, signingParams, privKeyMap, multikeyMap));
+                }
+                if (witnessParam != null) {
+                    activeWitnessParams = params;
                 }
 
             // ----------------------------------------------------------------
@@ -408,7 +421,7 @@ public class GenerateVectors {
             }
             if (meta.getVersionTime() != null) metaObj.addProperty("versionTime", meta.getVersionTime());
             if (Boolean.TRUE.equals(meta.getDeactivated())) metaObj.addProperty("deactivated", true);
-            if (Boolean.TRUE.equals(meta.getPortable()))    metaObj.addProperty("portable", true);
+            if (meta.getPortable() != null)                  metaObj.addProperty("portable", meta.getPortable());
             if (meta.getScid() != null)        metaObj.addProperty("scid", meta.getScid());
         }
         actual.add("didDocumentMetadata", metaObj);
