@@ -7,7 +7,7 @@
 # The did-webvh library is installed into the system Python inside the image
 # so it survives the runtime mount of implementations/python/.
 
-FROM python:3.12-slim
+FROM python:3.14-slim
 
 ARG REPO=https://github.com/decentralized-identity/didwebvh-py
 ARG BRANCH=main
