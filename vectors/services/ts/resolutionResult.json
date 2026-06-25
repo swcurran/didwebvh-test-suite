@@ -48,10 +48,10 @@
   },
   "didDocumentMetadata": {
     "created": "2000-01-01T00:00:00Z",
-    "updated": "2000-01-02T00:00:00.000Z",
-    "versionId": "2-QmeAh35vrJez3HAErnMTtm6prsUDdXH75XceZhGL2GF29W",
+    "updated": "2000-01-02T00:00:00Z",
+    "versionId": "2-QmYUmpUekqCteNaGcqAuT5Db3E296zn3tLriH1RKQJgG67",
     "versionNumber": 2,
-    "versionTime": "2000-01-02T00:00:00.000Z"
+    "versionTime": "2000-01-02T00:00:00Z"
   },
   "didResolutionMetadata": {
     "contentType": "application/did+ld+json"

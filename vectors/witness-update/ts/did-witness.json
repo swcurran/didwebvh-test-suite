@@ -21,7 +21,7 @@
     ]
   },
   {
-    "versionId": "2-QmaDJfHL8zLtJDfC5WQssCf8hG77CstnRpMwxJeyR1FKVv",
+    "versionId": "2-QmcRmyDP523pLsvKvr49BNEVsevhjNGYZhxMGtPyhut9Hy",
     "proof": [
       {
         "type": "DataIntegrityProof",
@@ -29,7 +29,7 @@
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
         "created": "2000-01-02T00:00:00Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z4RwJbHsGJPW81uezcbmnnGTQBny7jQHsgrnt9Hs2syVR9kmVaaUx47yiBSnWLKKPUztp7zesvuF68u3nn1W9cDty"
+        "proofValue": "z4XPgZKoDEFEukANdJgJcPq37A2VhRcYuUr9a9XeFjGfm7sAu1CZmGegNKN2GtLV13b8zEGx6cygwK48JYQ3RAVCt"
       },
       {
         "type": "DataIntegrityProof",
@@ -37,7 +37,7 @@
         "verificationMethod": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP#z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP",
         "created": "2000-01-02T00:00:00Z",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z315EDCGqn8tfeyA1hMRZi9ARmCfmikS6FuSTTk2jxXq1rXoXAqNMjMsg6oikxfZFDQcrhKPCukKhNYYub1NUqGW7"
+        "proofValue": "z47PRt9MCjMJWDZZDp7J1pVy6HwrfVV11tp2Vn6J7AcT69vLvGDfR1ajwgppep1UtJ3FzjSEFocmumUPiiniPzY1C"
       }
     ]
   }

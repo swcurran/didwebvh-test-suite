@@ -22,6 +22,9 @@
     "keyAgreement": [],
     "capabilityDelegation": [],
     "capabilityInvocation": [],
+    "alsoKnownAs": [
+      "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com"
+    ],
     "service": [
       {
         "id": "#files",
@@ -38,10 +41,10 @@
   },
   "didDocumentMetadata": {
     "created": "2000-01-01T00:00:00Z",
-    "updated": "2000-01-02T00:00:00.000Z",
-    "versionId": "2-QmV4GWQ8zXoNfDYLT1gFM2VuAHDBuWxuumd7GUFyRWApGA",
+    "updated": "2000-01-02T00:00:00Z",
+    "versionId": "2-QmfGVAEVP1t121wgcin2SPjsYtMDRgYRfSHxF81f1gHiqL",
     "versionNumber": 2,
-    "versionTime": "2000-01-02T00:00:00.000Z"
+    "versionTime": "2000-01-02T00:00:00Z"
   },
   "didResolutionMetadata": {
     "contentType": "application/did+ld+json"
