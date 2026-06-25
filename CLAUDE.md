@@ -419,7 +419,7 @@ Scenario to add once this is implemented:
 
 ### Additional Negative Test Vectors
 
-The 16 current negative scenarios cover a broad set of violations but candidates for future addition include:
+The 17 current negative scenarios cover a broad set of violations but candidates for future addition include:
 
 | Scenario | Violated rule |
 | --- | --- |
@@ -427,7 +427,6 @@ The 16 current negative scenarios cover a broad set of violations but candidates
 | `update-after-deactivate` | Any update after a deactivation entry |
 | `double-deactivate` | Second deactivation entry on an already-deactivated DID |
 | `pre-rotation-wrong-key` | Update whose signing key hash does not appear in the previous entry's `nextKeyHashes` |
-| `witness-threshold-unmet` | Resolution where the witness proof collection does not meet the declared threshold |
 
 The negative generator (`implementations/ts/src/negative-generator.ts`) already supports the DSL ops needed for most of these: `create`, `update`, `migrate`, `corrupt`, `sign-witness-proof`, and `resolve-did`. The `PermissiveVerifier` bypass is already in place for steps that the library's own validation would otherwise block.
 

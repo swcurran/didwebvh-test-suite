@@ -1,0 +1,57 @@
+description: "Witness list change approved by only 1 of the 2 required previous witnesses — threshold unmet"
+spec_ref: "https://identity.foundation/didwebvh/v1.0/#witnesses"
+negative: true
+
+keys:
+  - id: key-0
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000001"
+  - id: wit-0
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000010"
+  - id: wit-1
+    type: ed25519
+    seed: "0000000000000000000000000000000000000000000000000000000000000011"
+
+steps:
+  - op: create
+    domain: example.com
+    signer: key-0
+    timestamp: "2000-01-01T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+      witness:
+        threshold: 2
+        witnesses:
+          - id: wit-0
+          - id: wit-1
+
+  - op: update
+    signer: key-0
+    timestamp: "2000-01-02T00:00:00Z"
+    params:
+      updateKeys: ["key-0"]
+      witness:
+        threshold: 1
+        witnesses:
+          - id: wit-0
+
+  # Provide full 2-of-2 approval for the genesis entry (entry 0).
+  - op: sign-witness-proof
+    signer: wit-0
+    entry: 0
+
+  - op: sign-witness-proof
+    signer: wit-1
+    entry: 0
+
+  # For the update entry (entry 1) only wit-0 signs — wit-1 is intentionally omitted.
+  # The previous 2-of-2 list governs this entry (a list change takes effect only after
+  # the entry is published), so the threshold of 2 is not met.
+  # A conforming resolver must reject this with invalidDid.
+  - op: sign-witness-proof
+    signer: wit-0
+    entry: 1
+
+  - op: resolve
+    expectError: invalidDid

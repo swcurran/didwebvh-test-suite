@@ -58,6 +58,7 @@ echo "╚═══════════════════════�
 echo ""
 echo "▶ docker build → $IMAGE"
 docker build \
+  --no-cache \
   --build-arg "REPO=$REPO" \
   --build-arg "BRANCH=$BRANCH" \
   -t "$IMAGE" \

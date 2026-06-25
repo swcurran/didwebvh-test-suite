@@ -4,19 +4,19 @@
       "https://www.w3.org/ns/did/v1",
       "https://w3id.org/security/multikey/v1"
     ],
-    "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com",
-    "controller": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com",
+    "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org",
+    "controller": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org",
     "verificationMethod": [
       {
         "type": "Multikey",
         "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
         "purpose": "authentication",
-        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#P5RDjVJG",
-        "controller": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com"
+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#P5RDjVJG",
+        "controller": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org"
       }
     ],
     "authentication": [
-      "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#P5RDjVJG"
+      "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#P5RDjVJG"
     ],
     "assertionMethod": [],
     "keyAgreement": [],
@@ -26,22 +26,22 @@
       {
         "id": "#files",
         "type": "relativeRef",
-        "serviceEndpoint": "https://example.com"
+        "serviceEndpoint": "https://example.org"
       },
       {
         "@context": "https://identity.foundation/linked-vp/contexts/v1",
         "id": "#whois",
         "type": "LinkedVerifiablePresentation",
-        "serviceEndpoint": "https://example.com/whois.vp"
+        "serviceEndpoint": "https://example.org/whois.vp"
       }
     ]
   },
   "didDocumentMetadata": {
     "created": "2000-01-01T00:00:00Z",
-    "updated": "2000-01-02T00:00:00Z",
-    "versionId": "2-QmeMtiHWAh9fmBJGYaSvbNBVrBR6sZfa5VRCkyDmZNSQkP",
+    "updated": "2000-01-02T00:00:00.000Z",
+    "versionId": "2-QmV4GWQ8zXoNfDYLT1gFM2VuAHDBuWxuumd7GUFyRWApGA",
     "versionNumber": 2,
-    "versionTime": "2000-01-02T00:00:00Z"
+    "versionTime": "2000-01-02T00:00:00.000Z"
   },
   "didResolutionMetadata": {
     "contentType": "application/did+ld+json"

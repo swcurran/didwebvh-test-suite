@@ -27,17 +27,18 @@ Implementation: didwebvh-ts 2.7.4
 | negative-cross-did-witness-replay | invalidDid | ✅ PASS |  |
 | negative-did-key-body-fragment-mismatch | invalidProof | ✅ PASS |  |
 | negative-duplicate-witness-ids | invalidParameters | ✅ PASS |  |
-| negative-fragment-leaks-into-domain | invalidDid | ❌ FAIL | resolver fetched URL: https://127.0.0.1/.well-known/did.jsonl |
-| negative-lowercase-pct-port-ip | invalidDid | ❌ FAIL | resolver fetched URL: https://127.0.0.1:8080/.well-known/did.jsonl |
-| negative-path-traversal-did | invalidDid | ❌ FAIL | resolver fetched URL: https://example.com/../../admin/did.jsonl |
-| negative-pct-encoded-ip-host | invalidDid | ❌ FAIL | resolver fetched URL: https://127.0.0.1/.well-known/did.jsonl |
-| negative-pct-encoded-traversal | invalidDid | ❌ FAIL | resolver fetched URL: https://example.com/../admin/did.jsonl |
-| negative-portable-scid-swap | invalidDid | ❌ FAIL | expected error "invalidDid" but resolution succeeded |
+| negative-fragment-leaks-into-domain | invalidDid | ✅ PASS |  |
+| negative-lowercase-pct-port-ip | invalidDid | ✅ PASS |  |
+| negative-path-traversal-did | invalidDid | ✅ PASS |  |
+| negative-pct-encoded-ip-host | invalidDid | ✅ PASS |  |
+| negative-pct-encoded-traversal | invalidDid | ✅ PASS |  |
+| negative-portable-scid-swap | invalidDid | ✅ PASS |  |
 | negative-pre-rotation-omit-updatekeys | invalidParameters | ✅ PASS |  |
 | negative-scid-mismatch-genesis | invalidDid | ✅ PASS |  |
 | negative-unknown-method-version | invalidDid | ✅ PASS |  |
 | negative-versiontime-future | invalidDid | ✅ PASS |  |
-| negative-versiontime-non-monotonic | invalidDid | ❌ FAIL | expected error "invalidDid" but resolution succeeded |
+| negative-versiontime-non-monotonic | invalidDid | ✅ PASS |  |
+| negative-witness-update-threshold-not-met | invalidDid | ✅ PASS |  |
 | negative-wrong-cryptosuite | invalidProof | ✅ PASS |  |
 | negative-zero-witness-threshold | invalidParameters | ✅ PASS |  |
 
@@ -125,4 +126,4 @@ Implementation: didwebvh-ts 2.7.4
 | witness-update | ts (self) | ✅ PASS |  |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (ab41190)
+Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (407df7d)
