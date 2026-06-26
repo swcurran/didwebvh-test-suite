@@ -1,4 +1,3 @@
 name: ts
 home_repo: https://github.com/decentralized-identity/didwebvh-ts
-version: "2.7.4"
-commit: "86b50c2"
+version: "2.8.0"

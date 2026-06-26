@@ -225,6 +225,10 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
         })) as VerificationMethod[];
       }
 
+      // The previous witness list governs this entry (a change takes effect only after
+      // the entry is published). Save it before potentially overwriting witnessVMs.
+      const prevWitnessVMs = [...witnessVMs];
+
       const witnessParam = s.params?.witness ? buildWitnessParam(s.params.witness, keyMap) : undefined;
       if (s.params?.witness) {
         witnessVMs = s.params.witness.witnesses.map(w => {
@@ -256,9 +260,12 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
 
       log = newLog;
 
-      if (witnessVMs.length > 0) {
+      // If witnesses were active before this update, the previous list must approve it.
+      // If witnesses are being activated for the first time, the new list approves it.
+      const signingWitnessVMs = prevWitnessVMs.length > 0 ? prevWitnessVMs : witnessVMs;
+      if (signingWitnessVMs.length > 0) {
         const proofs: DataIntegrityProof[] = [];
-        for (const wvm of witnessVMs) {
+        for (const wvm of signingWitnessVMs) {
           proofs.push(await generateWitnessProof(meta.versionId, wvm, s.timestamp));
         }
         witnessProofs.push({ versionId: meta.versionId, proof: proofs });
