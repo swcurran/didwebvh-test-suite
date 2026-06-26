@@ -1,6 +1,6 @@
 # ts status
 
-Implementation: didwebvh-ts 2.7.4
+Implementation: didwebvh-ts 2.8.0
 
 ## DID Creation
 
