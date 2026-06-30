@@ -36,11 +36,11 @@ async function deactivateDIDWithTimestamp(
   const signer = new Ed25519Signer({ verificationMethod: signerVM });
   const verifier = new Ed25519Signer({ verificationMethod: signerVM });
 
-  // Resolve to get current meta (updateKeys etc.)
-  const { meta } = await resolveDIDFromLog(log, { verifier, fastResolve: false } as any);
+  // Resolve to get current didDocumentMetadata (updateKeys etc.)
+  const { didDocumentMetadata } = await resolveDIDFromLog(log, { verifier, fastResolve: false } as any);
 
   const versionNumber = log.length + 1;
-  const params = { updateKeys: meta.updateKeys, deactivated: true };
+  const params = { updateKeys: didDocumentMetadata.updateKeys, deactivated: true };
   const logEntry = {
     versionId: lastEntry.versionId,
     versionTime: timestamp,
@@ -288,8 +288,11 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
       if (s.versionId) opts.versionId = s.versionId;
       if (s.versionNumber !== undefined) opts.versionNumber = s.versionNumber;
 
-      const { doc, meta } = await resolveDIDFromLog(log, opts as any);
-      resolveResults.push({ filename: s.expect, result: toResolutionResult(doc, meta) });
+      const { didDocument, didDocumentMetadata, didResolutionMetadata } = await resolveDIDFromLog(log, opts as any);
+      if (didResolutionMetadata.error) {
+        throw new Error(`resolve failed: ${didResolutionMetadata.error}${didResolutionMetadata.message ? ` - ${didResolutionMetadata.message}` : ''}`);
+      }
+      resolveResults.push({ filename: s.expect, result: toResolutionResult(didDocument, didDocumentMetadata) });
     }
   }
 
@@ -452,8 +455,14 @@ async function runVectorTest(
     if (witnessProofs.length > 0) opts.witnessProofs = witnessProofs;
     if (versionNumber !== null) opts.versionNumber = versionNumber;
 
-    const { doc, meta } = await resolveDIDFromLog(log, opts as any);
-    const actual = toResolutionResult(doc, meta);
+    const { didDocument, didDocumentMetadata, didResolutionMetadata } = await resolveDIDFromLog(log, opts as any);
+    if (didResolutionMetadata.error) {
+      return {
+        type: 'fail',
+        reason: `${didResolutionMetadata.error}${didResolutionMetadata.message ? `: ${didResolutionMetadata.message}` : ''}`,
+      };
+    }
+    const actual = toResolutionResult(didDocument, didDocumentMetadata);
 
     if (canonicalize(actual) === canonicalize(expected)) return { type: 'pass' };
     return { type: 'diff', diff: computeUnifiedDiff(expected, actual) };
@@ -555,14 +564,13 @@ async function runNegativeResolutionTest(
     ? JSON.parse(fs.readFileSync(witnessPath, 'utf8'))
     : undefined;
 
-  try {
-    await resolveDIDFromLog(log, { verifier, fastResolve: false, witnessProofs } as any);
-    // Resolver accepted the log — it should have rejected it.
-    return { outcome: 'fail', expectedError, reason: `expected error "${expectedError}" but resolution succeeded` };
-  } catch {
-    // Resolver threw — correctly rejected the invalid log.
+  const { didResolutionMetadata } = await resolveDIDFromLog(log, { verifier, fastResolve: false, witnessProofs } as any);
+  if (didResolutionMetadata.error) {
+    // Resolver correctly rejected the invalid log.
     return { outcome: 'pass', expectedError };
   }
+  // Resolver accepted the log — it should have rejected it.
+  return { outcome: 'fail', expectedError, reason: `expected error "${expectedError}" but resolution succeeded` };
 }
 
 async function negativeResolutionStatus(): Promise<NegRow[]> {
