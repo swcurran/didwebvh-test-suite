@@ -30,7 +30,7 @@ Implementation: didwebvh-rs 0.5.3 @ ad614934
 | negative-fragment-leaks-into-domain | invalidDid | ✅ PASS |  |
 | negative-lowercase-pct-port-ip | invalidDid | ✅ PASS |  |
 | negative-path-traversal-did | invalidDid | ✅ PASS |  |
-| negative-pct-encoded-ip-host | invalidDid | ❌ FAIL | URL parser accepted invalid DID: did:webvh:Qm0000000000000000000000000000000000000000000000:127%2E0%2E0%2E1 |
+| negative-pct-encoded-ip-host | invalidDid | ✅ PASS |  |
 | negative-pct-encoded-traversal | invalidDid | ✅ PASS |  |
 | negative-portable-scid-swap | invalidDid | ✅ PASS |  |
 | negative-pre-rotation-omit-updatekeys | invalidParameters | ✅ PASS |  |
@@ -38,6 +38,7 @@ Implementation: didwebvh-rs 0.5.3 @ ad614934
 | negative-unknown-method-version | invalidDid | ✅ PASS |  |
 | negative-versiontime-future | invalidDid | ✅ PASS |  |
 | negative-versiontime-non-monotonic | invalidDid | ✅ PASS |  |
+| negative-witness-update-threshold-not-met | invalidDid | ✅ PASS |  |
 | negative-wrong-cryptosuite | invalidProof | ✅ PASS |  |
 | negative-zero-witness-threshold | invalidParameters | ✅ PASS |  |
 
@@ -122,7 +123,7 @@ Implementation: didwebvh-rs 0.5.3 @ ad614934
 | witness-update | java-eecc | 🔶 DIFF | see diffs.txt |
 | witness-update | python | 🔶 DIFF | see diffs.txt |
 | witness-update | rust (self) | ✅ PASS |  |
-| witness-update | ts | ❌ FAIL | resolve_log: WitnessProofError("Witness proof threshold (2) was not met. Only (1) proofs were validated") |
+| witness-update | ts | 🔶 DIFF | see diffs.txt |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (cbf35ef)
+Built from: https://github.com/decentralized-identity/didwebvh-rs @ main (c3daba1)
