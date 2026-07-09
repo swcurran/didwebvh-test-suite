@@ -3,7 +3,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -12,15 +12,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:14Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy",
-     "updated": "2026-06-15T00:55:14Z",
-     "versionId": "1-QmRuHz62v3kfqdvcVdHdSSexc3GP5RMvWzSa2i54oNZwGp",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+     "updated": "2026-06-15T01:50:27Z",
+     "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:55:14Z"
-+    "versionTime": "2026-06-15T00:55:14Z",
+-    "versionTime": "2026-06-15T01:50:27Z"
++    "versionTime": "2026-06-15T01:50:27Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -33,7 +33,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -42,15 +42,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
-     "updated": "2026-06-15T00:54:37Z",
-     "versionId": "1-QmfLPLwX9H3HN6PFfcbNDxBKBY427iPSsdmF6VdRrKrqoC",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+     "updated": "2026-06-15T01:48:28Z",
+     "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:37Z"
-+    "versionTime": "2026-06-15T00:54:37Z",
+-    "versionTime": "2026-06-15T01:48:28Z"
++    "versionTime": "2026-06-15T01:48:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -66,29 +66,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmfQ6TyRVcSEPCXkH5bturZVXzB6JjHA8Ss2bCCughJhoZ:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmfQ6TyRVcSEPCXkH5bturZVXzB6JjHA8Ss2bCCughJhoZ:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:55Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmfQ6TyRVcSEPCXkH5bturZVXzB6JjHA8Ss2bCCughJhoZ",
-     "updated": "2026-06-15T00:54:55Z",
-     "versionId": "1-QmQZbng9Xhh7vR5ZCtHPwzyuxj6HSn9Tntoq6J59RfvXU2",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+     "updated": "2026-06-15T01:49:28Z",
+     "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:55Z"
-+    "versionTime": "2026-06-15T00:54:55Z",
+-    "versionTime": "2026-06-15T01:49:28Z"
++    "versionTime": "2026-06-15T01:49:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -170,7 +170,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -179,15 +179,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:14Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy",
-     "updated": "2026-06-15T00:55:15Z",
-     "versionId": "2-QmaguKxmGMMLJmjKgrmQkeJpt4Mu4aR2Wp9S6NxEo5My4s",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:15Z"
-+    "versionTime": "2026-06-15T00:55:15Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -200,7 +200,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -209,15 +209,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-QmXh6vK9t7rEeS2C4VVmP3w2N4rDPEvemUQ9x8cuCF5Gam",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -233,29 +233,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmTRFSVxvFQW8NoaCv3SrB9cnKHjnSygMZkBi5nXa2eZJN",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -337,7 +337,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -345,15 +345,15 @@
        {
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
      "deactivated": true,
 +    "portable": false,
-     "scid": "Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir",
-     "updated": "2026-06-15T00:55:16Z",
-     "versionId": "2-QmPJXePfrBZdV7apM6JFrKRx9hLP12q9hg8kJfp4etrE7h",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-QmVx56yUdo9fp3WWGDUEiKKnnkP9NHS8Jda3qDYkFsSm5A",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -365,35 +365,30 @@
 --- expected
 +++ actual (rust resolver)
      ],
-     "controller": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com",
-     "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com",
+     "controller": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
 +    "service": [
 +      {
-+        "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
++        "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 +        "serviceEndpoint": "https://example.com",
 +        "type": "relativeRef"
 +      },
 +      {
 +        "@context": "https://identity.foundation/linked-vp/contexts/v1",
-+        "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#whois",
++        "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#whois",
 +        "serviceEndpoint": "https://example.com/whois.vp",
 +        "type": "LinkedVerifiablePresentation"
 +      }
 +    ],
      "verificationMethod": [
        {
-         "controller": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com",
+         "controller": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
 ...
-   "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
-     "deactivated": true,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-QmcUrj1Y6NiZodp6kLrmhVHVT4EkhFUQJwok1qkbBrw9cj",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmewLGADyXQcdRJzag26wPX5HkL95J88BAATKQFDSn39t5",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -409,28 +404,28 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
      "deactivated": true,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmYBryWmBZNwDpAU78dxJBee4iAdQAddUjo2FWD3tXJGbb",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmWtSdrKNPo3Gxp5dVr5GyToRRquCJMHWshAWNBG6YYDos",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -473,22 +468,45 @@
 === deactivate / ts — resolutionResult.json ===
 --- expected
 +++ actual (rust resolver)
-     "keyAgreement": [],
-     "service": [
-       {
--        "id": "#files",
+ {
+-  "didDocument": null,
++  "didDocument": {
++    "@context": [
++      "https://www.w3.org/ns/did/v1",
++      "https://w3id.org/security/multikey/v1"
++    ],
++    "assertionMethod": [],
++    "authentication": [
++      "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#P5RDjVJG"
++    ],
++    "capabilityDelegation": [],
++    "capabilityInvocation": [],
++    "controller": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++    "id": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++    "keyAgreement": [],
++    "service": [
++      {
 +        "id": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
-         "serviceEndpoint": "https://example.com",
-         "type": "relativeRef"
-       },
-       {
-         "@context": "https://identity.foundation/linked-vp/contexts/v1",
--        "id": "#whois",
++        "serviceEndpoint": "https://example.com",
++        "type": "relativeRef"
++      },
++      {
++        "@context": "https://identity.foundation/linked-vp/contexts/v1",
 +        "id": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
-         "serviceEndpoint": "https://example.com/whois.vp",
-         "type": "LinkedVerifiablePresentation"
-       }
-...
++        "serviceEndpoint": "https://example.com/whois.vp",
++        "type": "LinkedVerifiablePresentation"
++      }
++    ],
++    "verificationMethod": [
++      {
++        "controller": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++        "id": "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#P5RDjVJG",
++        "publicKeyMultibase": "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++        "purpose": "authentication",
++        "type": "Multikey"
++      }
++    ]
++  },
    "didDocumentMetadata": {
      "created": "2000-01-01T00:00:00Z",
      "deactivated": true,
@@ -511,7 +529,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -520,15 +538,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir",
-     "updated": "2026-06-15T00:55:16Z",
-     "versionId": "2-QmNze9BcNDVT4YUiJ6j71PoStik3CJkkRKahs7yZG3wdS5",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-QmVZT577FWYaEkbAEjtTsYDL1yFbiKcBVHN6zx7fTmhibU",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -541,7 +559,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -550,15 +568,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-QmV6afzkQCicaGHDdybs1KDXedu4PtK9vuBJio4WBBxLHV",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmNYKuDc5pHK5x4Cu6xef8ThdL2BSs9kXmasTck5LNYPWk",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -574,29 +592,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmYP1MC1dG29S5VVHNZPE4RpGgfL9iy4v8t6ymQqznmpLY",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmcdFJoGwihkhTDV24RVdXyNbMPRPkgA6EvbVZfjwX1p98",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -678,7 +696,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -687,16 +705,16 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir",
--    "updated": "2026-06-15T00:55:15Z",
-+    "updated": "2026-06-15T00:55:17Z",
-     "versionId": "1-Qmdizmd7WdLKmv1zfCYYGPXUiqiVeEohVDS52w5Jr5L3uv",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+-    "updated": "2026-06-15T01:50:27Z",
++    "updated": "2026-06-15T01:50:29Z",
+     "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:55:15Z"
-+    "versionTime": "2026-06-15T00:55:15Z",
+-    "versionTime": "2026-06-15T01:50:27Z"
++    "versionTime": "2026-06-15T01:50:27Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -709,7 +727,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -718,16 +736,16 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir",
--    "updated": "2026-06-15T00:55:16Z",
-+    "updated": "2026-06-15T00:55:17Z",
-     "versionId": "2-QmZ5QYrWKExxj8K7QUtApB1WcF9R3ew8LxeEVmh9ZM2joH",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+-    "updated": "2026-06-15T01:50:28Z",
++    "updated": "2026-06-15T01:50:29Z",
+     "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -740,7 +758,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+         "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -749,15 +767,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir",
-     "updated": "2026-06-15T00:55:17Z",
-     "versionId": "3-QmNmhZLhoWAam73idSLtdpy1q2bmM3V7zSwNfeRd6Ycofh",
+     "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
+     "updated": "2026-06-15T01:50:29Z",
+     "versionId": "3-QmNWbWKrzYNagB7PHyKEA2ijsYoWnay8VAq7imiwggc5wM",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:55:17Z"
-+    "versionTime": "2026-06-15T00:55:17Z",
+-    "versionTime": "2026-06-15T01:50:29Z"
++    "versionTime": "2026-06-15T01:50:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -770,7 +788,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -779,16 +797,16 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
--    "updated": "2026-06-15T00:54:37Z",
-+    "updated": "2026-06-15T00:54:39Z",
-     "versionId": "1-QmfLPLwX9H3HN6PFfcbNDxBKBY427iPSsdmF6VdRrKrqoC",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+-    "updated": "2026-06-15T01:48:28Z",
++    "updated": "2026-06-15T01:48:30Z",
+     "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:37Z"
-+    "versionTime": "2026-06-15T00:54:37Z",
+-    "versionTime": "2026-06-15T01:48:28Z"
++    "versionTime": "2026-06-15T01:48:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -801,7 +819,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -810,16 +828,16 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
--    "updated": "2026-06-15T00:54:38Z",
-+    "updated": "2026-06-15T00:54:39Z",
-     "versionId": "2-QmXh6vK9t7rEeS2C4VVmP3w2N4rDPEvemUQ9x8cuCF5Gam",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+-    "updated": "2026-06-15T01:48:29Z",
++    "updated": "2026-06-15T01:48:30Z",
+     "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -832,7 +850,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb:example.com#files",
+         "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -841,15 +859,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmXwYwxsCt45P1G2pTm4wSVPTCezVWWxqE44rjPPD2voJb",
-     "updated": "2026-06-15T00:54:39Z",
-     "versionId": "3-Qmb6amE2Mf9dm9KddPofuVDNe65qVrRN9kRPNNfwENe1Mz",
+     "portable": false,
+     "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
+     "updated": "2026-06-15T01:48:30Z",
+     "versionId": "3-QmUVLd7KFJ2WLwuETpBYAyeEK93aztRUAQ1pGVRd5c4kSq",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:54:39Z"
-+    "versionTime": "2026-06-15T00:54:39Z",
+-    "versionTime": "2026-06-15T01:48:30Z"
++    "versionTime": "2026-06-15T01:48:30Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -865,30 +883,30 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
--    "updated": "2026-06-15T00:54:56Z",
-+    "updated": "2026-06-15T00:54:58Z",
-     "versionId": "1-QmUhGku7U8wmvVs2SwtttyYoXzNq7auJ3Jr1obMEmoFv69",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+-    "updated": "2026-06-15T01:49:28Z",
++    "updated": "2026-06-15T01:49:30Z",
+     "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:56Z"
-+    "versionTime": "2026-06-15T00:54:56Z",
+-    "versionTime": "2026-06-15T01:49:28Z"
++    "versionTime": "2026-06-15T01:49:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -904,30 +922,30 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
--    "updated": "2026-06-15T00:54:57Z",
-+    "updated": "2026-06-15T00:54:58Z",
-     "versionId": "2-QmTRFSVxvFQW8NoaCv3SrB9cnKHjnSygMZkBi5nXa2eZJN",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+-    "updated": "2026-06-15T01:49:29Z",
++    "updated": "2026-06-15T01:49:30Z",
+     "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -943,29 +961,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#files",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd:example.com#whois",
++        "id": "did:webvh:QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZP1mUMM1gKCVxnLEH5mivA7eqLgY2PQRJ4AZfVbBbbnd",
-     "updated": "2026-06-15T00:54:58Z",
-     "versionId": "3-Qmbo13juVE36WzUAd5twuDcCeUWqa9AcUdmqkDhpUygLX4",
+     "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
+     "updated": "2026-06-15T01:49:30Z",
+     "versionId": "3-QmNwWFzfiYoVbvhmNDHWwsZN9L6h9mNbozMy4rcAjqVTS5",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:54:58Z"
-+    "versionTime": "2026-06-15T00:54:58Z",
+-    "versionTime": "2026-06-15T01:49:30Z"
++    "versionTime": "2026-06-15T01:49:30Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1219,29 +1237,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmZcHABZLcZFCC9Y3Bqdq3hAxK7JAd55xx16LnJuyT4x4N:example.com#files",
++        "id": "did:webvh:QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmZcHABZLcZFCC9Y3Bqdq3hAxK7JAd55xx16LnJuyT4x4N:example.com#whois",
++        "id": "did:webvh:QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmZcHABZLcZFCC9Y3Bqdq3hAxK7JAd55xx16LnJuyT4x4N",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmZzG8AnsHoDBZh9FfQG98KAxcbdCsUpMBnk8ekHPAR8Wg",
+     "scid": "QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmepNLQU1y9Pxr2Bb19BvP6BLjqQBaAWaGxvYxUv3ya37K",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1323,7 +1341,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.com#files",
+         "id": "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1332,15 +1350,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh",
-     "updated": "2026-06-15T00:55:15Z",
-     "versionId": "1-QmWNCJNFBACHqnH25buvqis7wgcPGUpvCTiwSo7SJzFuCX",
+     "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw",
+     "updated": "2026-06-15T01:50:27Z",
+     "versionId": "1-QmUoyF3wmGZPcrjxKaQB2JJyBXCvGdqABKK4J3vNcXA9N9",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:55:15Z"
-+    "versionTime": "2026-06-15T00:55:15Z",
+-    "versionTime": "2026-06-15T01:50:27Z"
++    "versionTime": "2026-06-15T01:50:27Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1353,7 +1371,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmNiVzjfybEQxUmx6wALdJBANNHtz6ZHWdgwkfqzdmFjbF:example.com#files",
+         "id": "did:webvh:QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1362,15 +1380,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmNiVzjfybEQxUmx6wALdJBANNHtz6ZHWdgwkfqzdmFjbF",
-     "updated": "2026-06-15T00:54:37Z",
-     "versionId": "1-QmbVR7jTaT7Dmu2xL6E38skeYXDjm1gGzNxK7Z9huVJHyT",
+     "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD",
+     "updated": "2026-06-15T01:48:28Z",
+     "versionId": "1-QmbYJFqLkVXnnUWo1FfxaqTtZ54XuHnbFdkQk8GVnof6KH",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:37Z"
-+    "versionTime": "2026-06-15T00:54:37Z",
+-    "versionTime": "2026-06-15T01:48:28Z"
++    "versionTime": "2026-06-15T01:48:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1386,29 +1404,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k:example.com#files",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k:example.com#whois",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k",
-     "updated": "2026-06-15T00:54:56Z",
-     "versionId": "1-QmemKzyFaCAwkhqzUKsrMnuejpmcKwvECfDnTeef3gj2Cy",
+     "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4",
+     "updated": "2026-06-15T01:49:28Z",
+     "versionId": "1-QmZNC7sDrjYuVM451dafe6rzDhUXyLLXobtHrL5Gs5X7n2",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:56Z"
-+    "versionTime": "2026-06-15T00:54:56Z",
+-    "versionTime": "2026-06-15T01:49:28Z"
++    "versionTime": "2026-06-15T01:49:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1490,7 +1508,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.org#files",
+         "id": "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org#files",
 -        "serviceEndpoint": "https://example.org/",
 +        "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
@@ -1499,15 +1517,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh",
-     "updated": "2026-06-15T00:55:16Z",
-     "versionId": "2-QmWYMhzwx3MckqusvT8KXBmTwkSiy3t58tNJgC3x9X5JDf",
+     "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-QmST3rirCWARgn2FQSdDWk5qqwoEEMddRa88pBYPp5Pywc",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1520,7 +1538,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmNiVzjfybEQxUmx6wALdJBANNHtz6ZHWdgwkfqzdmFjbF:example.org#files",
+         "id": "did:webvh:QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD:example.org#files",
 -        "serviceEndpoint": "https://example.org/",
 +        "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
@@ -1529,15 +1547,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmNiVzjfybEQxUmx6wALdJBANNHtz6ZHWdgwkfqzdmFjbF",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-QmeXV6EANAkhEoZtp8LXPo8jmkS2XKvXerRR6TULx6LHhx",
+     "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmYXbkGu3vbQmAdqrqeHvvQCBDmZVm6z2dohBZ6RGxntrx",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1553,29 +1571,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.org/",
-+        "id": "did:webvh:QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k:example.org#files",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.org#files",
 +        "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k:example.org#whois",
++        "id": "did:webvh:QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4:example.org#whois",
          "serviceEndpoint": "https://example.org/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
      "portable": true,
-     "scid": "QmTVwvW8R9RysiSFfWnNn5uRo6BUw3J5fmRseyJ2dp1o3k",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-Qmb6C6MSnrQsg7NyQVT1cKoGxszaWnGFyUC69mqDpyiwZA",
+     "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmXNiQDbxxaNtLZainKvhdsy75Ge6tVRmn8HMr24YAYcQK",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1622,15 +1640,15 @@
      "service": [
        {
 -        "id": "#files",
-+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#files",
-         "serviceEndpoint": "https://example.com",
++        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#files",
+         "serviceEndpoint": "https://example.org",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#whois",
-         "serviceEndpoint": "https://example.com/whois.vp",
++        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#whois",
+         "serviceEndpoint": "https://example.org/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
@@ -1641,7 +1659,7 @@
 +    "portable": true,
 +    "scid": "QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S",
      "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmeMtiHWAh9fmBJGYaSvbNBVrBR6sZfa5VRCkyDmZNSQkP",
+     "versionId": "2-QmfGVAEVP1t121wgcin2SPjsYtMDRgYRfSHxF81f1gHiqL",
      "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z"
 +    "versionTime": "2000-01-02T00:00:00Z",
@@ -1657,7 +1675,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#files",
+         "id": "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1666,15 +1684,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW",
-     "updated": "2026-06-15T00:55:15Z",
-     "versionId": "1-QmXfc6aZNzPvkrFZsm9dE3Mab6n1C1zAgRXM8jtpReo9gG",
+     "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH",
+     "updated": "2026-06-15T01:50:27Z",
+     "versionId": "1-QmQ2n7wwXetW4wQTunrV8fd6GuPvBpuHXW6b2jnNwfVs2s",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:55:15Z"
-+    "versionTime": "2026-06-15T00:55:15Z",
+-    "versionTime": "2026-06-15T01:50:27Z"
++    "versionTime": "2026-06-15T01:50:27Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1687,7 +1705,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmUfNxtn9UMdbxNPxxaHVZgKFqPYf3KAVxY4i9u3Tv4duE:example.com#files",
+         "id": "did:webvh:QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1696,15 +1714,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmUfNxtn9UMdbxNPxxaHVZgKFqPYf3KAVxY4i9u3Tv4duE",
-     "updated": "2026-06-15T00:54:37Z",
-     "versionId": "1-QmfJtCKJZoGT4rEE2iPzUrPT6eHkJobZDrXu4nigmb36Dq",
+     "portable": false,
+     "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1",
+     "updated": "2026-06-15T01:48:28Z",
+     "versionId": "1-QmRYA4DfjCZBWLZb4NmzEKeGoG5E2n1rRCRxcsk83vnmb9",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:37Z"
-+    "versionTime": "2026-06-15T00:54:37Z",
+-    "versionTime": "2026-06-15T01:48:28Z"
++    "versionTime": "2026-06-15T01:48:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1720,29 +1738,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R:example.com#files",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R:example.com#whois",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R",
-     "updated": "2026-06-15T00:54:56Z",
-     "versionId": "1-QmYQm6o2L22xKkt3yQoqqXkpN6vmiVvdVaWzA1Bpa9pWr4",
+     "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1",
+     "updated": "2026-06-15T01:49:28Z",
+     "versionId": "1-QmPDaTYiXRdVX7T5MwbLxWs8ZQe3xhbmWTk4W5dazbxytv",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:56Z"
-+    "versionTime": "2026-06-15T00:54:56Z",
+-    "versionTime": "2026-06-15T01:49:28Z"
++    "versionTime": "2026-06-15T01:49:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1824,7 +1842,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#files",
+         "id": "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1833,15 +1851,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW",
-     "updated": "2026-06-15T00:55:17Z",
-     "versionId": "3-QmPsB4NXVg7whEusPX6z7smno5VArZFYxYH8wBDGiKXVPx",
+     "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH",
+     "updated": "2026-06-15T01:50:29Z",
+     "versionId": "3-QmcwboQ78tEqJEDDbYtVs15bBq2TqXjxEj9zoi3K5FaovH",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:55:17Z"
-+    "versionTime": "2026-06-15T00:55:17Z",
+-    "versionTime": "2026-06-15T01:50:29Z"
++    "versionTime": "2026-06-15T01:50:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1854,7 +1872,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmUfNxtn9UMdbxNPxxaHVZgKFqPYf3KAVxY4i9u3Tv4duE:example.com#files",
+         "id": "did:webvh:QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -1863,15 +1881,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmUfNxtn9UMdbxNPxxaHVZgKFqPYf3KAVxY4i9u3Tv4duE",
-     "updated": "2026-06-15T00:54:39Z",
-     "versionId": "3-QmTcaKvn3AroAzb1MYkqsMof6wCyKvTSJ6UuCNnCcJ9eif",
+     "portable": false,
+     "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1",
+     "updated": "2026-06-15T01:48:30Z",
+     "versionId": "3-QmbLoMafpUjAgaRru1B4NKkaRrkMYrMDrKRfJ5Yh512bUz",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:54:39Z"
-+    "versionTime": "2026-06-15T00:54:39Z",
+-    "versionTime": "2026-06-15T01:48:30Z"
++    "versionTime": "2026-06-15T01:48:30Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1887,29 +1905,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R:example.com#files",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R:example.com#whois",
++        "id": "did:webvh:QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmS2GmPJUnmiEbGFF5aeEqQC7ngsZcnUNawSX3uN4Qot5R",
-     "updated": "2026-06-15T00:54:58Z",
-     "versionId": "3-QmXZqEG97iufpd9Rou5GM6XTjXdk8V5W1RaaSbpkG81Sts",
+     "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1",
+     "updated": "2026-06-15T01:49:30Z",
+     "versionId": "3-QmQiXWDykLYn27GnDy1NRGENne8MUCB2vVWE8SEKr1pjCm",
      "versionNumber": 3,
--    "versionTime": "2026-06-15T00:54:58Z"
-+    "versionTime": "2026-06-15T00:54:58Z",
+-    "versionTime": "2026-06-15T01:49:30Z"
++    "versionTime": "2026-06-15T01:49:30Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -1991,7 +2009,7 @@
 +++ actual (rust resolver)
        },
        {
-         "id": "did:webvh:QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf:example.com#files",
+         "id": "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2000,15 +2018,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf",
-     "updated": "2026-06-15T00:55:16Z",
-     "versionId": "2-QmcUBCi2c7bA5o8HjME2J5mrfghwbe6QySbH7cP44qbEeq",
+     "scid": "QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-QmbyXKshKVqrtxHc8Td4uioBSg7ftrgVJLa3wK9mptkRYM",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -2021,7 +2039,7 @@
 +++ actual (rust resolver)
        },
        {
-         "id": "did:webvh:QmNadFr7yDTE3pYGFznKSMCv5YWJU6o1DeXhGKK1ZfWroj:example.com#files",
+         "id": "did:webvh:QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2030,15 +2048,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmNadFr7yDTE3pYGFznKSMCv5YWJU6o1DeXhGKK1ZfWroj",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-Qmew93DrcnyXTsPHsTg3h2Z68cKZJwFXrGWVJFpzMWtT8g",
+     "portable": false,
+     "scid": "QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmT7s4jDcFrVhAMiWfGcQXWrBKmRR8QUuKjGm7XEd3fvBE",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -2054,29 +2072,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:Qma9LyWhkxYqtHtPAbUYBNqbANhXb1Aoe3SKPe4K7uVVhk:example.com#files",
++        "id": "did:webvh:QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:Qma9LyWhkxYqtHtPAbUYBNqbANhXb1Aoe3SKPe4K7uVVhk:example.com#whois",
++        "id": "did:webvh:QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "Qma9LyWhkxYqtHtPAbUYBNqbANhXb1Aoe3SKPe4K7uVVhk",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmRCe9wqQfFMgNBk5H3ewexn9SL9T465akcZ7Bt5UawC31",
+     "scid": "QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmPegF4nZogWvCQoNHVym6U2t6e9UgdA5H8abJoToK8w98",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": null
    },
@@ -2158,7 +2176,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1:example.com#files",
+         "id": "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2167,15 +2185,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1",
-     "updated": "2026-06-15T00:55:15Z",
-     "versionId": "1-Qme8McuwL5L2UiCpn125a2oLg7y6jQB3oBaGmMduKJGvMJ",
+     "scid": "QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt",
+     "updated": "2026-06-15T01:50:27Z",
+     "versionId": "1-QmNxFGBfgpzjDtaqndr7CwxrHfreV1z9agPa1rFgpHvyPF",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:55:15Z"
-+    "versionTime": "2026-06-15T00:55:15Z",
+-    "versionTime": "2026-06-15T01:50:27Z"
++    "versionTime": "2026-06-15T01:50:27Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 1,
@@ -2195,7 +2213,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmV3EGxgaNqXuNZ8iDQFUKXbSFtuRptk7dZA1cE342ycut:example.com#files",
+         "id": "did:webvh:Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2204,15 +2222,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmV3EGxgaNqXuNZ8iDQFUKXbSFtuRptk7dZA1cE342ycut",
-     "updated": "2026-06-15T00:54:37Z",
-     "versionId": "1-QmXVgSjx15umNf3tmeSRugZfqjKnYuPmNJjbRRYe3ct7mq",
+     "portable": false,
+     "scid": "Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4",
+     "updated": "2026-06-15T01:48:28Z",
+     "versionId": "1-QmQA7ok8zXo7unKP9yLDspHbtfUt6Mcw2fLk8T9JmqBcQ2",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:37Z"
-+    "versionTime": "2026-06-15T00:54:37Z",
+-    "versionTime": "2026-06-15T01:48:28Z"
++    "versionTime": "2026-06-15T01:48:28Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 1,
@@ -2235,29 +2253,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmP6v1opfi4SH4Qhg61WhANcpJ5FjaQuKgSBNccAj75SGG:example.com#files",
++        "id": "did:webvh:QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmP6v1opfi4SH4Qhg61WhANcpJ5FjaQuKgSBNccAj75SGG:example.com#whois",
++        "id": "did:webvh:QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmP6v1opfi4SH4Qhg61WhANcpJ5FjaQuKgSBNccAj75SGG",
-     "updated": "2026-06-15T00:54:56Z",
-     "versionId": "1-QmduxeBHfv58Vow4yiZ8JnU4oT56Lp2ZxWZUkJi6j2sKG2",
+     "scid": "QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK",
+     "updated": "2026-06-15T01:49:28Z",
+     "versionId": "1-QmT5oxBcEktYDynwhAjMRyLZ946wDCFn5sfDpjECbhtLDh",
      "versionNumber": 1,
--    "versionTime": "2026-06-15T00:54:56Z"
-+    "versionTime": "2026-06-15T00:54:56Z",
+-    "versionTime": "2026-06-15T01:49:28Z"
++    "versionTime": "2026-06-15T01:49:28Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 1,
@@ -2357,7 +2375,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV:example.com#files",
+         "id": "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2366,15 +2384,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:55:15Z",
+     "created": "2026-06-15T01:50:27Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV",
-     "updated": "2026-06-15T00:55:16Z",
-     "versionId": "2-QmPBpArtYj8kWD3Rc5t7k1iQR4nzXctxaLBBHEipTWNCf8",
+     "scid": "QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA",
+     "updated": "2026-06-15T01:50:28Z",
+     "versionId": "2-QmdvfEewA3m32DwJmUNgGBYn9azrsTxJQXnNrKxYsvDzXm",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:55:16Z"
-+    "versionTime": "2026-06-15T00:55:16Z",
+-    "versionTime": "2026-06-15T01:50:28Z"
++    "versionTime": "2026-06-15T01:50:28Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 2,
@@ -2397,7 +2415,7 @@
 +++ actual (rust resolver)
      "service": [
        {
-         "id": "did:webvh:QmZPmxbRFBPhrgWZGbhcdWqwQyWyUWvnkPkkmjiydb78Zn:example.com#files",
+         "id": "did:webvh:QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU:example.com#files",
 -        "serviceEndpoint": "https://example.com/",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
@@ -2406,15 +2424,15 @@
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:37Z",
+     "created": "2026-06-15T01:48:28Z",
 +    "deactivated": false,
-+    "portable": false,
-     "scid": "QmZPmxbRFBPhrgWZGbhcdWqwQyWyUWvnkPkkmjiydb78Zn",
-     "updated": "2026-06-15T00:54:38Z",
-     "versionId": "2-QmSGjLVa4APaWLEzdwUsBWDGwkbMM1ebYfS1ohLa39cxLH",
+     "portable": false,
+     "scid": "QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU",
+     "updated": "2026-06-15T01:48:29Z",
+     "versionId": "2-QmZcgvHkcKU1q3UY3UV7wHhZN5teux4co9yw3ZTiYSfV8G",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:38Z"
-+    "versionTime": "2026-06-15T00:54:38Z",
+-    "versionTime": "2026-06-15T01:48:29Z"
++    "versionTime": "2026-06-15T01:48:29Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 2,
@@ -2440,29 +2458,29 @@
        {
 -        "id": "#files",
 -        "serviceEndpoint": "https://example.com/",
-+        "id": "did:webvh:QmSxwj6L4vBTjERKaKwkgtqMoDUpLrHmRYD9q5NhJDxXW9:example.com#files",
++        "id": "did:webvh:QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT:example.com#files",
 +        "serviceEndpoint": "https://example.com",
          "type": "relativeRef"
        },
        {
          "@context": "https://identity.foundation/linked-vp/contexts/v1",
 -        "id": "#whois",
-+        "id": "did:webvh:QmSxwj6L4vBTjERKaKwkgtqMoDUpLrHmRYD9q5NhJDxXW9:example.com#whois",
++        "id": "did:webvh:QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT:example.com#whois",
          "serviceEndpoint": "https://example.com/whois.vp",
          "type": "LinkedVerifiablePresentation"
        }
 ...
    },
    "didDocumentMetadata": {
-     "created": "2026-06-15T00:54:56Z",
+     "created": "2026-06-15T01:49:28Z",
 +    "deactivated": false,
 +    "portable": false,
-     "scid": "QmSxwj6L4vBTjERKaKwkgtqMoDUpLrHmRYD9q5NhJDxXW9",
-     "updated": "2026-06-15T00:54:57Z",
-     "versionId": "2-QmWF8Ak2md8GhG7TZCau7nHK9Vu7LzaJL9bnfrPg6w9uoe",
+     "scid": "QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT",
+     "updated": "2026-06-15T01:49:29Z",
+     "versionId": "2-QmcsxtZwegSguNQQPgJVBhgD5abdXYk7qPUguXJXXs4wgi",
      "versionNumber": 2,
--    "versionTime": "2026-06-15T00:54:57Z"
-+    "versionTime": "2026-06-15T00:54:57Z",
+-    "versionTime": "2026-06-15T01:49:29Z"
++    "versionTime": "2026-06-15T01:49:29Z",
 +    "watchers": null,
 +    "witness": {
 +      "threshold": 2,
@@ -2521,3 +2539,50 @@
 +    "contentType": "application/did+ld+json"
 +  }
  }
+
+=== witness-update / ts — resolutionResult.json ===
+--- expected
++++ actual (rust resolver)
+     "keyAgreement": [],
+     "service": [
+       {
+-        "id": "#files",
++        "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#files",
+         "serviceEndpoint": "https://example.com",
+         "type": "relativeRef"
+       },
+       {
+         "@context": "https://identity.foundation/linked-vp/contexts/v1",
+-        "id": "#whois",
++        "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#whois",
+         "serviceEndpoint": "https://example.com/whois.vp",
+         "type": "LinkedVerifiablePresentation"
+       }
+...
+   },
+   "didDocumentMetadata": {
+     "created": "2000-01-01T00:00:00Z",
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv",
+     "updated": "2000-01-02T00:00:00Z",
+     "versionId": "2-QmcRmyDP523pLsvKvr49BNEVsevhjNGYZhxMGtPyhut9Hy",
+     "versionNumber": 2,
+-    "versionTime": "2000-01-02T00:00:00Z"
++    "versionTime": "2000-01-02T00:00:00Z",
++    "watchers": null,
++    "witness": {
++      "threshold": 2,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        },
++        {
++          "id": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP"
++        }
++      ]
++    }
+   },
+   "didResolutionMetadata": {
+     "contentType": "application/did+ld+json"
+

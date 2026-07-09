@@ -5,10 +5,10 @@
       {
         "type": "DataIntegrityProof",
         "cryptosuite": "eddsa-jcs-2022",
-        "created": "2026-06-15T01:48:10Z",
+        "created": "2026-07-09T23:33:06Z",
         "verificationMethod": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z2QwuPxJXTGVqakts5ZsuVQqYM7EF5J7KFYaTZAg2Y3uckm6ppvz1fJwyEtaeUbbyvQRDmZaA8mMHYMPmnHyyCXr4"
+        "proofValue": "zoPhoC3DDMg5QYNQSZyUBiLfiDUfPkp12EzggtVBRfqa2mmqrZM1ZVqQy2EkeQLudpZ86ZVymstd3QmaQP73ccDA"
       }
     ]
   }
