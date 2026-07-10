@@ -24,13 +24,13 @@
     "capabilityInvocation": [],
     "service": [
       {
-        "id": "#files",
+        "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#files",
         "type": "relativeRef",
-        "serviceEndpoint": "https://example.com"
+        "serviceEndpoint": "https://example.com/"
       },
       {
         "@context": "https://identity.foundation/linked-vp/contexts/v1",
-        "id": "#whois",
+        "id": "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#whois",
         "type": "LinkedVerifiablePresentation",
         "serviceEndpoint": "https://example.com/whois.vp"
       }

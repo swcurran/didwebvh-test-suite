@@ -27,13 +27,13 @@
     ],
     "service": [
       {
-        "id": "#files",
+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#files",
         "type": "relativeRef",
-        "serviceEndpoint": "https://example.org"
+        "serviceEndpoint": "https://example.org/"
       },
       {
         "@context": "https://identity.foundation/linked-vp/contexts/v1",
-        "id": "#whois",
+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#whois",
         "type": "LinkedVerifiablePresentation",
         "serviceEndpoint": "https://example.org/whois.vp"
       }

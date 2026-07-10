@@ -51,14 +51,14 @@ async function deactivateDIDWithTimestamp(
   const versionId = `${versionNumber}-${entryHash}`;
   const prelimEntry = { ...logEntry, versionId };
 
-  const cryptosuite = 'eddsa-jcs-2022';
+  const cryptosuite = 'eddsa-jcs-2022' as const;
   const vmId = signer.getVerificationMethodId();
   const proofBase = {
-    type: 'DataIntegrityProof',
+    type: 'DataIntegrityProof' as const,
     cryptosuite,
     verificationMethod: vmId,
     created: timestamp,
-    proofPurpose: 'assertionMethod',
+    proofPurpose: 'assertionMethod' as const,
   };
   const { proofValue } = await signer.sign({ document: prelimEntry, proof: proofBase });
   const entry = { ...prelimEntry, proof: [{ ...proofBase, proofValue }] };
@@ -74,11 +74,11 @@ async function generateWitnessProof(
   const document = { versionId };
   const vmId = `did:key:${witnessVM.publicKeyMultibase}#${witnessVM.publicKeyMultibase}`;
   const proof = {
-    type: 'DataIntegrityProof',
-    cryptosuite: 'eddsa-jcs-2022',
+    type: 'DataIntegrityProof' as const,
+    cryptosuite: 'eddsa-jcs-2022' as const,
     verificationMethod: vmId,
     created: timestamp,
-    proofPurpose: 'assertionMethod',
+    proofPurpose: 'assertionMethod' as const,
   };
   const dataToSign = await prepareDataForSigning(document, proof);
   const secretKey = multibaseDecode(witnessVM.secretKeyMultibase!).bytes.slice(2);
@@ -175,7 +175,7 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
         : [];
 
       const { log: newLog, meta } = await createDID({
-        domain: s.domain,
+        address: s.domain,
         signer,
         verifier,
         updateKeys: currentUpdateVMs.map(vm => vm.publicKeyMultibase!),
@@ -255,7 +255,7 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
         witness: witnessParam,
         witnessProofs: witnessProofs.length > 0 ? witnessProofs : undefined,
         updated: s.timestamp,
-        domain: s.domain,
+        address: s.domain,
       } as any);
 
       log = newLog;
