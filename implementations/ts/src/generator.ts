@@ -36,11 +36,14 @@ async function deactivateDIDWithTimestamp(
   const signer = new Ed25519Signer({ verificationMethod: signerVM });
   const verifier = new Ed25519Signer({ verificationMethod: signerVM });
 
-  // Resolve to get current meta (updateKeys etc.)
-  const { meta } = await resolveDIDFromLog(log, { verifier, fastResolve: false } as any);
+  // Resolve to get current metadata (updateKeys etc.)
+  const { didDocumentMetadata, didResolutionMetadata } = await resolveDIDFromLog(log, { verifier });
+  if (didResolutionMetadata.error) {
+    throw new Error(`resolve failed before deactivate: ${didResolutionMetadata.error}`);
+  }
 
   const versionNumber = log.length + 1;
-  const params = { updateKeys: meta.updateKeys, deactivated: true };
+  const params = { updateKeys: (didDocumentMetadata as any).updateKeys, deactivated: true };
   const logEntry = {
     versionId: lastEntry.versionId,
     versionTime: timestamp,
@@ -111,26 +114,6 @@ function buildWitnessParam(config: { threshold: number; witnesses: { id: string 
       if (!vm) throw new Error(`Unknown witness key ID: ${w.id}`);
       return { id: `did:key:${vm.publicKeyMultibase}` };
     }),
-  };
-}
-
-function toResolutionResult(doc: any, meta: any) {
-  const versionId: string = meta.versionId;
-  const versionNumber = parseInt(versionId.split('-')[0]);
-  const didDocumentMetadata: Record<string, unknown> = {
-    created: meta.created,
-    updated: meta.updated,
-    versionId,
-    versionNumber,
-    versionTime: meta.updated,
-  };
-  if (meta.deactivated) {
-    didDocumentMetadata.deactivated = true;
-  }
-  return {
-    didDocument: doc,
-    didDocumentMetadata,
-    didResolutionMetadata: { contentType: 'application/did+ld+json' },
   };
 }
 
@@ -283,13 +266,12 @@ async function processScript(scriptPath: string, verify: boolean): Promise<void>
       const opts: Record<string, unknown> = {
         verifier,
         witnessProofs: witnessProofs.length > 0 ? witnessProofs : undefined,
-        fastResolve: false,
       };
       if (s.versionId) opts.versionId = s.versionId;
       if (s.versionNumber !== undefined) opts.versionNumber = s.versionNumber;
 
-      const { doc, meta } = await resolveDIDFromLog(log, opts as any);
-      resolveResults.push({ filename: s.expect, result: toResolutionResult(doc, meta) });
+      const result = await resolveDIDFromLog(log, opts as any);
+      resolveResults.push({ filename: s.expect, result });
     }
   }
 
@@ -448,12 +430,11 @@ async function runVectorTest(
     const dummyVM = keyFromSeed('0'.repeat(64));
     const verifier = new PermissiveVerifier({ verificationMethod: dummyVM });
 
-    const opts: Record<string, unknown> = { verifier, fastResolve: false };
+    const opts: Record<string, unknown> = { verifier };
     if (witnessProofs.length > 0) opts.witnessProofs = witnessProofs;
     if (versionNumber !== null) opts.versionNumber = versionNumber;
 
-    const { doc, meta } = await resolveDIDFromLog(log, opts as any);
-    const actual = toResolutionResult(doc, meta);
+    const actual = await resolveDIDFromLog(log, opts as any);
 
     if (canonicalize(actual) === canonicalize(expected)) return { type: 'pass' };
     return { type: 'diff', diff: computeUnifiedDiff(expected, actual) };
@@ -555,14 +536,13 @@ async function runNegativeResolutionTest(
     ? JSON.parse(fs.readFileSync(witnessPath, 'utf8'))
     : undefined;
 
-  try {
-    await resolveDIDFromLog(log, { verifier, fastResolve: false, witnessProofs } as any);
-    // Resolver accepted the log — it should have rejected it.
-    return { outcome: 'fail', expectedError, reason: `expected error "${expectedError}" but resolution succeeded` };
-  } catch {
-    // Resolver threw — correctly rejected the invalid log.
+  const result = await resolveDIDFromLog(log, { verifier, witnessProofs } as any);
+  if (result.didResolutionMetadata?.error) {
+    // Resolver correctly rejected the invalid log.
     return { outcome: 'pass', expectedError };
   }
+  // Resolver accepted the log — it should have rejected it.
+  return { outcome: 'fail', expectedError, reason: `expected error "${expectedError}" but resolution succeeded` };
 }
 
 async function negativeResolutionStatus(): Promise<NegRow[]> {

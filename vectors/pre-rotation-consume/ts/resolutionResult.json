@@ -1,4 +1,7 @@
 {
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json"
+  },
   "didDocument": {
     "@context": [
       "https://www.w3.org/ns/did/v1",
@@ -37,13 +40,21 @@
     ]
   },
   "didDocumentMetadata": {
+    "versionId": "3-QmSjCVCLYuM8LpPYfmnVyNUN2EN3rar2odQPj7iiSJoFYv",
     "created": "2000-01-01T00:00:00Z",
     "updated": "2000-01-03T00:00:00Z",
-    "versionId": "3-QmSjCVCLYuM8LpPYfmnVyNUN2EN3rar2odQPj7iiSJoFYv",
-    "versionNumber": 3,
-    "versionTime": "2000-01-03T00:00:00Z"
-  },
-  "didResolutionMetadata": {
-    "contentType": "application/did+ld+json"
+    "deactivated": false,
+    "portable": false,
+    "scid": "QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq",
+    "updateKeys": [
+      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
+    ],
+    "nextKeyHashes": [
+      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
+    ],
+    "prerotation": true,
+    "witness": {},
+    "watchers": [],
+    "previousLogEntryHash": "QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq"
   }
 }

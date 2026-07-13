@@ -1,14 +1,22 @@
 {
-  "didDocument": null,
-  "didDocumentMetadata": {
-    "created": "2000-01-01T00:00:00Z",
-    "updated": "2000-01-02T00:00:00Z",
-    "versionId": "2-QmR5hA9K5pf2eycp7rbZmjC6YoD3WeKGAAppRvRBtMyRrx",
-    "versionNumber": 2,
-    "versionTime": "2000-01-02T00:00:00Z",
-    "deactivated": true
-  },
   "didResolutionMetadata": {
     "contentType": "application/did+ld+json"
+  },
+  "didDocument": null,
+  "didDocumentMetadata": {
+    "versionId": "2-QmR5hA9K5pf2eycp7rbZmjC6YoD3WeKGAAppRvRBtMyRrx",
+    "created": "2000-01-01T00:00:00Z",
+    "updated": "2000-01-02T00:00:00Z",
+    "deactivated": true,
+    "portable": false,
+    "scid": "QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9",
+    "updateKeys": [
+      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    ],
+    "nextKeyHashes": [],
+    "prerotation": false,
+    "witness": {},
+    "watchers": [],
+    "previousLogEntryHash": "QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9"
   }
 }

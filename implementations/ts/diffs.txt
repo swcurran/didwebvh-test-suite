@@ -1,36 +1,91 @@
 === basic-create / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -32,14 +35,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:27Z",
-     "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:50:27Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:50:27Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-create / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:28Z",
-     "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:48:28Z"
--    "versionTime": "2026-06-15T01:48:28Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -32,15 +35,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:48:28Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-create / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,31 @@
      ],
      "service": [
        {
@@ -46,50 +101,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:28Z",
-     "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:49:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:49:28Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-create / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "1-QmWFwGhwjwRBMcQRzHHSQwpebk7iQ8CKd8rihrzbU1BGRt",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
-     "versionId": "1-QmWFwGhwjwRBMcQRzHHSQwpebk7iQ8CKd8rihrzbU1BGRt",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "1-QmWFwGhwjwRBMcQRzHHSQwpebk7iQ8CKd8rihrzbU1BGRt",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === basic-create / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -128,54 +216,118 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2000-01-01T00:00:00Z",
-     "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
++    "updated": "2000-01-01T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-01T00:00:00Z",
+-    "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-update / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,8 +39,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -35,14 +38,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:50:28Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-update / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,9 +39,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -35,15 +38,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-update / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -26,13 +26,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -26,27 +29,31 @@
      ],
      "service": [
        {
@@ -191,50 +343,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -43,8 +43,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === basic-update / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -42,14 +41,11 @@
+@@ -40,16 +42,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-Qmc9HWbJWrAC1VLzFCEbgMrZFzX9Up21zv9K1cBbKgzcmQ",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
-     "versionId": "2-Qmc9HWbJWrAC1VLzFCEbgMrZFzX9Up21zv9K1cBbKgzcmQ",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-Qmc9HWbJWrAC1VLzFCEbgMrZFzX9Up21zv9K1cBbKgzcmQ",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === basic-update / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -16,39 +16,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -16,41 +19,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -273,27 +458,37 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === deactivate / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,44 +1,12 @@
+@@ -1,46 +1,19 @@
  {
-+  "didDocument": null,
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
 -  "didDocument": {
 -    "@context": "https://www.w3.org/ns/did/v1",
 -    "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
@@ -325,26 +520,37 @@
 -        "serviceEndpoint": "https://example.com/whois.vp"
 -      }
 -    ]
--  },
+   },
++  "didDocument": null,
    "didDocumentMetadata": {
++    "versionId": "2-QmVx56yUdo9fp3WWGDUEiKKnnkP9NHS8Jda3qDYkFsSm5A",
      "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-QmVx56yUdo9fp3WWGDUEiKKnnkP9NHS8Jda3qDYkFsSm5A",
-     "versionNumber": 2,
-     "versionTime": "2026-06-15T01:50:28Z",
-+    "deactivated": true
--    "deactivated": true,
+-    "versionId": "2-QmVx56yUdo9fp3WWGDUEiKKnnkP9NHS8Jda3qDYkFsSm5A",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:50:28Z",
+     "deactivated": true,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === deactivate / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,32 +1,12 @@
+@@ -1,34 +1,19 @@
  {
-+  "didDocument": null,
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
 -  "didDocument": {
 -    "@context": "https://www.w3.org/ns/did/v1",
 -    "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
@@ -363,27 +569,37 @@
 -    "assertionMethod": [
 -      "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com#z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
 -    ]
--  },
+   },
++  "didDocument": null,
    "didDocumentMetadata": {
++    "versionId": "2-QmewLGADyXQcdRJzag26wPX5HkL95J88BAATKQFDSn39t5",
      "created": "2026-06-15T01:48:28Z",
      "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmewLGADyXQcdRJzag26wPX5HkL95J88BAATKQFDSn39t5",
-     "versionNumber": 2,
-     "versionTime": "2026-06-15T01:48:29Z",
-+    "deactivated": true
--    "deactivated": true,
--    "portable": false,
+-    "versionId": "2-QmewLGADyXQcdRJzag26wPX5HkL95J88BAATKQFDSn39t5",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "deactivated": true,
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
 -    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === deactivate / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,48 +1,12 @@
+@@ -1,50 +1,19 @@
  {
-+  "didDocument": null,
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
 -  "didDocument": {
 -    "@context": [
 -      "https://www.w3.org/ns/did/v1",
@@ -419,26 +635,37 @@
 -        "serviceEndpoint": "https://example.com/whois.vp"
 -      }
 -    ]
--  },
+   },
++  "didDocument": null,
    "didDocumentMetadata": {
++    "versionId": "2-QmWtSdrKNPo3Gxp5dVr5GyToRRquCJMHWshAWNBG6YYDos",
      "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmWtSdrKNPo3Gxp5dVr5GyToRRquCJMHWshAWNBG6YYDos",
-     "versionNumber": 2,
-     "versionTime": "2026-06-15T01:49:29Z",
-+    "deactivated": true
--    "deactivated": true,
+-    "versionId": "2-QmWtSdrKNPo3Gxp5dVr5GyToRRquCJMHWshAWNBG6YYDos",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:49:29Z",
+     "deactivated": true,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === deactivate / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,52 +1,14 @@
+@@ -1,52 +1,22 @@
  {
-+  "didDocument": null,
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
 -  "@context": "https://w3id.org/did-resolution/v1",
 -  "didDocument": {
 -    "@context": [
@@ -475,32 +702,39 @@
 -        "serviceEndpoint": "https://example.com/whois.vp"
 -      }
 -    ]
--  },
+   },
++  "didDocument": null,
    "didDocumentMetadata": {
++    "versionId": "2-QmPkQz6DbG4FDdQAHyXPatCmpuFaptHNKUqRThHqQGUUtW",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": true,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
-     "versionId": "2-QmPkQz6DbG4FDdQAHyXPatCmpuFaptHNKUqRThHqQGUUtW",
-     "versionNumber": 2,
-     "versionTime": "2000-01-02T00:00:00Z",
-+    "deactivated": true
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "deactivated": true,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-QmPkQz6DbG4FDdQAHyXPatCmpuFaptHNKUqRThHqQGUUtW",
+-    "versionNumber": 2,
+-    "versionTime": "2000-01-02T00:00:00Z",
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === deactivate / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,51 +1,12 @@
+@@ -1,53 +1,19 @@
  {
-+  "didDocument": null,
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
 -  "didDocument": {
 -    "@context": [
 -      "https://www.w3.org/ns/did/v1",
@@ -536,56 +770,119 @@
 -        "type": "Multikey"
 -      }
 -    ]
--  },
-   "didDocumentMetadata": {
-     "created": "2000-01-01T00:00:00Z",
--    "deactivated": true,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2026-07-09T23:33:06Z",
-     "versionId": "2-QmZzrytcF9pD28kx3q62SvPmr66JdSykfi7P9zZvPcHNoR",
-     "versionNumber": 2,
-     "versionTime": "2026-07-09T23:33:06Z",
-+    "deactivated": true
--    "watchers": null,
--    "witness": null
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
++  "didDocument": null,
+   "didDocumentMetadata": {
++    "versionId": "2-QmZzrytcF9pD28kx3q62SvPmr66JdSykfi7P9zZvPcHNoR",
+     "created": "2000-01-01T00:00:00Z",
++    "updated": "2026-07-09T23:33:06Z",
+     "deactivated": true,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2026-07-09T23:33:06Z",
+-    "versionId": "2-QmZzrytcF9pD28kx3q62SvPmr66JdSykfi7P9zZvPcHNoR",
+-    "versionNumber": 2,
+-    "versionTime": "2026-07-09T23:33:06Z",
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
+-    "witness": null
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === key-rotation / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -32,14 +35,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmVZT577FWYaEkbAEjtTsYDL1yFbiKcBVHN6zx7fTmhibU",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-QmVZT577FWYaEkbAEjtTsYDL1yFbiKcBVHN6zx7fTmhibU",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "2-QmVZT577FWYaEkbAEjtTsYDL1yFbiKcBVHN6zx7fTmhibU",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:50:28Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === key-rotation / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmNYKuDc5pHK5x4Cu6xef8ThdL2BSs9kXmasTck5LNYPWk",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -32,15 +35,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmNYKuDc5pHK5x4Cu6xef8ThdL2BSs9kXmasTck5LNYPWk",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmNYKuDc5pHK5x4Cu6xef8ThdL2BSs9kXmasTck5LNYPWk",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === key-rotation / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,31 @@
      ],
      "service": [
        {
@@ -601,50 +898,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmcdFJoGwihkhTDV24RVdXyNbMPRPkgA6EvbVZfjwX1p98",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmcdFJoGwihkhTDV24RVdXyNbMPRPkgA6EvbVZfjwX1p98",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "2-QmcdFJoGwihkhTDV24RVdXyNbMPRPkgA6EvbVZfjwX1p98",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === key-rotation / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-QmTAeLprCisy3m8BifULyt8ma35gtB8BbWFQMyPpDpTd51",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
-     "versionId": "2-QmTAeLprCisy3m8BifULyt8ma35gtB8BbWFQMyPpDpTd51",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-QmTAeLprCisy3m8BifULyt8ma35gtB8BbWFQMyPpDpTd51",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === key-rotation / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -683,112 +1013,270 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmTBYjihTX2h3aFXurXq67c5DjKN3fvc8cXbRBYsm18iRp",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmTBYjihTX2h3aFXurXq67c5DjKN3fvc8cXbRBYsm18iRp",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmTBYjihTX2h3aFXurXq67c5DjKN3fvc8cXbRBYsm18iRp",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / dart — resolutionResult.1.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -32,14 +35,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:27Z",
-     "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:50:27Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "1-QmdL4w2mykHy72nP1zqsZQ3wFdDxDxxhiZSu2r2LM3nVHM",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:50:27Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / dart — resolutionResult.2.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,8 +39,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -35,14 +38,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "2-Qmcjby2eUpWXbSWDpQzSFsdbXRfYsuWei1MkEfPuY1mVKY",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:50:28Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -40,8 +40,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+@@ -36,14 +39,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "3-QmNWbWKrzYNagB7PHyKEA2ijsYoWnay8VAq7imiwggc5wM",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:29Z",
-     "versionId": "3-QmNWbWKrzYNagB7PHyKEA2ijsYoWnay8VAq7imiwggc5wM",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:50:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
+-    "versionId": "3-QmNWbWKrzYNagB7PHyKEA2ijsYoWnay8VAq7imiwggc5wM",
+-    "versionNumber": 3,
 -    "versionTime": "2026-06-15T01:50:29Z",
 -    "scid": "Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java — resolutionResult.1.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:28Z",
-     "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:48:28Z"
--    "versionTime": "2026-06-15T01:48:28Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -32,15 +35,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmaNiUQUgafjNvBs14qTzMLVws6Q8oti4U8AtML4iHcsHr",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:48:28Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java — resolutionResult.2.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,9 +39,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -35,15 +38,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmU92tHTN6xrrvCxtKj2xt3Jq1o9bMvGxt9z1GL5AjVmhS",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -40,9 +40,7 @@
-     "updated": "2026-06-15T01:48:30Z",
-     "versionId": "3-QmUVLd7KFJ2WLwuETpBYAyeEK93aztRUAQ1pGVRd5c4kSq",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:48:30Z"
--    "versionTime": "2026-06-15T01:48:30Z",
--    "portable": false,
--    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3:example.com",
+@@ -36,15 +39,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "3-QmUVLd7KFJ2WLwuETpBYAyeEK93aztRUAQ1pGVRd5c4kSq",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:30Z",
++    "deactivated": false,
+-    "versionId": "3-QmUVLd7KFJ2WLwuETpBYAyeEK93aztRUAQ1pGVRd5c4kSq",
+-    "versionNumber": 3,
+-    "versionTime": "2026-06-15T01:48:30Z",
+     "portable": false,
++    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-    "scid": "QmSXsRKkp2WdQxJCgV8DQFWGZAgd1nuSqF65uutDP9bVX3"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java-eecc — resolutionResult.1.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,31 @@
      ],
      "service": [
        {
@@ -804,21 +1292,44 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:28Z",
-     "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:49:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "1-QmZcCkwP2VZgxMWqqmUsDG8vDQPecvz1qcMdS2i35MdYGU",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:49:28Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java-eecc — resolutionResult.2.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -26,13 +26,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -26,27 +29,31 @@
      ],
      "service": [
        {
@@ -834,21 +1345,44 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -43,8 +43,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "2-QmTJUj9Lh6j7xuFfTXz7wrZDv4aZfwHQ6nT7yP1qwydR1Q",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -27,13 +27,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -27,27 +30,31 @@
      ],
      "service": [
        {
@@ -864,27 +1398,45 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -44,8 +44,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "3-QmNwWFzfiYoVbvhmNDHWwsZN9L6h9mNbozMy4rcAjqVTS5",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:30Z",
-     "versionId": "3-QmNwWFzfiYoVbvhmNDHWwsZN9L6h9mNbozMy4rcAjqVTS5",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:49:30Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
+-    "versionId": "3-QmNwWFzfiYoVbvhmNDHWwsZN9L6h9mNbozMy4rcAjqVTS5",
+-    "versionNumber": 3,
 -    "versionTime": "2026-06-15T01:49:30Z",
 -    "scid": "QmNieX9pNouJgaMPUfhoFJs6o7orDrJzkNZ8uutvGZmUnc"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / python — resolutionResult.1.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -22,10 +21,6 @@
+@@ -22,10 +24,6 @@
      "keyAgreement": [],
      "capabilityDelegation": [],
      "capabilityInvocation": [],
@@ -895,40 +1447,47 @@
      "service": [
        {
          "id": "did:webvh:QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux:example.com#files",
-@@ -42,15 +37,12 @@
+@@ -41,16 +39,19 @@
+     ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmWFwGhwjwRBMcQRzHHSQwpebk7iQ8CKd8rihrzbU1BGRt",
      "created": "2000-01-01T00:00:00Z",
 +    "updated": "2000-01-01T00:00:00Z",
-+    "versionId": "1-QmWFwGhwjwRBMcQRzHHSQwpebk7iQ8CKd8rihrzbU1BGRt",
-+    "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
 -    "updated": "2000-01-03T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
 -    "versionId": "3-QmcYJKm1TNjxEf99hGcvSfN9ze55E6aczUojP24G92n7Qr",
 -    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === multi-update / python — resolutionResult.2.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -23,8 +22,7 @@
+@@ -23,8 +25,7 @@
      "capabilityDelegation": [],
      "capabilityInvocation": [],
      "alsoKnownAs": [
@@ -938,63 +1497,85 @@
      ],
      "service": [
        {
-@@ -42,15 +40,12 @@
+@@ -41,16 +42,19 @@
+     ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-Qmc9HWbJWrAC1VLzFCEbgMrZFzX9Up21zv9K1cBbKgzcmQ",
      "created": "2000-01-01T00:00:00Z",
 +    "updated": "2000-01-02T00:00:00Z",
-+    "versionId": "2-Qmc9HWbJWrAC1VLzFCEbgMrZFzX9Up21zv9K1cBbKgzcmQ",
-+    "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
 -    "updated": "2000-01-03T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
 -    "versionId": "3-QmcYJKm1TNjxEf99hGcvSfN9ze55E6aczUojP24G92n7Qr",
 -    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === multi-update / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -43,14 +42,11 @@
+@@ -41,16 +43,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "3-QmcYJKm1TNjxEf99hGcvSfN9ze55E6aczUojP24G92n7Qr",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-03T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
-     "versionId": "3-QmcYJKm1TNjxEf99hGcvSfN9ze55E6aczUojP24G92n7Qr",
-     "versionNumber": 3,
-+    "versionTime": "2000-01-03T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "3-QmcYJKm1TNjxEf99hGcvSfN9ze55E6aczUojP24G92n7Qr",
+-    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmXhVjFG6EBTosDastaaHMRypm2qSv4SMGctADsx878Yux"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === multi-update / rust — resolutionResult.1.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -1033,26 +1614,42 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
      "created": "2000-01-01T00:00:00Z",
 +    "updated": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
 -    "updated": "2000-01-03T00:00:00Z",
-     "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
+-    "versionId": "1-QmWbebxXcUEq9YE9cB12DKxd4tCpntFn6Z1dUEbdw61cyx",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / rust — resolutionResult.2.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -16,39 +16,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -16,41 +19,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -1091,26 +1688,42 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
      "created": "2000-01-01T00:00:00Z",
 +    "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
 -    "updated": "2000-01-03T00:00:00Z",
-     "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+-    "versionId": "2-QmbizFKB593dcTPX114p1vRSn5WArBYGce1JAJKhxjbMV9",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multi-update / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -17,39 +17,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -17,41 +20,41 @@
      "controller": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "id": "did:webvh:Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY:example.com",
      "keyAgreement": [],
@@ -1149,25 +1762,42 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "3-QmceJhgSs5HTbwid4WCvY2nP9d5Ddmnu4K1wXaWWKjvGUw",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
-     "updated": "2000-01-03T00:00:00Z",
-     "versionId": "3-QmceJhgSs5HTbwid4WCvY2nP9d5Ddmnu4K1wXaWWKjvGUw",
-     "versionNumber": 3,
-+    "versionTime": "2000-01-03T00:00:00Z"
++    "updated": "2000-01-03T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-03T00:00:00Z",
+-    "versionId": "3-QmceJhgSs5HTbwid4WCvY2nP9d5Ddmnu4K1wXaWWKjvGUw",
+-    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "Qmc57yQsqz5NYVyMwT1zWTAXBAX6cNHfiAzqcABAJTkLnY"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multiple-update-keys / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -33,13 +33,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -33,27 +36,32 @@
      ],
      "service": [
        {
@@ -1183,50 +1813,85 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -50,8 +50,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmepNLQU1y9Pxr2Bb19BvP6BLjqQBaAWaGxvYxUv3ya37K",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmepNLQU1y9Pxr2Bb19BvP6BLjqQBaAWaGxvYxUv3ya37K",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH"
+-    "versionId": "2-QmepNLQU1y9Pxr2Bb19BvP6BLjqQBaAWaGxvYxUv3ya37K",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmTr9bmT2QKAxBWvec8wwuQx6sggvAMZKc5xjCciB9vmtH"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === multiple-update-keys / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -49,14 +48,11 @@
+@@ -47,16 +49,20 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-QmYDLrfFgUqfkruNxgDKYCjbaySmjj3tM3RQE96ZtFhQhG",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmaSetYkGWKD3FF9VBazD9FRfg7RBbiQKum21NcryzTkM1",
-     "versionId": "2-QmYDLrfFgUqfkruNxgDKYCjbaySmjj3tM3RQE96ZtFhQhG",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmaSetYkGWKD3FF9VBazD9FRfg7RBbiQKum21NcryzTkM1",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-QmYDLrfFgUqfkruNxgDKYCjbaySmjj3tM3RQE96ZtFhQhG",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmaSetYkGWKD3FF9VBazD9FRfg7RBbiQKum21NcryzTkM1"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === multiple-update-keys / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -17,19 +17,6 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -17,19 +20,6 @@
      "controller": "did:webvh:QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu:example.com",
      "id": "did:webvh:QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu:example.com",
      "keyAgreement": [],
@@ -1246,7 +1911,7 @@
      "verificationMethod": [
        {
          "controller": "did:webvh:QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu:example.com",
-@@ -43,19 +30,27 @@
+@@ -43,21 +33,35 @@
          "publicKeyMultibase": "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf",
          "type": "Multikey"
        }
@@ -1266,55 +1931,119 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmSWsnyR6p7FQ6v8PKKFQvVxeG682gDEwc9pJiSy4hGDBc",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmSWsnyR6p7FQ6v8PKKFQvVxeG682gDEwc9pJiSy4hGDBc",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++      "z6MknGc3ocHs3zdPiJbnaaqDi58NGb4pk1Sp9WxWufuXSdxf"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmSWsnyR6p7FQ6v8PKKFQvVxeG682gDEwc9pJiSy4hGDBc",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmXZdkKddfnXYAsHpqjKFoTv5oyiCYM5cmbscDtMTi5Qhu"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:50:27Z",
-     "versionId": "1-QmUoyF3wmGZPcrjxKaQB2JJyBXCvGdqABKK4J3vNcXA9N9",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:50:27Z"
--    "versionTime": "2026-06-15T01:50:27Z",
--    "portable": true,
--    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com",
+@@ -32,15 +35,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmUoyF3wmGZPcrjxKaQB2JJyBXCvGdqABKK4J3vNcXA9N9",
+     "created": "2026-06-15T01:50:27Z",
+     "updated": "2026-06-15T01:50:27Z",
++    "deactivated": false,
+-    "versionId": "1-QmUoyF3wmGZPcrjxKaQB2JJyBXCvGdqABKK4J3vNcXA9N9",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:50:27Z",
+     "portable": true,
++    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+-    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:28Z",
-     "versionId": "1-QmbYJFqLkVXnnUWo1FfxaqTtZ54XuHnbFdkQk8GVnof6KH",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:48:28Z"
--    "versionTime": "2026-06-15T01:48:28Z",
--    "portable": true,
--    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD:example.com",
+@@ -32,15 +35,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmbYJFqLkVXnnUWo1FfxaqTtZ54XuHnbFdkQk8GVnof6KH",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmbYJFqLkVXnnUWo1FfxaqTtZ54XuHnbFdkQk8GVnof6KH",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:48:28Z",
+     "portable": true,
++    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+-    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,28 +26,31 @@
      ],
      "service": [
        {
@@ -1330,51 +2059,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,9 +40,7 @@
-     "updated": "2026-06-15T01:49:28Z",
-     "versionId": "1-QmZNC7sDrjYuVM451dafe6rzDhUXyLLXobtHrL5Gs5X7n2",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:49:28Z"
--    "versionTime": "2026-06-15T01:49:28Z",
--    "portable": true,
--    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmZNC7sDrjYuVM451dafe6rzDhUXyLLXobtHrL5Gs5X7n2",
+     "created": "2026-06-15T01:49:28Z",
+     "updated": "2026-06-15T01:49:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmZNC7sDrjYuVM451dafe6rzDhUXyLLXobtHrL5Gs5X7n2",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:49:28Z",
+     "portable": true,
++    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+-    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "1-Qmb9RgqXp7fGJZRF8MmofEVdUnxaANLVT3pXYjjbN9PKRu",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": true,
--    "scid": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C",
-     "versionId": "1-Qmb9RgqXp7fGJZRF8MmofEVdUnxaANLVT3pXYjjbN9PKRu",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
+     "deactivated": false,
+     "portable": true,
+     "scid": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "1-Qmb9RgqXp7fGJZRF8MmofEVdUnxaANLVT3pXYjjbN9PKRu",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === portable / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,41 @@
      "controller": "did:webvh:QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC:example.com",
      "id": "did:webvh:QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC:example.com",
      "keyAgreement": [],
@@ -1413,55 +2174,118 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmY8n5j6nkyzPrjtVvVTkqtbiEk15D3GVzxiPUjTMPwr9f",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": true,
--    "scid": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC",
-     "updated": "2000-01-01T00:00:00Z",
-     "versionId": "1-QmY8n5j6nkyzPrjtVvVTkqtbiEk15D3GVzxiPUjTMPwr9f",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
++    "updated": "2000-01-01T00:00:00Z",
+     "deactivated": false,
+     "portable": true,
+     "scid": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-01T00:00:00Z",
+-    "versionId": "1-QmY8n5j6nkyzPrjtVvVTkqtbiEk15D3GVzxiPUjTMPwr9f",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable-move / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,9 +39,7 @@
-     "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-QmST3rirCWARgn2FQSdDWk5qqwoEEMddRa88pBYPp5Pywc",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
--    "versionTime": "2026-06-15T01:50:28Z",
--    "portable": true,
--    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org",
+@@ -35,15 +38,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmST3rirCWARgn2FQSdDWk5qqwoEEMddRa88pBYPp5Pywc",
+     "created": "2026-06-15T01:50:27Z",
+     "updated": "2026-06-15T01:50:28Z",
++    "deactivated": false,
+-    "versionId": "2-QmST3rirCWARgn2FQSdDWk5qqwoEEMddRa88pBYPp5Pywc",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:50:28Z",
+     "portable": true,
++    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+-    "scid": "Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable-move / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -39,9 +39,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmYXbkGu3vbQmAdqrqeHvvQCBDmZVm6z2dohBZ6RGxntrx",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": true,
--    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD:example.org",
+@@ -35,15 +38,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmYXbkGu3vbQmAdqrqeHvvQCBDmZVm6z2dohBZ6RGxntrx",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmYXbkGu3vbQmAdqrqeHvvQCBDmZVm6z2dohBZ6RGxntrx",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": true,
++    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+-    "scid": "QmXYBYX1uuwfcyhySFkegAqm6U8kutS7yzG8ruxKm8GGpD"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable-move / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -26,13 +26,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -26,28 +29,31 @@
      ],
      "service": [
        {
@@ -1477,51 +2301,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.org/whois.vp"
        }
-@@ -43,9 +43,7 @@
-     "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmXNiQDbxxaNtLZainKvhdsy75Ge6tVRmn8HMr24YAYcQK",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
--    "versionTime": "2026-06-15T01:49:29Z",
--    "portable": true,
--    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmXNiQDbxxaNtLZainKvhdsy75Ge6tVRmn8HMr24YAYcQK",
+     "created": "2026-06-15T01:49:28Z",
+     "updated": "2026-06-15T01:49:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmXNiQDbxxaNtLZainKvhdsy75Ge6tVRmn8HMr24YAYcQK",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:49:29Z",
+     "portable": true,
++    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+-    "scid": "QmaWg9hkFsXg7ityiMZ3GG4JSTzXa8ERvgRtLi63rbxnQ4"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === portable-move / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-QmZrA2G9GDTJmQ2nuqhMG2MtCTdzRWsJR7a54giXWjrop2",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": true,
--    "scid": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C",
-     "versionId": "2-QmZrA2G9GDTJmQ2nuqhMG2MtCTdzRWsJR7a54giXWjrop2",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": true,
+     "scid": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-QmZrA2G9GDTJmQ2nuqhMG2MtCTdzRWsJR7a54giXWjrop2",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmZEmV4tPDCfzr5xb62SpKZWoJinQG81ZBaZXBQuEosD1C"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === portable-move / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,41 @@
      "controller": "did:webvh:QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC:example.com",
      "id": "did:webvh:QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC:example.com",
      "keyAgreement": [],
@@ -1560,54 +2416,122 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmVuaRChgrjDwRervewT8veixnTP9ix5d28eUC2RtHHTYq",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": true,
--    "scid": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmVuaRChgrjDwRervewT8veixnTP9ix5d28eUC2RtHHTYq",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": true,
+     "scid": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmVuaRChgrjDwRervewT8veixnTP9ix5d28eUC2RtHHTYq",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmWPpSLJhdVVGnMnS8Z9BKBYwbRhhb4BHYidhiidLsvSfC"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
+@@ -32,14 +35,20 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmQ2n7wwXetW4wQTunrV8fd6GuPvBpuHXW6b2jnNwfVs2s",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:27Z",
-     "versionId": "1-QmQ2n7wwXetW4wQTunrV8fd6GuPvBpuHXW6b2jnNwfVs2s",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:50:27Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [
++      "Qmf2V5jB2UwPcFL5bvmKed7VvY3CSQ1RXyDdtip7ufpQ3R"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH"
+-    "versionId": "1-QmQ2n7wwXetW4wQTunrV8fd6GuPvBpuHXW6b2jnNwfVs2s",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:50:27Z",
 -    "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:28Z",
-     "versionId": "1-QmRYA4DfjCZBWLZb4NmzEKeGoG5E2n1rRCRxcsk83vnmb9",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:48:28Z"
--    "versionTime": "2026-06-15T01:48:28Z",
--    "portable": false,
--    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1:example.com",
+@@ -32,15 +35,20 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmRYA4DfjCZBWLZb4NmzEKeGoG5E2n1rRCRxcsk83vnmb9",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmRYA4DfjCZBWLZb4NmzEKeGoG5E2n1rRCRxcsk83vnmb9",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:48:28Z",
+     "portable": false,
++    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [
++      "Qmf2V5jB2UwPcFL5bvmKed7VvY3CSQ1RXyDdtip7ufpQ3R"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+-    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,33 @@
      ],
      "service": [
        {
@@ -1623,50 +2547,87 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmPDaTYiXRdVX7T5MwbLxWs8ZQe3xhbmWTk4W5dazbxytv",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:28Z",
-     "versionId": "1-QmPDaTYiXRdVX7T5MwbLxWs8ZQe3xhbmWTk4W5dazbxytv",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:49:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [
++      "Qmf2V5jB2UwPcFL5bvmKed7VvY3CSQ1RXyDdtip7ufpQ3R"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1"
+-    "versionId": "1-QmPDaTYiXRdVX7T5MwbLxWs8ZQe3xhbmWTk4W5dazbxytv",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:49:28Z",
 -    "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,21 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "1-QmXr1NpRE3dPZjrc47fLGbMyB5rpDpNG2gPYfab7Ejof6n",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv",
-     "versionId": "1-QmXr1NpRE3dPZjrc47fLGbMyB5rpDpNG2gPYfab7Ejof6n",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [
++      "Qmf2V5jB2UwPcFL5bvmKed7VvY3CSQ1RXyDdtip7ufpQ3R"
++    ],
++    "prerotation": true,
++    "witness": {},
+-    "versionId": "1-QmXr1NpRE3dPZjrc47fLGbMyB5rpDpNG2gPYfab7Ejof6n",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === pre-rotation / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,43 @@
      "controller": "did:webvh:QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD:example.com",
      "id": "did:webvh:QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD:example.com",
      "keyAgreement": [],
@@ -1705,54 +2666,124 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmUPj8g2FxDTpSRJugYRXJjv8w4NRYXsDPiaSkZc2ZJ18p",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD",
-     "updated": "2000-01-01T00:00:00Z",
-     "versionId": "1-QmUPj8g2FxDTpSRJugYRXJjv8w4NRYXsDPiaSkZc2ZJ18p",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
++    "updated": "2000-01-01T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [
++      "Qmf2V5jB2UwPcFL5bvmKed7VvY3CSQ1RXyDdtip7ufpQ3R"
++    ],
++    "prerotation": true,
+-    "updated": "2000-01-01T00:00:00Z",
+-    "versionId": "1-QmUPj8g2FxDTpSRJugYRXJjv8w4NRYXsDPiaSkZc2ZJ18p",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation-consume / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
+@@ -32,14 +35,20 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "3-QmcwboQ78tEqJEDDbYtVs15bBq2TqXjxEj9zoi3K5FaovH",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:29Z",
-     "versionId": "3-QmcwboQ78tEqJEDDbYtVs15bBq2TqXjxEj9zoi3K5FaovH",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:50:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH",
++    "updateKeys": [
++      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
++    ],
++    "nextKeyHashes": [
++      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH"
+-    "versionId": "3-QmcwboQ78tEqJEDDbYtVs15bBq2TqXjxEj9zoi3K5FaovH",
+-    "versionNumber": 3,
 -    "versionTime": "2026-06-15T01:50:29Z",
 -    "scid": "QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation-consume / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:30Z",
-     "versionId": "3-QmbLoMafpUjAgaRru1B4NKkaRrkMYrMDrKRfJ5Yh512bUz",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:48:30Z"
--    "versionTime": "2026-06-15T01:48:30Z",
--    "portable": false,
--    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1:example.com",
+@@ -32,15 +35,20 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "3-QmbLoMafpUjAgaRru1B4NKkaRrkMYrMDrKRfJ5Yh512bUz",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:30Z",
++    "deactivated": false,
+-    "versionId": "3-QmbLoMafpUjAgaRru1B4NKkaRrkMYrMDrKRfJ5Yh512bUz",
+-    "versionNumber": 3,
+-    "versionTime": "2026-06-15T01:48:30Z",
+     "portable": false,
++    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1",
++    "updateKeys": [
++      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
++    ],
++    "nextKeyHashes": [
++      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+-    "scid": "QmP5BS8pyuZ2rWaxiMrbZPd5YbSX5X7Li3cS6pEuAFcMb1"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation-consume / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,33 @@
      ],
      "service": [
        {
@@ -1768,50 +2799,87 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "3-QmQiXWDykLYn27GnDy1NRGENne8MUCB2vVWE8SEKr1pjCm",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:30Z",
-     "versionId": "3-QmQiXWDykLYn27GnDy1NRGENne8MUCB2vVWE8SEKr1pjCm",
-     "versionNumber": 3,
-+    "versionTime": "2026-06-15T01:49:30Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1",
++    "updateKeys": [
++      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
++    ],
++    "nextKeyHashes": [
++      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
++    ],
++    "prerotation": true,
++    "watchers": null,
++    "previousLogEntryHash": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1"
+-    "versionId": "3-QmQiXWDykLYn27GnDy1NRGENne8MUCB2vVWE8SEKr1pjCm",
+-    "versionNumber": 3,
 -    "versionTime": "2026-06-15T01:49:30Z",
 -    "scid": "QmWP6kWz1Wwzehs6avT1aM4foFR82dY21ZEZ1Nj7aZt3V1"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === pre-rotation-consume / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,14 +38,11 @@
+@@ -37,16 +39,21 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "3-QmaX9bpujdGUBPy9NLxyESmurnLff6SrkLiJQpkjtbLZBj",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-03T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv",
-     "versionId": "3-QmaX9bpujdGUBPy9NLxyESmurnLff6SrkLiJQpkjtbLZBj",
-     "versionNumber": 3,
-+    "versionTime": "2000-01-03T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv",
++    "updateKeys": [
++      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
++    ],
++    "nextKeyHashes": [
++      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
++    ],
++    "prerotation": true,
++    "witness": {},
+-    "versionId": "3-QmaX9bpujdGUBPy9NLxyESmurnLff6SrkLiJQpkjtbLZBj",
+-    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmcKnGa3dur9W5JbQ3CC7D95Aqy5g4tbp81U3QG8DG1wtv"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === pre-rotation-consume / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,39 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,41 +16,43 @@
      "controller": "did:webvh:QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD:example.com",
      "id": "did:webvh:QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD:example.com",
      "keyAgreement": [],
@@ -1850,54 +2918,120 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "3-QmTa52uaWAABzmTTfaKnEqpxwYNeTvuT8C2TStGZonrGKy",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD",
-     "updated": "2000-01-03T00:00:00Z",
-     "versionId": "3-QmTa52uaWAABzmTTfaKnEqpxwYNeTvuT8C2TStGZonrGKy",
-     "versionNumber": 3,
-+    "versionTime": "2000-01-03T00:00:00Z"
++    "updated": "2000-01-03T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD",
++    "updateKeys": [
++      "z6MkvqoYXQfDDJRv8L4wKzxYeuKyVZBfi9Qo6Ro8MiLH3kDQ"
++    ],
++    "nextKeyHashes": [
++      "QmPz1YVUT3mXMEixAWj8J6NkiQbskFmNu3DLYQLdynmrtR"
++    ],
++    "prerotation": true,
+-    "updated": "2000-01-03T00:00:00Z",
+-    "versionId": "3-QmTa52uaWAABzmTTfaKnEqpxwYNeTvuT8C2TStGZonrGKy",
+-    "versionNumber": 3,
 -    "versionTime": "2000-01-03T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmUQVmu7yyX6x9jCUH863pBacUmg8Wuu4ZZtsdfv7Uv5iD"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === services / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -46,8 +46,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com",
+@@ -42,14 +45,18 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmbyXKshKVqrtxHc8Td4uioBSg7ftrgVJLa3wK9mptkRYM",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-QmbyXKshKVqrtxHc8Td4uioBSg7ftrgVJLa3wK9mptkRYM",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh"
+-    "versionId": "2-QmbyXKshKVqrtxHc8Td4uioBSg7ftrgVJLa3wK9mptkRYM",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:50:28Z",
 -    "scid": "QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === services / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -46,9 +46,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmT7s4jDcFrVhAMiWfGcQXWrBKmRR8QUuKjGm7XEd3fvBE",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": false,
--    "scid": "QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5:example.com",
+@@ -42,15 +45,18 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmT7s4jDcFrVhAMiWfGcQXWrBKmRR8QUuKjGm7XEd3fvBE",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmT7s4jDcFrVhAMiWfGcQXWrBKmRR8QUuKjGm7XEd3fvBE",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": false,
++    "scid": "QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5"
+-    "scid": "QmRBLAM2DKeKidNd1GZTNcP41KZjyBhY1Pm9jzabuZ51g5"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === services / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -33,13 +33,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -33,27 +36,31 @@
          "serviceEndpoint": "https://example.com/didcomm"
        },
        {
@@ -1913,50 +3047,83 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -50,8 +50,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmPegF4nZogWvCQoNHVym6U2t6e9UgdA5H8abJoToK8w98",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmPegF4nZogWvCQoNHVym6U2t6e9UgdA5H8abJoToK8w98",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "watchers": null,
++    "previousLogEntryHash": "QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr"
+-    "versionId": "2-QmPegF4nZogWvCQoNHVym6U2t6e9UgdA5H8abJoToK8w98",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmRGsayJFTYqt6NNLE74pYdvH5stooqdnbeDnRYaQYsNJr"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === services / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -49,14 +48,11 @@
+@@ -47,16 +49,19 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-QmWhav8VZoB8mJHDb9PgdBDNwVuu34jGa4r6rV1dq2kSeD",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmZMMkNS4sL91SHsuCfDi2imHr1tfDtDN8j4xBncmjjNjC",
-     "versionId": "2-QmWhav8VZoB8mJHDb9PgdBDNwVuu34jGa4r6rV1dq2kSeD",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmZMMkNS4sL91SHsuCfDi2imHr1tfDtDN8j4xBncmjjNjC",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {},
+-    "versionId": "2-QmWhav8VZoB8mJHDb9PgdBDNwVuu34jGa4r6rV1dq2kSeD",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": [],
--    "witness": {}
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "watchers": [],
++    "previousLogEntryHash": "QmZMMkNS4sL91SHsuCfDi2imHr1tfDtDN8j4xBncmjjNjC"
 +  }
+-    "witness": {}
+-  },
 -  "didResolutionMetadata": null
  }
 
 === services / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -26,14 +26,14 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -26,14 +29,14 @@
        },
        {
          "id": "did:webvh:QmUyGZWUjTziNzTsXXc65DJ1ofeAqtyQkTQuCYJ6dhiU6J:example.com#files",
@@ -1975,57 +3142,138 @@
        }
      ],
      "verificationMethod": [
-@@ -47,15 +47,10 @@
+@@ -46,18 +49,18 @@
+     ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmYCBbEkDfW5YWLbJo3b4a7MhNMLzpQQ4qT1eSzqEa3szs",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmUyGZWUjTziNzTsXXc65DJ1ofeAqtyQkTQuCYJ6dhiU6J",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmYCBbEkDfW5YWLbJo3b4a7MhNMLzpQQ4qT1eSzqEa3szs",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmUyGZWUjTziNzTsXXc65DJ1ofeAqtyQkTQuCYJ6dhiU6J",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmYCBbEkDfW5YWLbJo3b4a7MhNMLzpQQ4qT1eSzqEa3szs",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
--    "watchers": null,
+     "watchers": null,
++    "previousLogEntryHash": "QmUyGZWUjTziNzTsXXc65DJ1ofeAqtyQkTQuCYJ6dhiU6J"
 -    "witness": null
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-threshold / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com",
+@@ -32,14 +35,26 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmNxFGBfgpzjDtaqndr7CwxrHfreV1z9agPa1rFgpHvyPF",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:27Z",
-     "versionId": "1-QmNxFGBfgpzjDtaqndr7CwxrHfreV1z9agPa1rFgpHvyPF",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:50:27Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt"
+-    "versionId": "1-QmNxFGBfgpzjDtaqndr7CwxrHfreV1z9agPa1rFgpHvyPF",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:50:27Z",
 -    "scid": "QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-threshold / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:28Z",
-     "versionId": "1-QmQA7ok8zXo7unKP9yLDspHbtfUt6Mcw2fLk8T9JmqBcQ2",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:48:28Z"
--    "versionTime": "2026-06-15T01:48:28Z",
--    "portable": false,
--    "scid": "Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4:example.com",
+@@ -32,15 +35,26 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "1-QmQA7ok8zXo7unKP9yLDspHbtfUt6Mcw2fLk8T9JmqBcQ2",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:28Z",
++    "deactivated": false,
+-    "versionId": "1-QmQA7ok8zXo7unKP9yLDspHbtfUt6Mcw2fLk8T9JmqBcQ2",
+-    "versionNumber": 1,
+-    "versionTime": "2026-06-15T01:48:28Z",
+     "portable": false,
++    "scid": "Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4"
+-    "scid": "Qmemp8WNvnMscdyJukyT7u2hRpmygd3KXcrfcexfS9GJJ4"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-threshold / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,39 @@
      ],
      "service": [
        {
@@ -2041,57 +3289,99 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "1-QmT5oxBcEktYDynwhAjMRyLZ946wDCFn5sfDpjECbhtLDh",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:28Z",
-     "versionId": "1-QmT5oxBcEktYDynwhAjMRyLZ946wDCFn5sfDpjECbhtLDh",
-     "versionNumber": 1,
-+    "versionTime": "2026-06-15T01:49:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK"
+-    "versionId": "1-QmT5oxBcEktYDynwhAjMRyLZ946wDCFn5sfDpjECbhtLDh",
+-    "versionNumber": 1,
 -    "versionTime": "2026-06-15T01:49:28Z",
 -    "scid": "QmPMBcG9hzAJFCGETTpmzbefg5FmRtRxMCkudQZqioAziK"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-threshold / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,21 +38,11 @@
+@@ -37,15 +39,17 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "1-QmbzaUbeS2r1cVLYKhYMnhJp5wPjTEhYnLK7tZvhzsscGJ",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmQvFgRe9yNYAT253FoGixHgRsZDCxeWQoU12varD5CDdJ",
-     "versionId": "1-QmbzaUbeS2r1cVLYKhYMnhJp5wPjTEhYnLK7tZvhzsscGJ",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmQvFgRe9yNYAT253FoGixHgRsZDCxeWQoU12varD5CDdJ",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "versionId": "1-QmbzaUbeS2r1cVLYKhYMnhJp5wPjTEhYnLK7tZvhzsscGJ",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
 -    "watchers": [],
--    "witness": {
--      "threshold": 1,
--      "witnesses": [
--        {
--          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
--        }
--      ]
--    }
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "witness": {
+       "threshold": 1,
+       "witnesses": [
+@@ -53,7 +57,8 @@
+           "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+         }
+       ]
++    },
++    "watchers": [],
++    "previousLogEntryHash": "QmQvFgRe9yNYAT253FoGixHgRsZDCxeWQoU12varD5CDdJ"
 +  }
+-    }
+-  },
 -  "didResolutionMetadata": null
  }
 
 === witness-threshold / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,46 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,38 +16,40 @@
      "controller": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com",
      "id": "did:webvh:QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo:example.com",
      "keyAgreement": [],
@@ -2130,61 +3420,143 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "1-QmQuf4Ficd9An6KLaZeddjRARvUe7p3iXaYwrxUiy5xqCg",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo",
-     "updated": "2000-01-01T00:00:00Z",
-     "versionId": "1-QmQuf4Ficd9An6KLaZeddjRARvUe7p3iXaYwrxUiy5xqCg",
-     "versionNumber": 1,
-+    "versionTime": "2000-01-01T00:00:00Z"
++    "updated": "2000-01-01T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-01T00:00:00Z",
+-    "versionId": "1-QmQuf4Ficd9An6KLaZeddjRARvUe7p3iXaYwrxUiy5xqCg",
+-    "versionNumber": 1,
 -    "versionTime": "2000-01-01T00:00:00Z",
 -    "watchers": null,
--    "witness": {
--      "threshold": 1,
--      "witnesses": [
--        {
--          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
--        }
--      ]
+     "witness": {
+       "threshold": 1,
+       "witnesses": [
+@@ -52,9 +57,8 @@
+           "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+         }
+       ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmXxi5SJLod9kfjyLztg632vmSYK6Wi951PWQRCe7k32Fo"
 -    }
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-update / dart — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,8 +36,7 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com",
+@@ -32,14 +35,26 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmdvfEewA3m32DwJmUNgGBYn9azrsTxJQXnNrKxYsvDzXm",
+     "created": "2026-06-15T01:50:27Z",
      "updated": "2026-06-15T01:50:28Z",
-     "versionId": "2-QmdvfEewA3m32DwJmUNgGBYn9azrsTxJQXnNrKxYsvDzXm",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:50:28Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA"
+-    "versionId": "2-QmdvfEewA3m32DwJmUNgGBYn9azrsTxJQXnNrKxYsvDzXm",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:50:28Z",
 -    "scid": "QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-update / java — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -36,9 +36,7 @@
-     "updated": "2026-06-15T01:48:29Z",
-     "versionId": "2-QmZcgvHkcKU1q3UY3UV7wHhZN5teux4co9yw3ZTiYSfV8G",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:48:29Z"
--    "versionTime": "2026-06-15T01:48:29Z",
--    "portable": false,
--    "scid": "QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU"
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": "https://www.w3.org/ns/did/v1",
+     "id": "did:webvh:QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU:example.com",
+@@ -32,15 +35,26 @@
+     ]
    },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+   "didDocumentMetadata": {
++    "versionId": "2-QmZcgvHkcKU1q3UY3UV7wHhZN5teux4co9yw3ZTiYSfV8G",
+     "created": "2026-06-15T01:48:28Z",
+     "updated": "2026-06-15T01:48:29Z",
++    "deactivated": false,
+-    "versionId": "2-QmZcgvHkcKU1q3UY3UV7wHhZN5teux4co9yw3ZTiYSfV8G",
+-    "versionNumber": 2,
+-    "versionTime": "2026-06-15T01:48:29Z",
+     "portable": false,
++    "scid": "QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU"
+-    "scid": "QmYyEpEUR2ZV2ntUpR2Y9HAjDnZUQ9cmqsBBkGpJviRYGU"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-update / java-eecc — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -23,13 +23,13 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -23,27 +26,39 @@
      ],
      "service": [
        {
@@ -2200,57 +3572,99 @@
          "type": "LinkedVerifiablePresentation",
          "serviceEndpoint": "https://example.com/whois.vp"
        }
-@@ -40,8 +40,7 @@
+     ]
+   },
+   "didDocumentMetadata": {
++    "versionId": "2-QmcsxtZwegSguNQQPgJVBhgD5abdXYk7qPUguXJXXs4wgi",
+     "created": "2026-06-15T01:49:28Z",
      "updated": "2026-06-15T01:49:29Z",
-     "versionId": "2-QmcsxtZwegSguNQQPgJVBhgD5abdXYk7qPUguXJXXs4wgi",
-     "versionNumber": 2,
-+    "versionTime": "2026-06-15T01:49:29Z"
++    "deactivated": false,
++    "portable": false,
++    "scid": "QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
++    "witness": {
++      "threshold": 1,
++      "witnesses": [
++        {
++          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
++        }
++      ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT"
+-    "versionId": "2-QmcsxtZwegSguNQQPgJVBhgD5abdXYk7qPUguXJXXs4wgi",
+-    "versionNumber": 2,
 -    "versionTime": "2026-06-15T01:49:29Z",
 -    "scid": "QmVmwxsTKEkmDcnrNDv9ccrxJtk9cSyQS4Nga3TzkUfaGT"
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }
 
 === witness-update / python — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -1,5 +1,4 @@
+@@ -1,5 +1,7 @@
  {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
 -  "@context": "https://w3id.org/did-resolution/v1",
    "didDocument": {
      "@context": [
        "https://www.w3.org/ns/did/v1",
-@@ -39,21 +38,11 @@
+@@ -37,15 +39,17 @@
+     ]
+   },
    "didDocumentMetadata": {
++    "versionId": "2-QmUjrsFsAwy2csZnbRrQv6fHKVPhsFDxBwTpYdxbWXS9sB",
      "created": "2000-01-01T00:00:00Z",
      "updated": "2000-01-02T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmVPXTZAumzuRFXb7Squ63ah8h7Tdi9SuP58wQ65Y5Baje",
-     "versionId": "2-QmUjrsFsAwy2csZnbRrQv6fHKVPhsFDxBwTpYdxbWXS9sB",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmVPXTZAumzuRFXb7Squ63ah8h7Tdi9SuP58wQ65Y5Baje",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "versionId": "2-QmUjrsFsAwy2csZnbRrQv6fHKVPhsFDxBwTpYdxbWXS9sB",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
 -    "watchers": [],
--    "witness": {
--      "threshold": 1,
--      "witnesses": [
--        {
--          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
--        }
--      ]
--    }
-   },
-+  "didResolutionMetadata": {
-+    "contentType": "application/did+ld+json"
+     "witness": {
+       "threshold": 1,
+       "witnesses": [
+@@ -53,7 +57,8 @@
+           "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+         }
+       ]
++    },
++    "watchers": [],
++    "previousLogEntryHash": "QmVPXTZAumzuRFXb7Squ63ah8h7Tdi9SuP58wQ65Y5Baje"
 +  }
+-    }
+-  },
 -  "didResolutionMetadata": null
  }
 
 === witness-update / rust — resolutionResult.json ===
 --- expected
 +++ actual (ts resolver)
-@@ -13,49 +13,34 @@
+@@ -1,4 +1,7 @@
+ {
++  "didResolutionMetadata": {
++    "contentType": "application/did+ld+json"
++  },
+   "didDocument": {
+     "@context": [
+       "https://www.w3.org/ns/did/v1",
+@@ -13,51 +16,49 @@
      "controller": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com",
      "id": "did:webvh:QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc:example.com",
      "keyAgreement": [],
@@ -2289,27 +3703,39 @@
      ]
    },
    "didDocumentMetadata": {
++    "versionId": "2-QmT9zq4vRpeRfFxB5T3E93rCa4K3hGxvXGsQPFNx8Dzmka",
      "created": "2000-01-01T00:00:00Z",
--    "deactivated": false,
--    "portable": false,
--    "scid": "QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc",
-     "updated": "2000-01-02T00:00:00Z",
-     "versionId": "2-QmT9zq4vRpeRfFxB5T3E93rCa4K3hGxvXGsQPFNx8Dzmka",
-     "versionNumber": 2,
-+    "versionTime": "2000-01-02T00:00:00Z"
++    "updated": "2000-01-02T00:00:00Z",
+     "deactivated": false,
+     "portable": false,
+     "scid": "QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc",
++    "updateKeys": [
++      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
++    ],
++    "nextKeyHashes": [],
++    "prerotation": false,
+-    "updated": "2000-01-02T00:00:00Z",
+-    "versionId": "2-QmT9zq4vRpeRfFxB5T3E93rCa4K3hGxvXGsQPFNx8Dzmka",
+-    "versionNumber": 2,
 -    "versionTime": "2000-01-02T00:00:00Z",
 -    "watchers": null,
--    "witness": {
+     "witness": {
++      "threshold": 1,
 -      "threshold": 2,
--      "witnesses": [
--        {
--          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+       "witnesses": [
+         {
+           "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
 -        },
 -        {
 -          "id": "did:key:z6MkjnHi6KJKx625x56sxudLoKdDVDABJ5VHHdXRFPUea7NP"
--        }
--      ]
+         }
+       ]
++    },
++    "watchers": null,
++    "previousLogEntryHash": "QmUeSU5Vni9YSjxtVzpstHSjxJCXjMoNo7hJUAujG3Vksc"
 -    }
-   },
-   "didResolutionMetadata": {
-     "contentType": "application/did+ld+json"
+-  },
+-  "didResolutionMetadata": {
+-    "contentType": "application/did+ld+json"
+   }
+ }

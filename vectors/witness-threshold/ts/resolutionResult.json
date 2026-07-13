@@ -1,4 +1,7 @@
 {
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json"
+  },
   "didDocument": {
     "@context": [
       "https://www.w3.org/ns/did/v1",
@@ -37,13 +40,26 @@
     ]
   },
   "didDocumentMetadata": {
+    "versionId": "1-QmYY8MFqu6fsEBgnew5AjZfKJ3XFKe3EvJT6iNUikp9nk7",
     "created": "2000-01-01T00:00:00Z",
     "updated": "2000-01-01T00:00:00Z",
-    "versionId": "1-QmYY8MFqu6fsEBgnew5AjZfKJ3XFKe3EvJT6iNUikp9nk7",
-    "versionNumber": 1,
-    "versionTime": "2000-01-01T00:00:00Z"
-  },
-  "didResolutionMetadata": {
-    "contentType": "application/did+ld+json"
+    "deactivated": false,
+    "portable": false,
+    "scid": "QmU9s4GUNrt8SM9CCCTejsbZj583dXQWUduG1QnWaHbrzS",
+    "updateKeys": [
+      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    ],
+    "nextKeyHashes": [],
+    "prerotation": false,
+    "witness": {
+      "threshold": 1,
+      "witnesses": [
+        {
+          "id": "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L"
+        }
+      ]
+    },
+    "watchers": [],
+    "previousLogEntryHash": "QmU9s4GUNrt8SM9CCCTejsbZj583dXQWUduG1QnWaHbrzS"
   }
 }
