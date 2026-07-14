@@ -2,9 +2,6 @@ node_modules/
 .env
 *.log
 
-# Bun
-bun.lockb
-
 # TypeScript build output (none expected — noEmit; kept for safety)
 dist/
 build/

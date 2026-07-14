@@ -126,4 +126,4 @@ Implementation: didwebvh-ts 3.0.0
 | witness-update | ts (self) | ✅ PASS |  |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (9b89922)
+Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (2f795b1)

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { load as yamlLoad } from 'js-yaml';
 import { sha256 } from '@noble/hashes/sha2';
 import { canonicalize } from 'json-canonicalize';
@@ -9,7 +10,7 @@ import { keyFromSeed, Ed25519Signer, PermissiveVerifier } from './cryptography.t
 import type { Script, CreateStep, UpdateStep, DeactivateStep, ResolveStep } from './interfaces.ts';
 import * as ed25519 from '@stablelib/ed25519';
 
-const REPO_ROOT = path.resolve(import.meta.dir, '../../..');
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const TS_IMPL_DIR = path.join(REPO_ROOT, 'implementations/ts');
 const VECTORS_DIR = path.join(REPO_ROOT, 'vectors');
 

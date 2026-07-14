@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { load as yamlLoad } from 'js-yaml';
 import { sha256 } from '@noble/hashes/sha2';
 import { canonicalize } from 'json-canonicalize';
@@ -10,7 +11,7 @@ import type { KeyDef, CreateStep, UpdateStep, StepParams } from './interfaces.ts
 // KeyDef used via NegativeScript.keys below
 import * as ed25519 from '@stablelib/ed25519';
 
-const REPO_ROOT = path.resolve(import.meta.dir, '../../..');
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const VECTORS_DIR = path.join(REPO_ROOT, 'vectors');
 
 function deriveHashSync(input: unknown): string {
