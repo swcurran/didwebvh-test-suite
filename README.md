@@ -239,10 +239,11 @@ The Docker approach above is the recommended way to run. For local development w
 ### TypeScript
 
 ```bash
-bun install
-bun run generate            # regenerate all TS vectors + cross-resolution
-bun run generate <scenario> # single scenario
-bun run verify              # CI check: verify committed artifacts match generator output
+corepack enable             # one-time: activates the pinned pnpm version
+pnpm install
+pnpm run generate            # regenerate all TS vectors + cross-resolution
+pnpm run generate <scenario> # single scenario
+pnpm run verify              # CI check: verify committed artifacts match generator output
 ```
 
 ### Python

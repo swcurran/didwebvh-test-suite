@@ -1,6 +1,6 @@
 # ts status
 
-Implementation: didwebvh-ts 2.8.0
+Implementation: didwebvh-ts 3.0.0
 
 ## DID Creation
 
@@ -126,4 +126,4 @@ Implementation: didwebvh-ts 2.8.0
 | witness-update | ts (self) | ✅ PASS |  |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (aeaf739)
+Built from: https://github.com/decentralized-identity/didwebvh-ts @ main (2f795b1)

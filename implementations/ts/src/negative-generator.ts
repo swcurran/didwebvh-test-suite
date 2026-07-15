@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { load as yamlLoad } from 'js-yaml';
 import { sha256 } from '@noble/hashes/sha2';
 import { canonicalize } from 'json-canonicalize';
@@ -10,7 +11,7 @@ import type { KeyDef, CreateStep, UpdateStep, StepParams } from './interfaces.ts
 // KeyDef used via NegativeScript.keys below
 import * as ed25519 from '@stablelib/ed25519';
 
-const REPO_ROOT = path.resolve(import.meta.dir, '../../..');
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const VECTORS_DIR = path.join(REPO_ROOT, 'vectors');
 
 function deriveHashSync(input: unknown): string {
@@ -319,6 +320,44 @@ async function createGenesisBypass(
   return [{ ...finalEntry, proof: [{ ...proofBase, proofValue }] }] as DIDLog;
 }
 
+// Builds an update log entry manually, bypassing library-side authorization
+// checks (e.g. updateDID's hard rejection of updateKeys that don't hash into
+// the previous entry's nextKeyHashes commitment). Used as a fallback when
+// updateDID rejects intentionally invalid parameters that the negative test
+// needs to carry through to resolution.
+async function updateEntryBypass(
+  log: DIDLog,
+  timestamp: string,
+  parameters: Record<string, unknown>,
+  state: Record<string, unknown>,
+  signerVM: VerificationMethod,
+): Promise<DIDLog> {
+  const prevEntry = log[log.length - 1] as any;
+  const versionNumber = log.length + 1;
+
+  const hashInput = { versionId: prevEntry.versionId, versionTime: timestamp, parameters, state };
+  const entryHash = deriveHashSync(hashInput);
+  const versionId = `${versionNumber}-${entryHash}`;
+  const prelimEntry = { versionId, versionTime: timestamp, parameters, state };
+
+  const cryptosuite = 'eddsa-jcs-2022';
+  const vmId = `did:key:${signerVM.publicKeyMultibase}#${signerVM.publicKeyMultibase}`;
+  const proofBase = {
+    type: 'DataIntegrityProof',
+    cryptosuite,
+    verificationMethod: vmId,
+    created: timestamp,
+    proofPurpose: 'assertionMethod',
+  };
+
+  const secretKey = multibaseDecode(signerVM.secretKeyMultibase!).bytes.slice(2);
+  const dataToSign = await prepareDataForSigning(prelimEntry as any, proofBase as any);
+  const sig = ed25519.sign(secretKey, dataToSign);
+  const proofValue = multibaseEncode(sig, MultibaseEncoding.BASE58_BTC);
+
+  return [...log, { ...prelimEntry, proof: [{ ...proofBase, proofValue }] }] as DIDLog;
+}
+
 // Returns the given ISO-8601 timestamp advanced by one second, as a fallback
 // when the library rejects a timestamp that equals the previous entry's time.
 function bumpTimestamp(ts: string): string {
@@ -384,7 +423,7 @@ async function processNegativeScript(scriptPath: string): Promise<void> {
       let newLog: DIDLog;
       try {
         ({ log: newLog } = await createDID({
-          domain: s.domain,
+          address: s.domain,
           signer,
           verifier,
           updateKeys: currentUpdateVMs.map(vm => vm.publicKeyMultibase!),
@@ -461,13 +500,27 @@ async function processNegativeScript(scriptPath: string): Promise<void> {
         nextKeyHashes: nextKeyHashes.length > 0 ? nextKeyHashes : [],
         witness: witnessParam,
         witnessProofs: constructionWitnessProofs.length > 0 ? constructionWitnessProofs : undefined,
-        domain: s.domain,
+        address: s.domain,
       };
       try {
         ({ log: newLog } = await updateDID({ ...updateOpts, updated: updateTimestamp } as any));
       } catch {
         updateTimestamp = bumpTimestamp(updateTimestamp);
-        ({ log: newLog } = await updateDID({ ...updateOpts, updated: updateTimestamp } as any));
+        try {
+          ({ log: newLog } = await updateDID({ ...updateOpts, updated: updateTimestamp } as any));
+        } catch {
+          // Library hard-rejects some intentionally invalid updates (e.g. updateKeys
+          // that don't hash into the previous entry's nextKeyHashes commitment) even
+          // with a permissive verifier. Build the entry manually instead.
+          const prevState = (log[log.length - 1] as any).state;
+          const parameters: Record<string, unknown> = {
+            updateKeys: updateOpts.updateKeys,
+            nextKeyHashes: updateOpts.nextKeyHashes,
+            witness: updateOpts.witness ?? {},
+            watchers: [],
+          };
+          newLog = await updateEntryBypass(log, updateTimestamp, parameters, prevState, signerVM);
+        }
       }
       log = newLog;
 
@@ -491,7 +544,7 @@ async function processNegativeScript(scriptPath: string): Promise<void> {
         updateKeys: currentUpdateVMs.map(vm => vm.publicKeyMultibase!),
         verificationMethods: currentUpdateVMs,
         witnessProofs: constructionWitnessProofs.length > 0 ? constructionWitnessProofs : undefined,
-        domain: s.domain,
+        address: s.domain,
       };
       try {
         ({ log: newLog } = await updateDID({ ...migrateOpts, updated: migrateTimestamp } as any));

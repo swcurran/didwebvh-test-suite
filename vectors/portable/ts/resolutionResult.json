@@ -1,4 +1,7 @@
 {
+  "didResolutionMetadata": {
+    "contentType": "application/did+ld+json"
+  },
   "didDocument": {
     "@context": [
       "https://www.w3.org/ns/did/v1",
@@ -24,26 +27,32 @@
     "capabilityInvocation": [],
     "service": [
       {
-        "id": "#files",
+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#files",
         "type": "relativeRef",
-        "serviceEndpoint": "https://example.com"
+        "serviceEndpoint": "https://example.com/"
       },
       {
         "@context": "https://identity.foundation/linked-vp/contexts/v1",
-        "id": "#whois",
+        "id": "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#whois",
         "type": "LinkedVerifiablePresentation",
         "serviceEndpoint": "https://example.com/whois.vp"
       }
     ]
   },
   "didDocumentMetadata": {
+    "versionId": "1-QmakovVDuuoDiVHCzNScfzTHHEdvwQN3WshofC1br1LPXW",
     "created": "2000-01-01T00:00:00Z",
     "updated": "2000-01-01T00:00:00Z",
-    "versionId": "1-QmakovVDuuoDiVHCzNScfzTHHEdvwQN3WshofC1br1LPXW",
-    "versionNumber": 1,
-    "versionTime": "2000-01-01T00:00:00Z"
-  },
-  "didResolutionMetadata": {
-    "contentType": "application/did+ld+json"
+    "deactivated": false,
+    "portable": true,
+    "scid": "QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S",
+    "updateKeys": [
+      "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG"
+    ],
+    "nextKeyHashes": [],
+    "prerotation": false,
+    "witness": {},
+    "watchers": [],
+    "previousLogEntryHash": "QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S"
   }
 }
