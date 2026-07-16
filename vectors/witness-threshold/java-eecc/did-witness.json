@@ -1,11 +1,11 @@
 [ {
-  "versionId" : "1-QmT5oxBcEktYDynwhAjMRyLZ946wDCFn5sfDpjECbhtLDh",
+  "versionId" : "1-QmXNQtf6MMbMGmJ768QPfwP7srXoaCW4qKyg7aTyCic853",
   "proof" : [ {
     "type" : "DataIntegrityProof",
     "cryptosuite" : "eddsa-jcs-2022",
     "verificationMethod" : "did:key:z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L#z6Mkrv5Cm2XCLumMPTqooLTCw6YDf421d7VdTziwrZ8vNf4L",
-    "created" : "2026-06-15T01:49:28Z",
+    "created" : "2026-07-16T16:31:31Z",
     "proofPurpose" : "assertionMethod",
-    "proofValue" : "z2uxjHW1k73DTqvGCj9SSHa4dtYMFAdbdMCf4usGPsm7r26L5V7pd9Hny2zLBQsx5Yg5vHAUwaYUh71mY4eARJYYb"
+    "proofValue" : "z3AuM4pv9i6CC2V1P5PUVmFjmTtx4ajvu8DJQr4oDM9iugwb2ZFbTpYETeBVbtoaZyePnUcUCVtkqjpZMK2CaArGm"
   } ]
 } ]

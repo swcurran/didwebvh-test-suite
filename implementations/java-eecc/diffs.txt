@@ -1,16 +1,16 @@
 === basic-create / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com",
-     "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com",
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
      "service" : [ {
--      "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#files",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#whois",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -89,28 +89,34 @@
 === basic-create / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== basic-update / dart — resolutionResult.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com",
-     "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com",
-     "service" : [ {
--      "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#files",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmRgDRqtryh1r2QU5RgfzBAqtgrLmHxTYAJJ7ubRgZ1SZy:example.com#whois",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== basic-update / dart — resolutionResult.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -189,28 +195,34 @@
 === basic-update / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== deactivate / dart — resolutionResult.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "service" : [ {
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#whois",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== deactivate / dart — resolutionResult.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -291,28 +303,52 @@
 === deactivate / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "keyAgreement" : [ ],
-     "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
+ {
+-  "didDocument" : null,
++  "didDocument" : {
++    "@context" : [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1" ],
++    "assertionMethod" : [ ],
++    "authentication" : [ "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#P5RDjVJG" ],
++    "capabilityDelegation" : [ ],
++    "capabilityInvocation" : [ ],
++    "controller" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++    "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++    "keyAgreement" : [ ],
++    "service" : [ {
++      "id" : "#files",
 +      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
++      "type" : "relativeRef"
++    }, {
++      "@context" : "https://identity.foundation/linked-vp/contexts/v1",
++      "id" : "#whois",
++      "serviceEndpoint" : "https://example.com/whois.vp",
++      "type" : "LinkedVerifiablePresentation"
++    } ],
++    "verificationMethod" : [ {
++      "controller" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
++      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#P5RDjVJG",
++      "publicKeyMultibase" : "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
++      "purpose" : "authentication",
++      "type" : "Multikey"
++    } ]
++  },
+   "didDocumentMetadata" : {
+     "created" : "2000-01-01T00:00:00Z",
+     "deactivated" : true,
 
 === key-rotation / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
      "service" : [ {
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#whois",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -391,28 +427,34 @@
 === key-rotation / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== multi-update / dart — resolutionResult.1.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "service" : [ {
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#whois",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== multi-update / dart — resolutionResult.1.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -421,16 +463,16 @@
 === multi-update / dart — resolutionResult.2.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
      "service" : [ {
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#whois",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -439,16 +481,16 @@
 === multi-update / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
-     "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com",
+     "controller" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
+     "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com",
      "service" : [ {
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#files",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:Qmc658VyBd3qctM1kAJAVhe4s2WR8tFpSngU8qdctxhuir:example.com#whois",
+-      "id" : "did:webvh:Qmf7P4Pcebk5x2SqGUWE2dtXHk3Eu2DPHkd3EWpR19zB1m:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -710,38 +752,56 @@
 === multi-update / ts — resolutionResult.1.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === multi-update / ts — resolutionResult.2.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === multi-update / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === multiple-update-keys / python — resolutionResult.json ===
 --- expected
@@ -798,28 +858,34 @@
 === multiple-update-keys / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmdqYkwBrTsuFarEykVCw4MJJewAurmj8qZzkjZUz2bdAo:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== portable / dart — resolutionResult.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.com",
-     "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.com",
-     "service" : [ {
--      "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.com#files",
+-      "id" : "did:webvh:QmdqYkwBrTsuFarEykVCw4MJJewAurmj8qZzkjZUz2bdAo:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.com#whois",
+-      "id" : "did:webvh:QmdqYkwBrTsuFarEykVCw4MJJewAurmj8qZzkjZUz2bdAo:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== portable / dart — resolutionResult.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com",
+     "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -898,29 +964,35 @@
 === portable / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
+-      "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === portable-move / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.org",
-     "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.org",
+     "controller" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org",
+     "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org",
      "service" : [ {
--      "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.org#files",
+-      "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org#files",
 -      "serviceEndpoint" : "https://example.org/",
 +      "id" : "#files",
 +      "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmbYqwkrRaR7erqU8L6Y76dgoYqEWedtA2w9BpnTkJ3Kyh:example.org#whois",
+-      "id" : "did:webvh:Qme827gBknTfkmfM5AQd5zqtZMy1kaAhwggZ8V6pHPrqnw:example.org#whois",
 -      "serviceEndpoint" : "https://example.org/whois.vp",
 +      "id" : "#whois",
 +      "serviceEndpoint" : "https://example.com/whois.vp",
@@ -1022,28 +1094,37 @@
 === portable-move / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
+-      "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#files",
+-      "serviceEndpoint" : "https://example.org/",
++      "id" : "#files",
 +      "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmSoujwhaNNgWGD3deyXDHoE3UTvnXJSeq925AR4kzoc9S:example.org#whois",
+-      "serviceEndpoint" : "https://example.org/whois.vp",
++      "id" : "#whois",
++      "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+     "verificationMethod" : [ {
 
 === pre-rotation / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com",
-     "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com",
+     "controller" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
+     "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
      "service" : [ {
--      "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#files",
+-      "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#whois",
+-      "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -1122,28 +1203,34 @@
 === pre-rotation / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== pre-rotation-consume / dart — resolutionResult.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com",
-     "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com",
-     "service" : [ {
--      "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#files",
+-      "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmNk9dWhZNcNqKDkhk41QGFR1FobLWsndrHhfYFVcM96iW:example.com#whois",
+-      "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== pre-rotation-consume / dart — resolutionResult.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
+     "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmVgjwg2t4TaHYpdhFisgivyJH2bhkVABMRSCuFjHstcNH:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -1222,20 +1309,26 @@
 === pre-rotation-consume / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
+-      "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmXpqXh9uM1rN2uBuHQB4qdGUMfJsEouwz8Yn8RaaTXgKq:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === services / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf:example.com",
-     "id" : "did:webvh:QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf:example.com",
+     "controller" : "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com",
+     "id" : "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com",
      "service" : [ {
 +      "id" : "#files",
 +      "serviceEndpoint" : "https://example.com/",
@@ -1249,12 +1342,12 @@
        "serviceEndpoint" : "https://example.com/didcomm",
        "type" : "DIDCommMessaging"
 -    }, {
--      "id" : "did:webvh:QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf:example.com#files",
+-      "id" : "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com#files",
 -      "serviceEndpoint" : "https://example.com/",
 -      "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmPG2ptFsguYNwRfJ3u2SUzT69uZg5sPi7z8DVzpZUXnwf:example.com#whois",
+-      "id" : "did:webvh:QmWEva5XER8XTQi75y971fgYBKFbjvXphT1HkpeVkW88Uh:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -1365,28 +1458,45 @@
 === services / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
++      "id" : "#files",
 +      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
++      "type" : "relativeRef"
++    }, {
        "id" : "#linked-domain",
+       "serviceEndpoint" : "https://example.com",
+       "type" : "LinkedDomains"
+...
+       "id" : "#messaging",
+       "serviceEndpoint" : "https://example.com/didcomm",
+       "type" : "DIDCommMessaging"
+-    }, {
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#files",
+-      "serviceEndpoint" : "https://example.com/",
+-      "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmV2V5CSzH5w9UF4rHHAdktXL93ounugmgV2LXVCx9s2i9:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
 
 === witness-threshold / dart — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1:example.com",
-     "id" : "did:webvh:QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1:example.com",
+     "controller" : "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com",
+     "id" : "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com",
      "service" : [ {
--      "id" : "did:webvh:QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1:example.com#files",
+-      "id" : "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmTz6Bk5j1ouYRtnLFP7ot8BdnhovKcnjqPBqkK7sh5mo1:example.com#whois",
+-      "id" : "did:webvh:QmeSwUSitBPnjKHiGW3cNzKirJukYwLArP5A8z2PDoVdzt:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -1465,28 +1575,34 @@
 === witness-threshold / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
+     "id" : "did:webvh:QmU9s4GUNrt8SM9CCCTejsbZj583dXQWUduG1QnWaHbrzS:example.com",
      "keyAgreement" : [ ],
      "service" : [ {
-       "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
-+      "serviceEndpoint" : "https://example.com/",
-       "type" : "relativeRef"
-     }, {
-       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
-
-=== witness-update / dart — resolutionResult.json ===
---- expected
-+++ actual (java-eecc resolver)
-     "controller" : "did:webvh:QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV:example.com",
-     "id" : "did:webvh:QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV:example.com",
-     "service" : [ {
--      "id" : "did:webvh:QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV:example.com#files",
+-      "id" : "did:webvh:QmU9s4GUNrt8SM9CCCTejsbZj583dXQWUduG1QnWaHbrzS:example.com#files",
 +      "id" : "#files",
        "serviceEndpoint" : "https://example.com/",
        "type" : "relativeRef"
      }, {
        "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "did:webvh:QmYk9wztLeRSecERsujbVF9mzzLkZ1VLrWasajc2hV1vqV:example.com#whois",
+-      "id" : "did:webvh:QmU9s4GUNrt8SM9CCCTejsbZj583dXQWUduG1QnWaHbrzS:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
+
+=== witness-update / dart — resolutionResult.json ===
+--- expected
++++ actual (java-eecc resolver)
+     "controller" : "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com",
+     "id" : "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com",
+     "service" : [ {
+-      "id" : "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmVXdAAejY2pHoQ1TEKqPkYHVucXTqvYNa1ZmD3DHu8iWA:example.com#whois",
 +      "id" : "#whois",
        "serviceEndpoint" : "https://example.com/whois.vp",
        "type" : "LinkedVerifiablePresentation"
@@ -1565,35 +1681,17 @@
 === witness-update / ts — resolutionResult.json ===
 --- expected
 +++ actual (java-eecc resolver)
- {
--  "didDocument" : {
--    "@context" : [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1" ],
--    "assertionMethod" : [ ],
--    "authentication" : [ "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#P5RDjVJG" ],
--    "capabilityDelegation" : [ ],
--    "capabilityInvocation" : [ ],
--    "controller" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
--    "id" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
--    "keyAgreement" : [ ],
--    "service" : [ {
--      "id" : "#files",
--      "serviceEndpoint" : "https://example.com",
--      "type" : "relativeRef"
--    }, {
--      "@context" : "https://identity.foundation/linked-vp/contexts/v1",
--      "id" : "#whois",
--      "serviceEndpoint" : "https://example.com/whois.vp",
--      "type" : "LinkedVerifiablePresentation"
--    } ],
--    "verificationMethod" : [ {
--      "controller" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
--      "id" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#P5RDjVJG",
--      "publicKeyMultibase" : "z6MkjchhfUsD6mmvni8mCdXHw216Xrm9bQe2mBH1P5RDjVJG",
--      "purpose" : "authentication",
--      "type" : "Multikey"
--    } ]
--  },
-+  "didDocument" : null,
-   "didDocumentMetadata" : { },
-   "didResolutionMetadata" : {
-     "contentType" : "application/did+ld+json"
+     "id" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com",
+     "keyAgreement" : [ ],
+     "service" : [ {
+-      "id" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#files",
++      "id" : "#files",
+       "serviceEndpoint" : "https://example.com/",
+       "type" : "relativeRef"
+     }, {
+       "@context" : "https://identity.foundation/linked-vp/contexts/v1",
+-      "id" : "did:webvh:QmbKWDWzoZZpiDQbDCD1tAVxWhsadoAdgKQuSfuM8pKQqv:example.com#whois",
++      "id" : "#whois",
+       "serviceEndpoint" : "https://example.com/whois.vp",
+       "type" : "LinkedVerifiablePresentation"
+     } ],
