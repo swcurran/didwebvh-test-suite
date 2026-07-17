@@ -1,6 +1,6 @@
 # python status
 
-Implementation: did-webvh python 1.0.0
+Implementation: did-webvh python 1.0.1
 
 ## DID Creation
 
@@ -37,9 +37,10 @@ Implementation: did-webvh python 1.0.0
 | negative-scid-mismatch-genesis | invalidDid | ✅ PASS |  |
 | negative-unknown-method-version | invalidDid | ✅ PASS |  |
 | negative-versiontime-future | invalidDid | ✅ PASS |  |
-| negative-versiontime-non-monotonic | invalidDid | ❌ FAIL | resolver accepted invalid log |
+| negative-versiontime-non-monotonic | invalidDid | ✅ PASS |  |
+| negative-witness-update-threshold-not-met | invalidDid | ✅ PASS |  |
 | negative-wrong-cryptosuite | invalidProof | ✅ PASS |  |
-| negative-zero-witness-threshold | invalidParameters | ❌ FAIL | resolver accepted invalid log |
+| negative-zero-witness-threshold | invalidParameters | ✅ PASS |  |
 
 ## Cross-Resolution
 
@@ -135,4 +136,4 @@ Implementation: did-webvh python 1.0.0
 | witness-update | ts | 🔶 DIFF | see diffs.txt |
 
 ---
-Built from: https://github.com/decentralized-identity/didwebvh-py @ main (dc32e19)
+Built from: https://github.com/decentralized-identity/didwebvh-py @ main (249e47a)
